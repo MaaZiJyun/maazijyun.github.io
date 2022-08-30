@@ -1,0 +1,372 @@
+<!-- This is the outermost frame -->
+<!-- Create by MaaZiJyun on 27 Aug 2022 -->
+<!DOCTYPE html>
+<html>
+  <!-- the head of the html -->
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" name="viewport">
+    <!-- more meta data settings -->
+    
+       <meta name="author" content="MaaZiJyun"> 
+     
+    
+        <meta name="subtitle" content="Welcome to My Home"> 
+     
+    
+        <meta name="description" content="Welcome to visit my personal blog. I usually write some notes and articales here to share with others. Hope you could find what you are interested in"> 
+    
+     
+    <!-- generate the title of the web page -->
+     
+
+    <!-- the title of the web page -->
+    <title>
+        Scheduling Algorithm
+    </title>
+
+    <!-- the icon of the web page -->
+    
+        <link rel="icon" href="/img/domukiico.ico ">
+     
+
+    <!-- CSS list -->
+     
+         
+            
+                <link rel="stylesheet" href="/css/style.css ">
+            
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css ">
+             
+         
+     
+    <!-- JS list -->
+     
+         
+            
+                <script src="/js/helper.css "></script>
+            
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js "></script>
+             
+         
+     
+<meta name="generator" content="Hexo 6.2.0"></head>
+  <!-- the body of the html -->
+  <!-- The interface to connect the body content -->
+<body>
+
+  <!-- the header of the page -->
+   
+    
+  <header class="header" style="background-color: black;">
+    
+  <!-- Navigation-->
+  <nav class="navbar navbar-expand-lg navbar-dark justify-content-center">
+    <div class="container p-2">
+      <a href="/" class="navbar-brand logo">
+        MaaZiJyun' Blog
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span
+          class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ms-auto">
+          
+            <li class="nav-item">
+              <a href="/" class="nav-link active">
+                Home
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/archives" class="nav-link active">
+                Archives
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/categories" class="nav-link active">
+                Categories
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/tags" class="nav-link active">
+                Tags
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/about" class="nav-link active">
+                About
+              </a>
+            </li>
+            
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header> 
+   
+
+  <!-- the main part of the page -->
+  <div class="content">
+
+    <main class="main">
+
+      <div class="main-content">
+
+        <!-- if the current page is home, then the content of hone will be shown up -->
+        
+          <article class="post">
+    <div class="post-title">
+        <h2 class="title">
+            Scheduling Algorithm
+        </h2>
+    </div>
+    <div class="post-meta">
+        <span class="post-time">
+            2021-04-30
+        </span>
+    </div>
+    <div class="post-content">
+        <h2 id="Scheduling-Algorithms-1-–-First-Come-First-Serve-FCFS"><a href="#Scheduling-Algorithms-1-–-First-Come-First-Serve-FCFS" class="headerlink" title="Scheduling Algorithms 1 – First-Come-First-Serve (FCFS)"></a>Scheduling Algorithms 1 – First-Come-First-Serve (FCFS)</h2><p>You are given a scheduling problem in Table 1 below, which involved 5 processes with the given arrival time and burst time:</p>
+<span id="more"></span>
+
+<table>
+<thead>
+<tr>
+<th><strong>Process</strong></th>
+<th><strong>Arrival Time</strong></th>
+<th><strong>Burst Time</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Process A</td>
+<td>0</td>
+<td>6</td>
+</tr>
+<tr>
+<td>Process B</td>
+<td>2</td>
+<td>4</td>
+</tr>
+<tr>
+<td>Process C</td>
+<td>5</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Process D</td>
+<td>6</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Process E</td>
+<td>9</td>
+<td>5</td>
+</tr>
+</tbody></table>
+<p>Implement a Java program to calculate the waiting time and turnaround time for each process involved using First-Come-First-Serve (FCFS) algorithm, and fill up the Table 2. Then calculate the average waiting time produced by FCFS scheduling algorithm.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Process</strong></th>
+<th><strong>Waiting  Time</strong></th>
+<th><strong>Turnaround  Time</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Process A</td>
+<td>0</td>
+<td>6</td>
+</tr>
+<tr>
+<td>Process B</td>
+<td>4</td>
+<td>8</td>
+</tr>
+<tr>
+<td>Process C</td>
+<td>5</td>
+<td>6</td>
+</tr>
+<tr>
+<td>Process D</td>
+<td>5</td>
+<td>8</td>
+</tr>
+<tr>
+<td>Process E</td>
+<td>5</td>
+<td>10</td>
+</tr>
+</tbody></table>
+<p>Avg Waiting Time &#x3D;<em><strong><strong><strong>3.8</strong></strong></strong></em>______</p>
+<h3 id="Source-Code"><a href="#Source-Code" class="headerlink" title="Source Code"></a>Source Code</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Process</span>&#123;</span><br><span class="line">	<span class="keyword">public</span> String id;</span><br><span class="line">	<span class="keyword">public</span> <span class="type">int</span> arrivalTime;</span><br><span class="line">	<span class="keyword">public</span> <span class="type">int</span> burstTime;</span><br><span class="line">	<span class="keyword">public</span> <span class="type">int</span> turnAroundTime;</span><br><span class="line">	<span class="keyword">public</span> <span class="type">int</span> waitingTime;</span><br><span class="line">	<span class="keyword">public</span> <span class="type">int</span> startTime;</span><br><span class="line">	<span class="keyword">public</span> <span class="type">int</span> completeTime;</span><br><span class="line">	<span class="keyword">public</span> String slices;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">public</span> <span class="title function_">Process</span><span class="params">()</span>&#123;&#125;</span><br><span class="line">	<span class="keyword">public</span> <span class="title function_">Process</span><span class="params">(String id, <span class="type">int</span> burstTime, <span class="type">int</span> arrivalTime)</span> &#123;</span><br><span class="line">		<span class="built_in">this</span>.id = id;</span><br><span class="line">		<span class="built_in">this</span>.burstTime = burstTime;</span><br><span class="line">		<span class="built_in">this</span>.arrivalTime = arrivalTime;</span><br><span class="line">		<span class="built_in">this</span>.waitingTime = -<span class="number">1</span>;</span><br><span class="line">		<span class="built_in">this</span>.turnAroundTime = -<span class="number">1</span>;</span><br><span class="line">		<span class="built_in">this</span>.startTime = -<span class="number">1</span>;</span><br><span class="line">		<span class="built_in">this</span>.completeTime = -<span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">public</span> <span class="title function_">Process</span><span class="params">(String id, <span class="type">int</span> burstTime)</span> &#123;</span><br><span class="line">		<span class="built_in">this</span>.id = id;</span><br><span class="line">		<span class="built_in">this</span>.burstTime = burstTime;</span><br><span class="line">		<span class="built_in">this</span>.arrivalTime = -<span class="number">1</span>;</span><br><span class="line">		<span class="built_in">this</span>.waitingTime = -<span class="number">1</span>;</span><br><span class="line">		<span class="built_in">this</span>.turnAroundTime = -<span class="number">1</span>;</span><br><span class="line">		<span class="built_in">this</span>.startTime = -<span class="number">1</span>;</span><br><span class="line">		<span class="built_in">this</span>.completeTime = -<span class="number">1</span>;</span><br><span class="line">		<span class="built_in">this</span>.slices = <span class="string">&quot;&quot;</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>this is the class of process</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">FCFS</span> &#123;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">sortArray</span><span class="params">(Process[] pt)</span> &#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">1</span>; i &lt; pt.length; i++) &#123;</span><br><span class="line">			<span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">0</span>; j &lt; pt.length - i; j++) &#123;</span><br><span class="line">				<span class="keyword">if</span>(pt[j].arrivalTime &gt; pt[j+<span class="number">1</span>].arrivalTime) &#123;</span><br><span class="line">					<span class="type">Process</span> <span class="variable">np</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Process</span>();</span><br><span class="line">					np = pt[j];</span><br><span class="line">					pt[j] = pt[j+<span class="number">1</span>];</span><br><span class="line">					pt[j+<span class="number">1</span>] = np;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> String <span class="title function_">runningMachine</span><span class="params">(Process[] pt)</span> &#123;</span><br><span class="line">		</span><br><span class="line">		<span class="type">String</span> <span class="variable">Gantt</span> <span class="operator">=</span> <span class="string">&quot;&quot;</span>;</span><br><span class="line">		</span><br><span class="line">		<span class="comment">//First-Come-First-Serve </span></span><br><span class="line">		<span class="type">int</span> <span class="variable">clock</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">		<span class="type">int</span> <span class="variable">processTime</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span>(<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; pt.length; i++) &#123;</span><br><span class="line">			<span class="keyword">while</span>(<span class="literal">true</span>) &#123;</span><br><span class="line">				<span class="keyword">if</span>(clock &gt;= pt[i].arrivalTime) &#123;</span><br><span class="line">					processTime = pt[i].burstTime;</span><br><span class="line">					<span class="keyword">break</span>;</span><br><span class="line">				&#125;<span class="keyword">else</span> &#123;</span><br><span class="line">					clock++;</span><br><span class="line">					Gantt = Gantt.concat(<span class="string">&quot;[_]&quot;</span>);</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">while</span>(<span class="literal">true</span>) &#123;</span><br><span class="line">				clock++;</span><br><span class="line">				processTime--;</span><br><span class="line">				Gantt = Gantt.concat(<span class="string">&quot;[&quot;</span>+pt[i].id+<span class="string">&quot;]&quot;</span>);</span><br><span class="line">				<span class="keyword">if</span>(processTime == <span class="number">0</span>) &#123;</span><br><span class="line">					<span class="keyword">break</span>;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			pt[i].completeTime = clock;</span><br><span class="line">			pt[i].turnAroundTime = pt[i].completeTime - pt[i].arrivalTime;</span><br><span class="line">			pt[i].waitingTime = pt[i].turnAroundTime - pt[i].burstTime;</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">return</span> Gantt;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">printOutput</span><span class="params">(Process[] pt)</span> &#123;</span><br><span class="line">		<span class="type">String</span> <span class="variable">Gantt</span> <span class="operator">=</span> runningMachine(pt);</span><br><span class="line">		</span><br><span class="line">		<span class="comment">//Display Gantt</span></span><br><span class="line">		System.out.println(<span class="string">&quot;Gantt: (1 [_] = 1 microsecong)&quot;</span>);</span><br><span class="line">		System.out.println(Gantt);</span><br><span class="line">		System.out.println();</span><br><span class="line">		System.out.println(<span class="string">&quot;----------------------------------------------------------------&quot;</span>);</span><br><span class="line">		<span class="comment">//Display processes along with all details</span></span><br><span class="line">        System.out.printf(<span class="string">&quot;Processes	Completion time	Waiting&quot;</span></span><br><span class="line">                       +<span class="string">&quot; time	Turn around time\n&quot;</span>);</span><br><span class="line">        System.out.println(<span class="string">&quot;----------------------------------------------------------------&quot;</span>);</span><br><span class="line">        <span class="comment">// Calculate total waiting time and total turn</span></span><br><span class="line">        <span class="comment">// around time</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; pt.length; i++) &#123;</span><br><span class="line">            System.out.print(pt[i].id);</span><br><span class="line">            System.out.printf(<span class="string">&quot;		%d &quot;</span>, pt[i].completeTime);</span><br><span class="line">            System.out.printf(<span class="string">&quot;		%d&quot;</span>, pt[i].waitingTime);</span><br><span class="line">            System.out.printf(<span class="string">&quot;		%d\n&quot;</span>, pt[i].turnAroundTime);</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(<span class="string">&quot;----------------------------------------------------------------&quot;</span>);</span><br><span class="line">        <span class="type">double</span> <span class="variable">avgTAT</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">		<span class="type">double</span> <span class="variable">avgWT</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">for</span>(Process p: pt) &#123;</span><br><span class="line">			avgTAT+= p.turnAroundTime;</span><br><span class="line">			avgWT+=p.waitingTime;</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		avgTAT /= pt.length;</span><br><span class="line">		avgWT /= pt.length;</span><br><span class="line">		System.out.println();</span><br><span class="line">        System.out.printf(<span class="string">&quot;Average waiting time = %f&quot;</span>, avgWT);</span><br><span class="line">        System.out.printf(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">        System.out.printf(<span class="string">&quot;Average turn around time = %f &quot;</span>, avgTAT);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] arg)</span> &#123;</span><br><span class="line">		</span><br><span class="line">		Process[] pt = <span class="keyword">new</span> <span class="title class_">Process</span>[<span class="number">5</span>];</span><br><span class="line">		pt[<span class="number">0</span>] = <span class="keyword">new</span> <span class="title class_">Process</span>(<span class="string">&quot;A&quot;</span>,<span class="number">6</span>,<span class="number">0</span>);</span><br><span class="line">		pt[<span class="number">1</span>] = <span class="keyword">new</span> <span class="title class_">Process</span>(<span class="string">&quot;B&quot;</span>,<span class="number">4</span>,<span class="number">2</span>);</span><br><span class="line">		pt[<span class="number">2</span>] = <span class="keyword">new</span> <span class="title class_">Process</span>(<span class="string">&quot;C&quot;</span>,<span class="number">1</span>,<span class="number">5</span>);</span><br><span class="line">		pt[<span class="number">3</span>] = <span class="keyword">new</span> <span class="title class_">Process</span>(<span class="string">&quot;D&quot;</span>,<span class="number">3</span>,<span class="number">6</span>);</span><br><span class="line">		pt[<span class="number">4</span>] = <span class="keyword">new</span> <span class="title class_">Process</span>(<span class="string">&quot;E&quot;</span>,<span class="number">5</span>,<span class="number">9</span>);</span><br><span class="line">		</span><br><span class="line">		sortArray(pt);</span><br><span class="line">		printOutput(pt);</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>this is the program of FCFS</p>
+<h3 id="output"><a href="#output" class="headerlink" title="output:"></a>output:</h3><p><img src="/Scheduling-Algorithm/Q1.png"></p>
+<h2 id="Scheduling-Algorithms-2-–-Round-Robin-RR"><a href="#Scheduling-Algorithms-2-–-Round-Robin-RR" class="headerlink" title="Scheduling Algorithms 2 – Round-Robin (RR)"></a>Scheduling Algorithms 2 – Round-Robin (RR)</h2><p>Implement a Java program to calculate the waiting time and turnaround time involving N processes using Round-Robin scheduling algorithm. The user should be allowed to enter the following information: </p>
+<p>·    N, or the total of processes involved (N should be between 4 to 10 inclusive)</p>
+<p>·    Burst time for each process</p>
+<p>·    The quantum time to be used by the RR algorithm. </p>
+<p>Arrival time is not needed as it is assumed all processes arrived at the same time (t&#x3D;0). Using the information provided, calculate </p>
+<p>·    Waiting times for all the processes</p>
+<p>·    Turnaround times for all the processes</p>
+<p>·    The average waiting time produced by the RR algorithm for the given situation&#x2F;problem.</p>
+<p>User input:</p>
+<table>
+<thead>
+<tr>
+<th>No.  of Processes &#x3D; 4<br>Time  Quantum &#x3D; 3</th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Process</strong></td>
+<td><strong>Burst Time</strong></td>
+</tr>
+<tr>
+<td>A</td>
+<td>7</td>
+</tr>
+<tr>
+<td>B</td>
+<td>4</td>
+</tr>
+<tr>
+<td>C</td>
+<td>1</td>
+</tr>
+<tr>
+<td>D</td>
+<td>4</td>
+</tr>
+</tbody></table>
+<p>Result of RR algorithm:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Process</strong></th>
+<th><strong>Waiting  Time</strong></th>
+<th><strong>Turnaround  Time</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>A</td>
+<td>9</td>
+<td>16</td>
+</tr>
+<tr>
+<td>B</td>
+<td>10</td>
+<td>14</td>
+</tr>
+<tr>
+<td>C</td>
+<td>6</td>
+<td>7</td>
+</tr>
+<tr>
+<td>D</td>
+<td>11</td>
+<td>15</td>
+</tr>
+<tr>
+<td>Avg Waiting  Time &#x3D; 9</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>An example output of the required program could be as follows:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">N: 4</span><br><span class="line">Burst time: 7 4 1 4</span><br><span class="line">Q: 3</span><br><span class="line">Process	Exec. slices (t)		Waiting	Turnaround</span><br><span class="line">A		0, 10, 15 			9		16</span><br><span class="line">B		3, 13   			10		14</span><br><span class="line">C		6           		6		7</span><br><span class="line">D		7, 14  			11		15</span><br><span class="line"></span><br><span class="line">Avg. waiting time for 4 processes = 9</span><br></pre></td></tr></table></figure>
+
+<h3 id="Source-Code-1"><a href="#Source-Code-1" class="headerlink" title="Source Code:"></a>Source Code:</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">RR</span> &#123;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="type">boolean</span> <span class="title function_">isAllDone</span><span class="params">(<span class="type">int</span>[] loadingTime)</span> &#123;</span><br><span class="line">		<span class="type">boolean</span> <span class="variable">mark</span> <span class="operator">=</span> <span class="literal">true</span>;</span><br><span class="line">		<span class="keyword">for</span>(<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; loadingTime.length; i++) &#123;</span><br><span class="line">			<span class="keyword">if</span>(loadingTime[i] != <span class="number">0</span>)</span><br><span class="line">				mark = <span class="literal">false</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> mark;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> String <span class="title function_">runningMachine</span><span class="params">(<span class="type">int</span> num, <span class="type">int</span> queue, Process[] pt)</span> &#123;</span><br><span class="line">		<span class="type">int</span>[] loadingTime = <span class="keyword">new</span> <span class="title class_">int</span>[num];</span><br><span class="line">		<span class="type">int</span> <span class="variable">clock</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">		<span class="type">String</span> <span class="variable">Gantt</span> <span class="operator">=</span> <span class="string">&quot;&quot;</span>;</span><br><span class="line">		<span class="comment">//load in the time of how long the system can done each the process</span></span><br><span class="line">		<span class="keyword">for</span>(<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; pt.length; i++) &#123;</span><br><span class="line">			loadingTime[i] = pt[i].burstTime;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">while</span>(!isAllDone(loadingTime)) &#123;</span><br><span class="line">			<span class="keyword">for</span>(<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; pt.length; i++) &#123;</span><br><span class="line">				<span class="keyword">if</span>(loadingTime[i] != <span class="number">0</span>) &#123;</span><br><span class="line">					pt[i].slices = pt[i].slices.concat(clock+<span class="string">&quot;,&quot;</span>);</span><br><span class="line">					<span class="type">int</span> <span class="variable">n</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">					<span class="keyword">while</span>(n &lt; queue) &#123;</span><br><span class="line">						<span class="keyword">if</span>(loadingTime[i] &gt; <span class="number">0</span>) &#123;</span><br><span class="line">							loadingTime[i]--;</span><br><span class="line">							Gantt = Gantt.concat(<span class="string">&quot;[&quot;</span>+pt[i].id+<span class="string">&quot;]&quot;</span>);</span><br><span class="line">							clock++;</span><br><span class="line">							n++;</span><br><span class="line">						&#125;<span class="keyword">else</span> &#123;</span><br><span class="line">							<span class="keyword">break</span>;</span><br><span class="line">						&#125;</span><br><span class="line">					&#125;</span><br><span class="line">					pt[i].arrivalTime = <span class="number">0</span>;</span><br><span class="line">					pt[i].completeTime = clock;</span><br><span class="line">					pt[i].turnAroundTime = pt[i].completeTime - pt[i].arrivalTime;</span><br><span class="line">					pt[i].waitingTime = pt[i].turnAroundTime - pt[i].burstTime;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> Gantt;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">		Process[] pt = <span class="keyword">new</span> <span class="title class_">Process</span>[<span class="number">4</span>];</span><br><span class="line">		pt[<span class="number">0</span>] = <span class="keyword">new</span> <span class="title class_">Process</span>(<span class="string">&quot;A&quot;</span>, <span class="number">7</span>);</span><br><span class="line">		pt[<span class="number">1</span>] = <span class="keyword">new</span> <span class="title class_">Process</span>(<span class="string">&quot;B&quot;</span>, <span class="number">4</span>);</span><br><span class="line">		pt[<span class="number">2</span>] = <span class="keyword">new</span> <span class="title class_">Process</span>(<span class="string">&quot;C&quot;</span>, <span class="number">1</span>);</span><br><span class="line">		pt[<span class="number">3</span>] = <span class="keyword">new</span> <span class="title class_">Process</span>(<span class="string">&quot;D&quot;</span>, <span class="number">4</span>);</span><br><span class="line">		</span><br><span class="line">		<span class="type">int</span> <span class="variable">num</span> <span class="operator">=</span> pt.length;</span><br><span class="line">		<span class="type">int</span> <span class="variable">queue</span> <span class="operator">=</span> <span class="number">3</span>;</span><br><span class="line">		<span class="type">String</span> <span class="variable">Gantt</span> <span class="operator">=</span> runningMachine(num, queue, pt);</span><br><span class="line">		<span class="comment">//Display num, Burst time and queue</span></span><br><span class="line">        System.out.print(<span class="string">&quot;N: &quot;</span>+num+<span class="string">&quot;\nBurst time: &quot;</span>);</span><br><span class="line">        <span class="keyword">for</span>(Process p: pt) &#123;</span><br><span class="line">        	System.out.print(p.burstTime+<span class="string">&quot; &quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(<span class="string">&quot;\nQ: &quot;</span>+queue);</span><br><span class="line">        System.out.println();</span><br><span class="line">        System.out.println(<span class="string">&quot;----------------------------------------------------------------&quot;</span>);</span><br><span class="line">		<span class="comment">//Display processes along with all details</span></span><br><span class="line">        System.out.printf(<span class="string">&quot;Processes\tExec. slices (t)\tWaiting&quot;</span></span><br><span class="line">                       +<span class="string">&quot; time\t\tTurn around time\n&quot;</span>);</span><br><span class="line">        System.out.println(<span class="string">&quot;----------------------------------------------------------------&quot;</span>);</span><br><span class="line">        <span class="comment">// Calculate total waiting time and total turn</span></span><br><span class="line">        <span class="comment">// around time</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; pt.length; i++) &#123;</span><br><span class="line">            System.out.print(pt[i].id);</span><br><span class="line">            System.out.printf(<span class="string">&quot;\t\t&quot;</span>+pt[i].slices);</span><br><span class="line">            System.out.printf(<span class="string">&quot;\t\t\t%d&quot;</span>, pt[i].waitingTime);</span><br><span class="line">            System.out.printf(<span class="string">&quot;\t\t\t%d\n&quot;</span>, pt[i].turnAroundTime);</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(<span class="string">&quot;----------------------------------------------------------------&quot;</span>);</span><br><span class="line">        System.out.println();</span><br><span class="line">        System.out.println(<span class="string">&quot;Gantt: (1 [_] = 1 microsecong)&quot;</span>);</span><br><span class="line">		System.out.println(Gantt);</span><br><span class="line">		System.out.println(<span class="string">&quot;----------------------------------------------------------------&quot;</span>);</span><br><span class="line">		<span class="type">double</span> <span class="variable">avgTAT</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">		<span class="type">double</span> <span class="variable">avgWT</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">for</span>(Process p: pt) &#123;</span><br><span class="line">			avgTAT+= p.turnAroundTime;</span><br><span class="line">			avgWT+=p.waitingTime;</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		avgTAT /= pt.length;</span><br><span class="line">		avgWT /= pt.length;</span><br><span class="line">		System.out.println();</span><br><span class="line">        System.out.printf(<span class="string">&quot;Average waiting time for &quot;</span>+num+<span class="string">&quot; processes = &quot;</span>+avgWT);</span><br><span class="line">        System.out.printf(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">        System.out.printf(<span class="string">&quot;Average turn around time = %f &quot;</span>, avgTAT);</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="output-1"><a href="#output-1" class="headerlink" title="output:"></a>output:</h3><p><img src="/Scheduling-Algorithm/Q2.png"></p>
+
+    </div>
+</article>
+
+        <!-- show the content of a category -->
+        
+      </div>
+      
+    </main>
+
+  </div>
+  <!-- the footer of the page -->
+  <!-- Footer -->
+<footer class="blog-footer font-small">
+
+    <!-- Footer Elements -->
+    <div class="footer-icons container">
+  
+      <!-- Grid row-->
+      <div class="row">
+  
+        <!-- Grid column -->
+        
+          <div class="flex-center">
+            <!-- Facebook -->
+             
+            <!-- Twitter -->
+             
+            <!-- Google +-->
+             
+            <!--Instagram-->
+             
+            <!--Pinterest-->
+             
+          </div>
+        
+        <!-- Grid column -->
+  
+      </div>
+      <!-- Grid row-->
+  
+    </div>
+    <!-- Footer Elements -->
+  
+    <!-- Copyright -->
+    <div class="footer-copyright text-center mt-3">© 2020 Copyright:
+      <a href="http://domuki.top ">http://domuki.top</a>
+    </div>
+    <!-- Copyright -->
+  
+  </footer>
+  <!-- Footer --> 
+  <button class="back-top" onclick="topFunction()">
+    Top
+  </button>
+  <script>
+    //Get the button
+    var mybutton = document.getElementsByClassName("back-top");
+    
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton[0].style.display = 'block';
+      } else {
+        mybutton[0].style.display = 'none';
+      }
+    }
+    
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+    </script>
+  
+</body>
+
+ 
+</html>

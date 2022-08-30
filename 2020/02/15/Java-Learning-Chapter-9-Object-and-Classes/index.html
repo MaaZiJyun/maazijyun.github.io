@@ -1,0 +1,371 @@
+<!-- This is the outermost frame -->
+<!-- Create by MaaZiJyun on 27 Aug 2022 -->
+<!DOCTYPE html>
+<html>
+  <!-- the head of the html -->
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" name="viewport">
+    <!-- more meta data settings -->
+    
+       <meta name="author" content="MaaZiJyun"> 
+     
+    
+        <meta name="subtitle" content="Welcome to My Home"> 
+     
+    
+        <meta name="description" content="Welcome to visit my personal blog. I usually write some notes and articales here to share with others. Hope you could find what you are interested in"> 
+    
+     
+    <!-- generate the title of the web page -->
+     
+
+    <!-- the title of the web page -->
+    <title>
+        Java Learning Chapter 9 Introduction (Object and Classes)
+    </title>
+
+    <!-- the icon of the web page -->
+    
+        <link rel="icon" href="/img/domukiico.ico ">
+     
+
+    <!-- CSS list -->
+     
+         
+            
+                <link rel="stylesheet" href="/css/style.css ">
+            
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css ">
+             
+         
+     
+    <!-- JS list -->
+     
+         
+            
+                <script src="/js/helper.css "></script>
+            
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js "></script>
+             
+         
+     
+<meta name="generator" content="Hexo 6.2.0"></head>
+  <!-- the body of the html -->
+  <!-- The interface to connect the body content -->
+<body>
+
+  <!-- the header of the page -->
+   
+    
+  <header class="header" style="background-color: black;">
+    
+  <!-- Navigation-->
+  <nav class="navbar navbar-expand-lg navbar-dark justify-content-center">
+    <div class="container p-2">
+      <a href="/" class="navbar-brand logo">
+        MaaZiJyun' Blog
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span
+          class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ms-auto">
+          
+            <li class="nav-item">
+              <a href="/" class="nav-link active">
+                Home
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/archives" class="nav-link active">
+                Archives
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/categories" class="nav-link active">
+                Categories
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/tags" class="nav-link active">
+                Tags
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/about" class="nav-link active">
+                About
+              </a>
+            </li>
+            
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header> 
+   
+
+  <!-- the main part of the page -->
+  <div class="content">
+
+    <main class="main">
+
+      <div class="main-content">
+
+        <!-- if the current page is home, then the content of hone will be shown up -->
+        
+          <article class="post">
+    <div class="post-title">
+        <h2 class="title">
+            Java Learning Chapter 9 Introduction (Object and Classes)
+        </h2>
+    </div>
+    <div class="post-meta">
+        <span class="post-time">
+            2020-02-15
+        </span>
+    </div>
+    <div class="post-content">
+        <h4 id="Learning-Objectives"><a href="#Learning-Objectives" class="headerlink" title="Learning Objectives"></a>Learning Objectives</h4><p><em>Describe classes and objects in OOP (A1, C1)</em></p>
+<p><em>Analyse a problem using object-oriented analysis. (C4)</em></p>
+<p><em>Construct a simple object-oriented program (P4)</em></p>
+<span id="more"></span>
+
+
+
+<h2 id="1-OO-Programming-Concepts"><a href="#1-OO-Programming-Concepts" class="headerlink" title="1. OO Programming Concepts"></a>1. OO Programming Concepts</h2><p>Object-oriented programming (OOP) involves programming using objects. </p>
+<p>An <em>object</em> represents or an abstraction of some entity in the real world that can be distinctly identified</p>
+<p>For example, <u>a student, a desk, a circle, a button, a cow, a car, a loan</u>, and etc. An object may be physical, like a radio, or intangible, like a song. Just as a noun is a person, place, or thing; so is an object</p>
+<p>An object has a Unique identity, State or characteristics or attributes (properties), and Action or behaviours. </p>
+<p>The <em>state</em> an object consists of a set of <strong>data</strong> <strong>fields</strong> (also known as <em>properties or attributes</em>) with their current values. For example, a book is an object. The behaviour of an object is defined by a set of <strong>methods</strong> .</p>
+<p>The information of a book can be “<em>name</em>“, “<em>author</em>“, “<em>classify</em>“ and etc. </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Book</span>&#123;</span><br><span class="line">    <span class="comment">// the body of book class</span></span><br><span class="line">    <span class="comment">//properties or attributes</span></span><br><span class="line">	String name;</span><br><span class="line">	String author;</span><br><span class="line">	String identity;</span><br><span class="line">	String classify;</span><br><span class="line">	<span class="type">int</span> price;</span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">Book</span><span class="params">()</span>&#123;</span><br><span class="line">        <span class="built_in">this</span>.name = name;</span><br><span class="line">        <span class="built_in">this</span>.author = author;</span><br><span class="line">        <span class="built_in">this</span>.identity = identity;</span><br><span class="line">        <span class="built_in">this</span>.classify = classify;</span><br><span class="line">        <span class="built_in">this</span>.price = price;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">Book</span><span class="params">(String name, String author, String identity, String classify, <span class="type">int</span> price;)</span>&#123;</span><br><span class="line">        <span class="built_in">this</span>.name = name;</span><br><span class="line">        <span class="built_in">this</span>.author = author;</span><br><span class="line">        <span class="built_in">this</span>.identity = identity;</span><br><span class="line">        <span class="built_in">this</span>.classify = classify;</span><br><span class="line">        <span class="built_in">this</span>.price = price;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//method</span></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">getName</span><span class="params">()</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Main</span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(Stirng[] args)</span>&#123;</span><br><span class="line">        <span class="type">Book</span> <span class="variable">firstBook</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Book</span>(<span class="string">&quot;notebook&quot;</span>, <span class="string">&quot;domuki&quot;</span>, <span class="string">&quot;001&quot;</span>, <span class="string">&quot;academic&quot;</span>, <span class="number">100</span>);</span><br><span class="line">        <span class="comment">//new object</span></span><br><span class="line">        System.out.print(<span class="string">&quot;The name of book is: &quot;</span> + firstBook.getName());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="2-How-to-create-a-class"><a href="#2-How-to-create-a-class" class="headerlink" title="2. How to create a class"></a>2. How to create a class</h2><h3 id="2-1-Concept"><a href="#2-1-Concept" class="headerlink" title="2.1. Concept"></a>2.1. Concept</h3><p>Here we are going to create a new class. The example is <strong>Circle</strong>.</p>
+<p>So, we define <u>the name of class</u> is <strong>Circle</strong>.</p>
+<p>But what properties or attributes does the circle have?</p>
+<ol>
+<li>radius</li>
+<li>area </li>
+<li>perimeter</li>
+</ol>
+<p>A Java class uses <strong>variables</strong> to define data fields </p>
+<p>and,</p>
+<p><strong>methods</strong> to define behaviours. </p>
+<table>
+<thead>
+<tr>
+<th>Name:</th>
+<th><em>Circle</em></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Properties(variables):</strong></td>
+<td><em><strong>1.radius</strong></em></td>
+</tr>
+<tr>
+<td></td>
+<td><em><strong>2. area</strong></em></td>
+</tr>
+<tr>
+<td></td>
+<td><em><strong>3. perimeter</strong></em></td>
+</tr>
+<tr>
+<td><strong>Behaviours(methods):</strong></td>
+<td><em><strong>1. set-Radius</strong></em></td>
+</tr>
+<tr>
+<td></td>
+<td><em><strong>2. get-Radius</strong></em></td>
+</tr>
+<tr>
+<td></td>
+<td><em><strong>3. get-Area</strong></em></td>
+</tr>
+<tr>
+<td></td>
+<td><em><strong>4. get-Perimeter</strong></em></td>
+</tr>
+</tbody></table>
+<h3 id="2-2-Transition"><a href="#2-2-Transition" class="headerlink" title="2.2. Transition"></a>2.2. Transition</h3><p>Additionally, a class provides a special type of methods, known as <strong>constructors</strong>, which are invoked to construct objects from the class. </p>
+<p>in Class “Circle”</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Circle</span>&#123;</span><br><span class="line">    <span class="comment">//1. Properties(variables)</span></span><br><span class="line">    <span class="type">double</span> <span class="variable">radius</span> <span class="operator">=</span> <span class="number">1</span>;</span><br><span class="line">    <span class="type">double</span> area;</span><br><span class="line">    <span class="type">double</span> perimeter;</span><br><span class="line">    <span class="comment">//2. constructors</span></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">Circle</span><span class="params">()</span>&#123;&#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">Circle</span><span class="params">(<span class="type">double</span> newRadius)</span>&#123;</span><br><span class="line">        <span class="built_in">this</span>.radius = newRadius;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//3. Behaviours(methods)</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setRadius</span><span class="params">()</span>&#123;</span><br><span class="line">        <span class="built_in">this</span>.radius = radius;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">double</span> <span class="title function_">getRadius</span><span class="params">()</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> radius;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">double</span> <span class="title function_">getArea</span><span class="params">()</span>&#123;</span><br><span class="line">        area = radius*radius*<span class="number">3.1415926</span>;</span><br><span class="line">        <span class="keyword">return</span> area;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">double</span> <span class="title function_">getPerimeter</span><span class="params">()</span>&#123;</span><br><span class="line">        perimeter = <span class="number">2</span>*radius*<span class="number">3.1415926</span>;</span><br><span class="line">        <span class="keyword">return</span> perimeter;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>in Class “Main”</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Main</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="type">Circle</span> <span class="variable">c1</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Circle</span>();<span class="comment">//object</span></span><br><span class="line"></span><br><span class="line">        System.out.println(c1.getPerimeter());</span><br><span class="line">        </span><br><span class="line">        System.out.println(c1.getArea());</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="3-Parts-in-Classes"><a href="#3-Parts-in-Classes" class="headerlink" title="3. Parts in Classes"></a>3. Parts in Classes</h2><h3 id="3-1-Properties-variables"><a href="#3-1-Properties-variables" class="headerlink" title="3.1. Properties(variables)"></a>3.1. Properties(variables)</h3><p>A Java class uses <strong>variables</strong> to define data fields</p>
+<h3 id="3-2-Constructors"><a href="#3-2-Constructors" class="headerlink" title="3.2. Constructors"></a>3.2. Constructors</h3><p><strong>Constructors</strong> are a <u>special kind of methods</u> that are invoked to construct objects.</p>
+<p><strong>Constructors</strong> must have the <em><u>same name</u></em> as the class itself. </p>
+<p><strong>Constructors</strong> *<u>do not have a return type</u>*—not even void. </p>
+<p><strong>Constructors</strong> are invoked using the new operator when an object is created. <u><em>Constructors play the role of initializing objects.</em></u></p>
+<h4 id="3-2-1-constructor"><a href="#3-2-1-constructor" class="headerlink" title="3.2.1. constructor"></a>3.2.1. constructor</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Circle(<span class="type">double</span> newRadius) &#123;  </span><br><span class="line">  radius = newRadius;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-2-2-a-no-arg-constructor"><a href="#3-2-2-a-no-arg-constructor" class="headerlink" title="3.2.2. a no-arg constructor"></a>3.2.2. a no-arg constructor</h4><p>A constructor with no parameters</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Circle() &#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-2-3-Default-Constructor"><a href="#3-2-3-Default-Constructor" class="headerlink" title="3.2.3. Default Constructor"></a>3.2.3. Default Constructor</h4><p>A class may be declared without constructors. </p>
+<p>In this case, a no-argument constructor with an empty body is <strong>implicitly declared in the class</strong>. </p>
+<p>This constructor, called <em>a default constructor</em>, is provided automatically <em>only if no constructors are explicitly declared in the class</em>.</p>
+<h3 id="3-3-Behaviours-methods"><a href="#3-3-Behaviours-methods" class="headerlink" title="3.3. Behaviours(methods)"></a>3.3. Behaviours(methods)</h3><p><strong>Methods</strong> to define behaviours. </p>
+<h3 id="3-4-Caution"><a href="#3-4-Caution" class="headerlink" title="3.4. Caution"></a>3.4. Caution</h3><p>Recall that you use : </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Math.methodName(arguments) <span class="comment">//(e.g., Math.pow(3, 2.5))</span></span><br></pre></td></tr></table></figure>
+
+<p>to invoke a method in the Math class. Can you invoke <code>getArea()</code> using <code>Circle.getArea()</code>? The answer is no. All the methods used before this chapter are static methods, which are defined using the static keyword. However, <code>getArea()</code> is non-static. It must be invoked from an object using <code>objectRefVar.methodName(arguments)</code> (e.g., myCircle.getArea())</p>
+<h2 id="4-The-null-Value"><a href="#4-The-null-Value" class="headerlink" title="4. The null Value"></a>4. The null Value</h2><p>If a data field of a reference type does not reference any object, the data field holds a special literal value, null. </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//you will get null without error</span></span><br><span class="line">String[] str1 = <span class="keyword">new</span> <span class="title class_">String</span>[<span class="number">10</span>];</span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; str1.length; i++)</span><br><span class="line">	System.out.println(str1[i]);</span><br><span class="line"><span class="comment">//you will get error: java: variable str might not have been initialized</span></span><br><span class="line">String str;</span><br><span class="line">System.out.println(str);</span><br></pre></td></tr></table></figure>
+
+<p>Cause: Java assigns <strong>no default value</strong> to a <strong>local variable</strong> inside a method. </p>
+<h2 id="5-Garbage-Collection"><a href="#5-Garbage-Collection" class="headerlink" title="5. Garbage Collection"></a>5. Garbage Collection</h2><p>As shown in the previous figure, after the assignment statement c1 &#x3D; c2, </p>
+<p>c1 points to the same object referenced by c2. </p>
+<p>The object previously referenced by c1 is no longer referenced. </p>
+<p>This object is known as garbage. Garbage is automatically collected by <em>Java Virtual Machine</em> (JVM). </p>
+<p>TIP: </p>
+<p>If you know that an object is no longer needed, you can explicitly assign null to a reference variable for the object. </p>
+<p>The JVM will automatically collect the space if the object is not referenced by any variable.</p>
+<h2 id="6-The-Date-Class"><a href="#6-The-Date-Class" class="headerlink" title="6. The Date Class"></a>6. The Date Class</h2><p>Java provides a system-independent encapsulation of date and time in the java.util.Date class. You can use the Date class to create an instance for the current date and time and use its toString method to return the date and time as a string. </p>
+<p>For example, the following code </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">java.util.<span class="type">Date</span> <span class="variable">date</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">java</span>.util.Date();</span><br><span class="line">System.out.println(date.toString());</span><br></pre></td></tr></table></figure>
+
+<p>displays a string like <code>Sun Mar 09 13:50:19 EST 2003</code>.</p>
+<h2 id="7-Static-Variables-Constants-and-Methods"><a href="#7-Static-Variables-Constants-and-Methods" class="headerlink" title="7. Static Variables, Constants, and Methods"></a>7. Static Variables, Constants, and Methods</h2><p><strong>Static variables</strong> are shared by all the instances of the class.</p>
+<p><strong>Static methods</strong> are not tied to a specific object. </p>
+<p><strong>Static constants</strong> are final variables shared by all the instances of the class.</p>
+<p>To declare static variables, constants, and methods, <em>use the static modifier</em>.</p>
+<h2 id="8-Visibility-Modifiers-and-Accessor-x2F-Mutator-Methods"><a href="#8-Visibility-Modifiers-and-Accessor-x2F-Mutator-Methods" class="headerlink" title="8. Visibility Modifiers and Accessor&#x2F; Mutator Methods"></a>8. Visibility Modifiers and Accessor&#x2F; Mutator Methods</h2><blockquote>
+<p>By default, the class, variable, or method can be accessed by any class in the same package</p>
+</blockquote>
+<ol>
+<li>public</li>
+</ol>
+<p> The class, data, or method is visible to any class in any package. </p>
+<ol start="2">
+<li>private</li>
+</ol>
+<p> The data or methods can be accessed only by the declaring class.</p>
+<p>  The get and set methods are used to read and modify private properties. </p>
+<img src="Java-Learning-Chapter-9-Object-and-Classes/001.png" style="zoom:75%;" />
+
+<p>The <strong>private modifier restricts access to within a class</strong>, the default modifier restricts access to within a package, and the <strong>public modifier enables unrestricted access</strong>. </p>
+<img src="Java-Learning-Chapter-9-Object-and-Classes/002.png" style="zoom:75%;" />
+
+<p>The default modifier on a class restricts access to <strong>within a package</strong>, and the public modifier enables unrestricted access. </p>
+<p>Make the C1 public and import it to page “class C3” and the C1 will be accessed</p>
+<p><strong>Why Data Fields Should Be private?</strong></p>
+<p>To protect data.</p>
+<p>To make code easy to maintain. </p>
+<p>Maybe…</p>
+<h2 id="9-Array-of-Objects"><a href="#9-Array-of-Objects" class="headerlink" title="9. Array of Objects"></a>9. Array of Objects</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Circle[] circleArray = <span class="keyword">new</span> <span class="title class_">Circle</span>[<span class="number">10</span>]; <span class="comment">//10 circles</span></span><br></pre></td></tr></table></figure>
+
+<p>An array of objects is actually an <em>array of reference variables</em>. So invoking circleArray[1].getArea() involves two levels of referencing as shown in the next figure. circleArray references to the entire array. circleArray[1] references to a Circle object. </p>
+<h2 id="10-Immutable-Objects-and-Classes"><a href="#10-Immutable-Objects-and-Classes" class="headerlink" title="10. Immutable Objects and Classes"></a>10. Immutable Objects and Classes</h2><blockquote>
+<p>a class to be immutable, it must mark all data fields private and provide no mutator methods and no accessor methods that would return a reference to a mutable data field object.</p>
+</blockquote>
+<p>If the contents of an object <u>cannot be changed once the object is created,</u> the object is called an <em>immutable object</em> and its class is called an <em>immutable class</em>. </p>
+<p>If you delete the set method in the Circle class in Listing 8.10, the class would be immutable because radius is private and cannot be changed without a set method. </p>
+<p><u>A class with <strong>all private</strong> data fields and <strong>without mutators</strong> is <strong>not necessarily immutable</strong>.</u> </p>
+<p>For example, the following class Student has all private data fields and no mutators, but it is mutable.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">BirthDate</span> &#123;  </span><br><span class="line">    <span class="keyword">private</span> <span class="type">int</span> year;  </span><br><span class="line">    <span class="keyword">private</span> <span class="type">int</span> month;  </span><br><span class="line">    <span class="keyword">private</span> <span class="type">int</span> day;    </span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">BirthDate</span><span class="params">(<span class="type">int</span> newYear, <span class="type">int</span> newMonth, <span class="type">int</span> newDay)</span> &#123;    </span><br><span class="line">        year = newYear;    </span><br><span class="line">        month = newMonth;    </span><br><span class="line">        day = newDay;  </span><br><span class="line">    &#125;    </span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setYear</span><span class="params">(<span class="type">int</span> newYear)</span> &#123;    </span><br><span class="line">        <span class="comment">//this method can change the value</span></span><br><span class="line">        year = newYear;  </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Student</span> &#123;  </span><br><span class="line">	<span class="keyword">private</span> <span class="type">int</span> id;  </span><br><span class="line">	<span class="keyword">private</span> BirthDate birthDate;  <span class="comment">//if year changed, BirthDate change too</span></span><br><span class="line">	<span class="keyword">public</span> <span class="title function_">Student</span><span class="params">(<span class="type">int</span> ssn, <span class="type">int</span> year, <span class="type">int</span> month, <span class="type">int</span> day)</span> &#123;    </span><br><span class="line">		id = ssn;    </span><br><span class="line">		birthDate = <span class="keyword">new</span> <span class="title class_">BirthDate</span>(year, month, day);  </span><br><span class="line">	&#125;  </span><br><span class="line">	<span class="keyword">public</span> <span class="type">int</span> <span class="title function_">getId</span><span class="params">()</span> &#123;    </span><br><span class="line">		<span class="keyword">return</span> id;  </span><br><span class="line">	&#125;  </span><br><span class="line">	<span class="keyword">public</span> BirthDate <span class="title function_">getBirthDate</span><span class="params">()</span> &#123;    </span><br><span class="line">		<span class="keyword">return</span> birthDate;  </span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="11-Scope-of-Variables"><a href="#11-Scope-of-Variables" class="headerlink" title="11. Scope of Variables"></a>11. Scope of Variables</h2><p>The scope of instance and static variables is the entire class. They can be declared anywhere inside a class.</p>
+<p>The scope of a local variable starts from its declaration and continues to the end of the block that contains the variable. A local variable must be initialized explicitly before it can be used.</p>
+<h2 id="12-The-this-Keyword"><a href="#12-The-this-Keyword" class="headerlink" title="12. The this Keyword"></a>12. <strong>The this Keyword</strong></h2><p>The this keyword is the name of a reference that <strong>refers to an object itself</strong>. One common use of the this keyword is reference a class’s <em>hidden data fields</em>. </p>
+<p>Another common use of the this keyword to enable a constructor to invoke another constructor of the same class. </p>
+<img src="Java-Learning-Chapter-9-Object-and-Classes/003.png" style="zoom:48%;" />
+
+<h2 id="13-UML-Class-Diagram"><a href="#13-UML-Class-Diagram" class="headerlink" title="13. UML Class Diagram"></a>13. UML Class Diagram</h2><img src="Java-Learning-Chapter-9-Object-and-Classes/004.png" style="zoom:48%;" />
+
+<p>The <a target="_blank" rel="noopener" href="https://domuki-main.github.io/2020/02/17/Jp2-L1/">Example</a> is in Question 2 of Java Programming 2, Lab 1</p>
+
+    </div>
+</article>
+
+        <!-- show the content of a category -->
+        
+      </div>
+      
+    </main>
+
+  </div>
+  <!-- the footer of the page -->
+  <!-- Footer -->
+<footer class="blog-footer font-small">
+
+    <!-- Footer Elements -->
+    <div class="footer-icons container">
+  
+      <!-- Grid row-->
+      <div class="row">
+  
+        <!-- Grid column -->
+        
+          <div class="flex-center">
+            <!-- Facebook -->
+             
+            <!-- Twitter -->
+             
+            <!-- Google +-->
+             
+            <!--Instagram-->
+             
+            <!--Pinterest-->
+             
+          </div>
+        
+        <!-- Grid column -->
+  
+      </div>
+      <!-- Grid row-->
+  
+    </div>
+    <!-- Footer Elements -->
+  
+    <!-- Copyright -->
+    <div class="footer-copyright text-center mt-3">© 2020 Copyright:
+      <a href="http://domuki.top ">http://domuki.top</a>
+    </div>
+    <!-- Copyright -->
+  
+  </footer>
+  <!-- Footer --> 
+  <button class="back-top" onclick="topFunction()">
+    Top
+  </button>
+  <script>
+    //Get the button
+    var mybutton = document.getElementsByClassName("back-top");
+    
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton[0].style.display = 'block';
+      } else {
+        mybutton[0].style.display = 'none';
+      }
+    }
+    
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+    </script>
+  
+</body>
+
+ 
+</html>

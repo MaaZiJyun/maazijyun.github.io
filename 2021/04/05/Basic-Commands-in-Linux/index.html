@@ -1,0 +1,252 @@
+<!-- This is the outermost frame -->
+<!-- Create by MaaZiJyun on 27 Aug 2022 -->
+<!DOCTYPE html>
+<html>
+  <!-- the head of the html -->
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" name="viewport">
+    <!-- more meta data settings -->
+    
+       <meta name="author" content="MaaZiJyun"> 
+     
+    
+        <meta name="subtitle" content="Welcome to My Home"> 
+     
+    
+        <meta name="description" content="Welcome to visit my personal blog. I usually write some notes and articales here to share with others. Hope you could find what you are interested in"> 
+    
+     
+    <!-- generate the title of the web page -->
+     
+
+    <!-- the title of the web page -->
+    <title>
+        Basic Commands in Linux
+    </title>
+
+    <!-- the icon of the web page -->
+    
+        <link rel="icon" href="/img/domukiico.ico ">
+     
+
+    <!-- CSS list -->
+     
+         
+            
+                <link rel="stylesheet" href="/css/style.css ">
+            
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css ">
+             
+         
+     
+    <!-- JS list -->
+     
+         
+            
+                <script src="/js/helper.css "></script>
+            
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js "></script>
+             
+         
+     
+<meta name="generator" content="Hexo 6.2.0"></head>
+  <!-- the body of the html -->
+  <!-- The interface to connect the body content -->
+<body>
+
+  <!-- the header of the page -->
+   
+    
+  <header class="header" style="background-color: black;">
+    
+  <!-- Navigation-->
+  <nav class="navbar navbar-expand-lg navbar-dark justify-content-center">
+    <div class="container p-2">
+      <a href="/" class="navbar-brand logo">
+        MaaZiJyun' Blog
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span
+          class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ms-auto">
+          
+            <li class="nav-item">
+              <a href="/" class="nav-link active">
+                Home
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/archives" class="nav-link active">
+                Archives
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/categories" class="nav-link active">
+                Categories
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/tags" class="nav-link active">
+                Tags
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/about" class="nav-link active">
+                About
+              </a>
+            </li>
+            
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header> 
+   
+
+  <!-- the main part of the page -->
+  <div class="content">
+
+    <main class="main">
+
+      <div class="main-content">
+
+        <!-- if the current page is home, then the content of hone will be shown up -->
+        
+          <article class="post">
+    <div class="post-title">
+        <h2 class="title">
+            Basic Commands in Linux
+        </h2>
+    </div>
+    <div class="post-meta">
+        <span class="post-time">
+            2021-04-05
+        </span>
+    </div>
+    <div class="post-content">
+        <p><em><strong>whoiam</strong></em> to identify the user</p>
+<p><em><strong>pwd</strong></em> to show what dir are you in</p>
+<p><em><strong>touch a.txt</strong></em> Create a file named ‘a.txt’ in the current directory</p>
+<span id="more"></span>
+
+<p><em><strong>echo “sometext”</strong></em> Print out the text ‘this is a text’ to the computer screen.</p>
+<p><em><strong>echo “this is a text” &gt; a.txt</strong></em> paste content to a.txt (overwrite)</p>
+<p><em><strong>echo “this is a text” &gt;&gt; a.txt</strong></em> paste content to a.txt after the content in a.txt</p>
+<p><strong>more</strong> and <strong>less</strong> command can be used to view the content of a file:</p>
+<blockquote>
+<p><em><strong>more a.txt</strong></em> </p>
+<p><em><strong>less a.txt</strong></em></p>
+</blockquote>
+<p>copy the content of a.txt into b.txt using <strong>more</strong> command:</p>
+<blockquote>
+<p><em><strong>more a.txt &gt; b.txt</strong></em></p>
+</blockquote>
+<p><em><strong>ls</strong></em> command will list directories and files in a directory. </p>
+<p>type: <strong>cd $root</strong> change to the root directory</p>
+<p><em><strong>ls -a</strong></em> list all the name of the folders and files in root dir</p>
+<p><em><strong>ls -l</strong></em> list all the information of the folders and files in root dir</p>
+<p>To create directories, use the <em><strong>mkdir <directory_name></strong></em> command</p>
+<p>To change directories, use the <em><strong>cd <directory_name></strong></em> command</p>
+<p>the <em><strong>cp</strong></em> command to make a copy of a file, with a new name</p>
+<p>To rename a file, you can use the <em><strong>mv</strong></em> command</p>
+<p>Delete files by using the <em><strong>rm</strong></em> command. </p>
+<p>To delete a directory in Linux, use the <em><strong>rmdir directory_name</strong></em> command</p>
+<p>To remove <u>non-empty directory</u> (and also for empty directory), use <em><strong>rm -r</strong></em></p>
+<p>(Tips: The deletion process will skip the question if using <em><strong>–f</strong></em> switch (force) e.g. <em><strong>rm IT -fr</strong></em> )</p>
+<p>To view currently running process(es) in user space, use the <em><strong>ps</strong></em> command</p>
+<p>A current process can be suspended by pressing <strong>Ctrl+Z</strong> (e.g. open an application and then pressing Ctrl+Z will cause the application to stop and display the shell).</p>
+<p><strong>vim</strong></p>
+<p>this will run the vim text editor. Press <strong>Ctrl+Z</strong>. </p>
+<p>When user suspend a process, the process can be brought back by using the command <em><strong>fg</strong></em>. To bring back the Vim editor,</p>
+<p>(to exit vim - press Esc, then type :q and press Enter)</p>
+<p>to get help about a specific command e.g. <em><strong>man ls</strong></em> or use –help switch e.g. <em><strong>ls –help</strong></em> </p>
+<p>Difference: </p>
+<p><em><strong>–help</strong></em> <em>can give a quick usage summary but <strong>man</strong> pages are usually much more detailed, better formatted</em></p>
+
+    </div>
+</article>
+
+        <!-- show the content of a category -->
+        
+      </div>
+      
+    </main>
+
+  </div>
+  <!-- the footer of the page -->
+  <!-- Footer -->
+<footer class="blog-footer font-small">
+
+    <!-- Footer Elements -->
+    <div class="footer-icons container">
+  
+      <!-- Grid row-->
+      <div class="row">
+  
+        <!-- Grid column -->
+        
+          <div class="flex-center">
+            <!-- Facebook -->
+             
+            <!-- Twitter -->
+             
+            <!-- Google +-->
+             
+            <!--Instagram-->
+             
+            <!--Pinterest-->
+             
+          </div>
+        
+        <!-- Grid column -->
+  
+      </div>
+      <!-- Grid row-->
+  
+    </div>
+    <!-- Footer Elements -->
+  
+    <!-- Copyright -->
+    <div class="footer-copyright text-center mt-3">© 2020 Copyright:
+      <a href="http://domuki.top ">http://domuki.top</a>
+    </div>
+    <!-- Copyright -->
+  
+  </footer>
+  <!-- Footer --> 
+  <button class="back-top" onclick="topFunction()">
+    Top
+  </button>
+  <script>
+    //Get the button
+    var mybutton = document.getElementsByClassName("back-top");
+    
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton[0].style.display = 'block';
+      } else {
+        mybutton[0].style.display = 'none';
+      }
+    }
+    
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+    </script>
+  
+</body>
+
+ 
+</html>

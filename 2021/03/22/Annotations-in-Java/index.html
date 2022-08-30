@@ -1,0 +1,274 @@
+<!-- This is the outermost frame -->
+<!-- Create by MaaZiJyun on 27 Aug 2022 -->
+<!DOCTYPE html>
+<html>
+  <!-- the head of the html -->
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" name="viewport">
+    <!-- more meta data settings -->
+    
+       <meta name="author" content="MaaZiJyun"> 
+     
+    
+        <meta name="subtitle" content="Welcome to My Home"> 
+     
+    
+        <meta name="description" content="Welcome to visit my personal blog. I usually write some notes and articales here to share with others. Hope you could find what you are interested in"> 
+    
+     
+    <!-- generate the title of the web page -->
+     
+
+    <!-- the title of the web page -->
+    <title>
+        Annotations in Java
+    </title>
+
+    <!-- the icon of the web page -->
+    
+        <link rel="icon" href="/img/domukiico.ico ">
+     
+
+    <!-- CSS list -->
+     
+         
+            
+                <link rel="stylesheet" href="/css/style.css ">
+            
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css ">
+             
+         
+     
+    <!-- JS list -->
+     
+         
+            
+                <script src="/js/helper.css "></script>
+            
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js "></script>
+             
+         
+     
+<meta name="generator" content="Hexo 6.2.0"></head>
+  <!-- the body of the html -->
+  <!-- The interface to connect the body content -->
+<body>
+
+  <!-- the header of the page -->
+   
+    
+  <header class="header" style="background-color: black;">
+    
+  <!-- Navigation-->
+  <nav class="navbar navbar-expand-lg navbar-dark justify-content-center">
+    <div class="container p-2">
+      <a href="/" class="navbar-brand logo">
+        MaaZiJyun' Blog
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span
+          class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ms-auto">
+          
+            <li class="nav-item">
+              <a href="/" class="nav-link active">
+                Home
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/archives" class="nav-link active">
+                Archives
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/categories" class="nav-link active">
+                Categories
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/tags" class="nav-link active">
+                Tags
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/about" class="nav-link active">
+                About
+              </a>
+            </li>
+            
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header> 
+   
+
+  <!-- the main part of the page -->
+  <div class="content">
+
+    <main class="main">
+
+      <div class="main-content">
+
+        <!-- if the current page is home, then the content of hone will be shown up -->
+        
+          <article class="post">
+    <div class="post-title">
+        <h2 class="title">
+            Annotations in Java
+        </h2>
+    </div>
+    <div class="post-meta">
+        <span class="post-time">
+            2021-03-22
+        </span>
+    </div>
+    <div class="post-content">
+        <blockquote>
+<p>Annotations are used to provide supplement information about a program.</p>
+</blockquote>
+<span id="more"></span>
+
+<h1 id="What-is-Annotations"><a href="#What-is-Annotations" class="headerlink" title="What is Annotations"></a>What is Annotations</h1><p>Annotations are also called metadata,a data used to describe data, such as, <code>@Override</code> and <code>@Deprecated</code>.</p>
+<p>It was imported in JDK1.5 and used to explain the code.</p>
+<ul>
+<li>Annotations start with ‘@’.</li>
+<li>Annotations do not change action of a compiled program.</li>
+<li>Annotations help to associate metadata (information) to the program elements.</li>
+<li>Annotations are not pure comments as they can change the way a program is treated by compiler.</li>
+</ul>
+<h1 id="Usages"><a href="#Usages" class="headerlink" title="Usages"></a>Usages</h1><ol>
+<li>Creating <em>javadoc</em> Documents via metadata from annotations in code.</li>
+<li>Checking compile</li>
+<li>Dynamic processing at compile time</li>
+<li>Dynamic processing at runtime</li>
+</ol>
+<h1 id="Categories"><a href="#Categories" class="headerlink" title="Categories"></a>Categories</h1><ol>
+<li><p><strong>Java default annotations</strong> </p>
+<p>Including <em>@Override</em>, <em>@Deprecated</em> (Indicate that a class or method is out of date) and <em>@SuppressWarnings</em> (Mark the warnings to be ignored)</p>
+</li>
+<li><p><strong>Meta annotations</strong></p>
+<p>meta annotations are annotations used to define annotations.</p>
+<p>Including <em>@Retention</em> (indicating the stage at which the annotation is retained), <em>@Targe</em>t (indicating the scope of the annotation use), <em>@Inherited</em> (indicating that the annotation can be inherited), <em>@Documented</em> (indicating whether to generate a javadoc document)</p>
+</li>
+<li><p><strong>Customize</strong></p>
+<p>Defining by user</p>
+</li>
+</ol>
+<h1 id="Default-annotations"><a href="#Default-annotations" class="headerlink" title="Default annotations"></a>Default annotations</h1><h2 id="Deprecated"><a href="#Deprecated" class="headerlink" title="@Deprecated"></a>@Deprecated</h2><p>Indicating the <strong>elements which are out of date</strong>. The warning will be throwed by compiler to tell developer that he is calling a out-of-date element.</p>
+<h3 id="Override"><a href="#Override" class="headerlink" title="@Override"></a>@Override</h3><p>Mark that this method <strong>covers the method of the parent class</strong>.</p>
+<h3 id="SuppressWarnings"><a href="#SuppressWarnings" class="headerlink" title="@SuppressWarnings"></a>@SuppressWarnings</h3><p>Used to selectively <strong>turn off the compiler’s warnings</strong> for classes, methods, member variables, and variable initialization.</p>
+<h3 id="SafeVarargs"><a href="#SafeVarargs" class="headerlink" title="@SafeVarargs"></a>@SafeVarargs</h3><p>Parameter safety type annotation. Its purpose is to remind developers not to <strong>use parameters to do some unsafe operations</strong>. Its existence will prevent the compiler from generating <em>unchecked warnings</em>. It was added in the Java 1.7.</p>
+<h3 id="FunctionalInterface"><a href="#FunctionalInterface" class="headerlink" title="@FunctionalInterface"></a>@FunctionalInterface</h3><p><a target="_blank" rel="noopener" href="https://docs.oracle.com/javase/8/docs/api/java/lang/FunctionalInterface.html">https://docs.oracle.com/javase/8/docs/api/java/lang/FunctionalInterface.html</a></p>
+<h1 id="Meta-annotations"><a href="#Meta-annotations" class="headerlink" title="Meta annotations"></a>Meta annotations</h1><h3 id="Retention"><a href="#Retention" class="headerlink" title="@Retention"></a>@Retention</h3><p>The RetentionPolicy.SOURCE annotation is only reserved in the source code phase, and it will be discarded and ignored when the compiler compiles.</p>
+<p>The RetentionPolicy.CLASS annotation is only retained until compilation is in progress, and it will not be loaded into the JVM. Such as Java built-in annotations, @Override, @Deprecated, @SuppressWarnning, etc.</p>
+<p>The RetentionPolicy.RUNTIME annotation can be retained until the program is running, it will be loaded into the JVM, so they can be obtained when the program is running. Such as @Controller, @Autowired, @RequestMapping, etc. in SpringMvc.</p>
+<h3 id="Documented"><a href="#Documented" class="headerlink" title="@Documented"></a>@Documented</h3><p>Its function is to be able to include the elements in the annotations into the Javadoc.</p>
+<h3 id="Target"><a href="#Target" class="headerlink" title="@Target"></a>@Target</h3><ul>
+<li>ElementType.ANNOTATION_TYPE can annotate an annotation</li>
+<li>ElementType.CONSTRUCTOR can annotate the construction method</li>
+<li>ElementType.FIELD can annotate attributes</li>
+<li>ElementType.LOCAL_VARIABLE can annotate local variables</li>
+<li>ElementType.METHOD can annotate methods</li>
+<li>ElementType.PACKAGE can annotate a package</li>
+<li>ElementType.PARAMETER can annotate the parameters in a method</li>
+<li>ElementType.TYPE can annotate a type, such as class, interface, enumeration</li>
+</ul>
+<h3 id="Inherite"><a href="#Inherite" class="headerlink" title="@Inherite"></a>@Inherite</h3><p>This is a annotation for annotations. It means that subclasses of annotated classes are considered having the same annotation as their superclass.</p>
+<h3 id="Repeatable"><a href="#Repeatable" class="headerlink" title="@Repeatable"></a>@Repeatable</h3><p>Repeatable usage scenarios: When you need to use the same annotation multiple times, you often need to use @Repeatable.</p>
+<h1 id="State-annotations"><a href="#State-annotations" class="headerlink" title="State annotations"></a>State annotations</h1><p>Java language uses <em><strong>@interface</strong></em> syntax to define annotations (Annotation), and its format is as follows:</p>
+<p>For example:</p>
+<h2 id="Use-interface-to-define"><a href="#Use-interface-to-define" class="headerlink" title="Use @interface to define"></a>Use @interface to define</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="meta">@interface</span> Report &#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Add-parameters-and-default-values"><a href="#Add-parameters-and-default-values" class="headerlink" title="Add parameters and default values"></a>Add parameters and default values</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="meta">@interface</span> Report &#123;</span><br><span class="line">    <span class="type">int</span> <span class="title function_">type</span><span class="params">()</span> <span class="keyword">default</span> <span class="number">0</span>;</span><br><span class="line">    String <span class="title function_">level</span><span class="params">()</span> <span class="keyword">default</span> <span class="string">&quot;info&quot;</span>;</span><br><span class="line">    String <span class="title function_">value</span><span class="params">()</span> <span class="keyword">default</span> <span class="string">&quot;&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Use-Meta-annotations"><a href="#Use-Meta-annotations" class="headerlink" title="Use Meta annotations"></a>Use Meta annotations</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Target(ElementType.TYPE)</span></span><br><span class="line"><span class="meta">@Retention(RetentionPolicy.RUNTIME)</span></span><br><span class="line"><span class="keyword">public</span> <span class="meta">@interface</span> Report &#123;</span><br><span class="line">    <span class="type">int</span> <span class="title function_">type</span><span class="params">()</span> <span class="keyword">default</span> <span class="number">0</span>;</span><br><span class="line">    String <span class="title function_">level</span><span class="params">()</span> <span class="keyword">default</span> <span class="string">&quot;info&quot;</span>;</span><br><span class="line">    String <span class="title function_">value</span><span class="params">()</span> <span class="keyword">default</span> <span class="string">&quot;&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+    </div>
+</article>
+
+        <!-- show the content of a category -->
+        
+      </div>
+      
+    </main>
+
+  </div>
+  <!-- the footer of the page -->
+  <!-- Footer -->
+<footer class="blog-footer font-small">
+
+    <!-- Footer Elements -->
+    <div class="footer-icons container">
+  
+      <!-- Grid row-->
+      <div class="row">
+  
+        <!-- Grid column -->
+        
+          <div class="flex-center">
+            <!-- Facebook -->
+             
+            <!-- Twitter -->
+             
+            <!-- Google +-->
+             
+            <!--Instagram-->
+             
+            <!--Pinterest-->
+             
+          </div>
+        
+        <!-- Grid column -->
+  
+      </div>
+      <!-- Grid row-->
+  
+    </div>
+    <!-- Footer Elements -->
+  
+    <!-- Copyright -->
+    <div class="footer-copyright text-center mt-3">© 2020 Copyright:
+      <a href="http://domuki.top ">http://domuki.top</a>
+    </div>
+    <!-- Copyright -->
+  
+  </footer>
+  <!-- Footer --> 
+  <button class="back-top" onclick="topFunction()">
+    Top
+  </button>
+  <script>
+    //Get the button
+    var mybutton = document.getElementsByClassName("back-top");
+    
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton[0].style.display = 'block';
+      } else {
+        mybutton[0].style.display = 'none';
+      }
+    }
+    
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+    </script>
+  
+</body>
+
+ 
+</html>

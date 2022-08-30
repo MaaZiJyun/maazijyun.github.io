@@ -1,0 +1,283 @@
+<!-- This is the outermost frame -->
+<!-- Create by MaaZiJyun on 27 Aug 2022 -->
+<!DOCTYPE html>
+<html>
+  <!-- the head of the html -->
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" name="viewport">
+    <!-- more meta data settings -->
+    
+       <meta name="author" content="MaaZiJyun"> 
+     
+    
+        <meta name="subtitle" content="Welcome to My Home"> 
+     
+    
+        <meta name="description" content="Welcome to visit my personal blog. I usually write some notes and articales here to share with others. Hope you could find what you are interested in"> 
+    
+     
+    <!-- generate the title of the web page -->
+     
+
+    <!-- the title of the web page -->
+    <title>
+        Java Programming 2 Lab2
+    </title>
+
+    <!-- the icon of the web page -->
+    
+        <link rel="icon" href="/img/domukiico.ico ">
+     
+
+    <!-- CSS list -->
+     
+         
+            
+                <link rel="stylesheet" href="/css/style.css ">
+            
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css ">
+             
+         
+     
+    <!-- JS list -->
+     
+         
+            
+                <script src="/js/helper.css "></script>
+            
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js "></script>
+             
+         
+     
+<meta name="generator" content="Hexo 6.2.0"></head>
+  <!-- the body of the html -->
+  <!-- The interface to connect the body content -->
+<body>
+
+  <!-- the header of the page -->
+   
+    
+  <header class="header" style="background-color: black;">
+    
+  <!-- Navigation-->
+  <nav class="navbar navbar-expand-lg navbar-dark justify-content-center">
+    <div class="container p-2">
+      <a href="/" class="navbar-brand logo">
+        MaaZiJyun' Blog
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span
+          class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ms-auto">
+          
+            <li class="nav-item">
+              <a href="/" class="nav-link active">
+                Home
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/archives" class="nav-link active">
+                Archives
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/categories" class="nav-link active">
+                Categories
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/tags" class="nav-link active">
+                Tags
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/about" class="nav-link active">
+                About
+              </a>
+            </li>
+            
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header> 
+   
+
+  <!-- the main part of the page -->
+  <div class="content">
+
+    <main class="main">
+
+      <div class="main-content">
+
+        <!-- if the current page is home, then the content of hone will be shown up -->
+        
+          <article class="post">
+    <div class="post-title">
+        <h2 class="title">
+            Java Programming 2 Lab2
+        </h2>
+    </div>
+    <div class="post-meta">
+        <span class="post-time">
+            2020-02-20
+        </span>
+    </div>
+    <div class="post-content">
+        <h2 id="Question-1"><a href="#Question-1" class="headerlink" title="Question 1"></a>Question 1</h2><p>The <strong>InventoryItem</strong> class holds simple data about an item in an inventory. A description of the item is stored in the description field and the number of units on hand is stored in the units field. The figure below shows the UML diagram for the class</p>
+<span id="more"></span>
+
+<p><img src="/JP2-L2/001.png"></p>
+<p>The first <u>constructor assigns an empty string (“ “) to the description field and assigns 0</u> to the units field. The second constructor accepts a String argument, d, which is assigned to the description field, and assigns 0 to the units field. The third constructor accepts a String argument, d, which is assigned to the description field and an int argument, u, which is assigned to the units field.</p>
+<p>Write a program to ask for the number of inventory items you wish to store into the system. For each item, enter the description and the units. When all items with their descriptions and units have been entered, display the output to the screen. Note: use array of objects to store the information. You may use any constructor that is suitable for your application. Input (Information of the inventory) to the system must be done via Scanner or JOptionPane.</p>
+<p><img src="/JP2-L2/002.png"></p>
+<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution:"></a>Solution:</h3><blockquote>
+<p>Class InventoryItem</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">InventoryItem</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//- description:String</span></span><br><span class="line">    <span class="keyword">private</span> <span class="type">String</span> <span class="variable">description</span> <span class="operator">=</span> <span class="string">&quot;&quot;</span>;</span><br><span class="line">    <span class="comment">//- units:int</span></span><br><span class="line">    <span class="keyword">private</span> <span class="type">int</span> <span class="variable">units</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//+ InventoryItem()</span></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">InventoryItem</span><span class="params">()</span>&#123;&#125;</span><br><span class="line">    <span class="comment">//+ InventoryItem(d:String)</span></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">InventoryItem</span><span class="params">(String description)</span>&#123;</span><br><span class="line">        <span class="built_in">this</span>.description = description;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//+ InventoryItem(d:String, u:int)</span></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">InventoryItem</span><span class="params">(String description, <span class="type">int</span> units)</span>&#123;</span><br><span class="line">        <span class="built_in">this</span>.description = description;</span><br><span class="line">        <span class="built_in">this</span>.units = units;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//+ setDescription(d:String):void</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setDescription</span><span class="params">(String description)</span>&#123;</span><br><span class="line">        <span class="built_in">this</span>.description = description;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//+ setUnits(u:int):void</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setUnits</span><span class="params">(<span class="type">int</span> units)</span>&#123;</span><br><span class="line">        <span class="built_in">this</span>.units = units;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//+ getDescription():String</span></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">getDescription</span><span class="params">()</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> description;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//+ getUnits():int</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">getUnits</span><span class="params">()</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> units;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>Class Main:</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Main</span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line"></span><br><span class="line">        <span class="type">Scanner</span> <span class="variable">sc</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);</span><br><span class="line">        <span class="type">int</span> <span class="variable">index</span> <span class="operator">=</span> <span class="number">10</span>;</span><br><span class="line">        <span class="type">String</span> <span class="variable">number</span> <span class="operator">=</span> <span class="string">&quot;&quot;</span>;</span><br><span class="line">        InventoryItem[] I = <span class="keyword">new</span> <span class="title class_">InventoryItem</span>[index];</span><br><span class="line">        System.out.println(<span class="string">&quot;Enter data for &quot;</span> + index + <span class="string">&quot; inventory items\n&quot;</span>);</span><br><span class="line">        <span class="comment">//input the information</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; I.length; i++) &#123;</span><br><span class="line">            <span class="comment">//different class in this situation need initialization</span></span><br><span class="line">            I[i] = <span class="keyword">new</span> <span class="title class_">InventoryItem</span>();</span><br><span class="line">            System.out.print(<span class="string">&quot;Enter the description for item &quot;</span> +(i+<span class="number">1</span>)+<span class="string">&quot;: &quot;</span>);</span><br><span class="line">            I[i].setDescription(sc.nextLine());</span><br><span class="line">            System.out.print(<span class="string">&quot;Enter the units for item &quot;</span> +(i+<span class="number">1</span>)+<span class="string">&quot;: &quot;</span>);</span><br><span class="line">            <span class="comment">//if user input string into int field</span></span><br><span class="line">            <span class="keyword">while</span> (<span class="literal">true</span>) &#123;</span><br><span class="line">                <span class="keyword">try</span> &#123;</span><br><span class="line">                    number = sc.nextLine();</span><br><span class="line">                    I[i].setUnits(Integer.parseInt(number));</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125; <span class="keyword">catch</span> (NumberFormatException e) &#123;</span><br><span class="line">                    System.out.println(<span class="string">&quot;not available&quot;</span>);</span><br><span class="line">                    sc = <span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            System.out.println();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//print the result</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; I.length; i++) &#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;Item &quot;</span> +(i+<span class="number">1</span>));</span><br><span class="line">            System.out.println(<span class="string">&quot;Description: &quot;</span> + I[i].getDescription());</span><br><span class="line">            System.out.println(<span class="string">&quot;Units: &quot;</span> + I[i].getUnits());</span><br><span class="line">            System.out.println();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="Question-2"><a href="#Question-2" class="headerlink" title="Question 2"></a>Question 2</h2><ol>
+<li><p>Write a class named <code>RetailItem</code> that holds data about an item in a retail store. The class should have the following properties: </p>
+<p>• The <code>description</code> field that references a <strong>String</strong> object that holds a brief description of the item</p>
+<p>• The <code>unitsOnHand</code> field is an <strong>int</strong> variable that holds the number of units currently in inventory</p>
+<p>• The <code>price</code> field is a <strong>double</strong> that holds the item’s retail price </p>
+<p>• A constructor that accepts arguments for each field, appropriate mutator methods that store values in these fields, and accessor methods that return the values in these fields.</p>
+</li>
+<li><p>Write a <code>CashRegister</code> class that can be used with the <code>RetailItem</code> class above. The <code>CashRegister</code> should simulate the sale of a retail item. The class should have the following properties:</p>
+<p>• A constructor that accepts a <code>RetailItem</code> object as an argument and an integer that represents the <code>quantity</code> of items being purchased</p>
+<p>• The <code>getSubTotal</code> method that returns the subtotal of the sale, which is the <code>quantity</code> multiplied by the <code>price</code>. This method must get the <code>price</code> from the <code>RetailItem</code> object that was passed as an argument to the constructor</p>
+<p>• The <code>getTax</code> method that should return the amount of sales tax on the purchase. The sales tax rate is 6 percent of a retail sale</p>
+<p>• The <code>getTotal</code> method that returns the total of the sale, which is the subtotal plus the sales tax.</p>
+</li>
+</ol>
+<p><img src="/JP2-L2/003.png"></p>
+<table>
+<thead>
+<tr>
+<th>RetailItem</th>
+<th>CashRegister</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>description: String<br>unitsOnHand: int<br>price: double</td>
+<td>quantity:int</td>
+</tr>
+<tr>
+<td>RetailItem()<br>RetailItem(d:String, u:int, p:double)<br>setDescription(d:String):void<br>setUnitsOnHand(u:int):void<br>setPrice(p:double):void<br>setDescription():String<br>setUnitsOnHand():int<br>setPrice():double</td>
+<td>CashRegister(r:RetailItem, q:int)<br>getSubTotal():double<br>getTax():double<br>getTotal():double</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>Class RetailItem</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">RetailItem</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> String description;</span><br><span class="line">    <span class="keyword">private</span> <span class="type">int</span> unitsOnHand;</span><br><span class="line">    <span class="keyword">private</span> <span class="type">double</span> price;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">RetailItem</span><span class="params">()</span>&#123;&#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">RetailItem</span><span class="params">(String description, <span class="type">int</span> unitsOnHand, <span class="type">double</span> price)</span>&#123;</span><br><span class="line">        <span class="built_in">this</span>.description = description;</span><br><span class="line">        <span class="built_in">this</span>.unitsOnHand = unitsOnHand;</span><br><span class="line">        <span class="built_in">this</span>.price = price;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setDescription</span><span class="params">(String description)</span>&#123;</span><br><span class="line">        <span class="built_in">this</span>.description = description;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setUnitsOnHand</span><span class="params">(<span class="type">int</span> unitsOnHand)</span>&#123;</span><br><span class="line">        <span class="built_in">this</span>.unitsOnHand = unitsOnHand;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setPrice</span><span class="params">(<span class="type">double</span> price)</span>&#123;</span><br><span class="line">        <span class="built_in">this</span>.price = price;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">getDescription</span><span class="params">()</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> description;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">getUnitsOnHand</span><span class="params">()</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> unitsOnHand;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">double</span> <span class="title function_">getPrice</span><span class="params">()</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> price;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>Class CashRegister</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">CashRegister</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> RetailItem retailItem;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> quantity;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">CashRegister</span><span class="params">(RetailItem retailItem, <span class="type">int</span> quantity)</span>&#123;</span><br><span class="line">        <span class="built_in">this</span>.retailItem = retailItem;</span><br><span class="line">        <span class="built_in">this</span>.quantity = quantity;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setQuantity</span><span class="params">()</span>&#123;</span><br><span class="line">        <span class="built_in">this</span>.quantity = quantity;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="type">double</span> <span class="title function_">getSubTotal</span><span class="params">()</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> quantity * retailItem.getPrice();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">double</span> <span class="title function_">getTax</span><span class="params">()</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0.06</span> * getSubTotal();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">double</span> <span class="title function_">getTotal</span><span class="params">()</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> getSubTotal() + getTax();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>Class Main</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Main</span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line"></span><br><span class="line">        <span class="type">Scanner</span> <span class="variable">sc</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);</span><br><span class="line">        <span class="type">RetailItem</span> <span class="variable">R</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">RetailItem</span>();</span><br><span class="line">        System.out.println(<span class="string">&quot;Price?&quot;</span>);</span><br><span class="line">        R.setPrice(sc.nextInt());</span><br><span class="line">        System.out.println(<span class="string">&quot;quantity?&quot;</span>);</span><br><span class="line">        <span class="type">int</span> <span class="variable">quantity</span> <span class="operator">=</span> sc.nextInt();</span><br><span class="line">        <span class="type">CashRegister</span> <span class="variable">C</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">CashRegister</span>(R, quantity);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="string">&quot;\n\n\n\n&quot;</span>);</span><br><span class="line">        System.out.println(<span class="string">&quot;\n\n\n\n&quot;</span>);</span><br><span class="line">        System.out.println(<span class="string">&quot;SALES RECEIPT&quot;</span>);</span><br><span class="line">        System.out.println(<span class="string">&quot;---------------------&quot;</span>);</span><br><span class="line">        System.out.println(<span class="string">&quot;Unit Price: RM&quot;</span> </span><br><span class="line">        + String.format(<span class="string">&quot;%.2f&quot;</span>, R.getPrice()));</span><br><span class="line">        </span><br><span class="line">        System.out.println(<span class="string">&quot;Quantity: &quot;</span> + quantity);</span><br><span class="line">        </span><br><span class="line">        System.out.println(<span class="string">&quot;Subtotal: RM&quot;</span> </span><br><span class="line">        + String.format(<span class="string">&quot;%.2f&quot;</span>, C.getSubTotal()));</span><br><span class="line">        </span><br><span class="line">        System.out.println(<span class="string">&quot;Sales Tax: RM&quot;</span> </span><br><span class="line">        + String.format(<span class="string">&quot;%.2f&quot;</span>, C.getTax()));</span><br><span class="line">        </span><br><span class="line">        System.out.println(<span class="string">&quot;Total: RM&quot;</span> + String.format(<span class="string">&quot;%.2f&quot;</span>, C.getTotal()));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>Note: For <em>RetailItem</em> data: description is “shirt”, units on hand are 200, price is RM10.00. </p>
+<p>For <em>CashRegister</em> data: quantity is 5.</p>
+
+    </div>
+</article>
+
+        <!-- show the content of a category -->
+        
+      </div>
+      
+    </main>
+
+  </div>
+  <!-- the footer of the page -->
+  <!-- Footer -->
+<footer class="blog-footer font-small">
+
+    <!-- Footer Elements -->
+    <div class="footer-icons container">
+  
+      <!-- Grid row-->
+      <div class="row">
+  
+        <!-- Grid column -->
+        
+          <div class="flex-center">
+            <!-- Facebook -->
+             
+            <!-- Twitter -->
+             
+            <!-- Google +-->
+             
+            <!--Instagram-->
+             
+            <!--Pinterest-->
+             
+          </div>
+        
+        <!-- Grid column -->
+  
+      </div>
+      <!-- Grid row-->
+  
+    </div>
+    <!-- Footer Elements -->
+  
+    <!-- Copyright -->
+    <div class="footer-copyright text-center mt-3">© 2020 Copyright:
+      <a href="http://domuki.top ">http://domuki.top</a>
+    </div>
+    <!-- Copyright -->
+  
+  </footer>
+  <!-- Footer --> 
+  <button class="back-top" onclick="topFunction()">
+    Top
+  </button>
+  <script>
+    //Get the button
+    var mybutton = document.getElementsByClassName("back-top");
+    
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton[0].style.display = 'block';
+      } else {
+        mybutton[0].style.display = 'none';
+      }
+    }
+    
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+    </script>
+  
+</body>
+
+ 
+</html>

@@ -1,0 +1,411 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+body {
+  width: 100%;
+  height: 100%;
+}
+.categories {
+  font-family: "Times New Roman", Times, serif;
+}
+.categories .page-type-title {
+  padding: 10vh 0;
+}
+.categories h1 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 8vw;
+}
+.categories .category-list {
+  list-style: none;
+  margin: 0 10vw;
+  padding: 0;
+}
+.categories .category-list .category-list-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 3vh;
+  transition: 0.5s;
+}
+.categories .category-list .category-list-item .category-list-link {
+  padding: 0.5vh 0;
+  margin-right: 2.5vw;
+}
+.categories .category-list .category-list-item a {
+  color: #000;
+  text-decoration: none;
+}
+.categories .category-list .category-list-item:hover {
+  font-weight: bold;
+  font-size: 5vh;
+}
+.tags {
+  font-family: "Times New Roman", Times, serif;
+  height: 100%;
+}
+.tags h1 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 8vw;
+}
+.tags .page-type-title {
+  padding: 10vh 0;
+}
+.tags .tag-list {
+  list-style: none;
+  padding: 0;
+}
+.tags .tag-list .tag-list-item {
+  display: inline-block;
+  position: relative;
+  margin: 3vh 3vw;
+  word-wrap: break-word;
+  font-size: 3vh;
+  transition: 1s;
+  border: 1px solid #000;
+  border-radius: 5rem;
+}
+.tags .tag-list .tag-list-item a {
+  color: #000;
+  padding: 2vh 2vw;
+  text-decoration: none;
+}
+.tags .tag-list .tag-list-item:hover {
+  background-color: #000;
+  border: none;
+}
+.tags .tag-list .tag-list-item:hover a {
+  color: #fff;
+}
+nav {
+  background-color: rgba(0,0,0,0.6);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+nav a {
+  font-family: "Times New Roman", Times, serif;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+nav .nav-link {
+  font-size: 2.5vh;
+}
+nav .logo {
+  font-size: 4vh;
+  font-weight: bold;
+}
+.posts {
+  padding: 1vw auto;
+  margin: 1em auto;
+  font-family: "Times New Roman", Times, serif;
+}
+.post {
+  background-color: rgba(0,0,0,0);
+  border-radius: 0.375rem;
+  padding: 2vh 2vh;
+  margin: 0 3vh 3vh 0;
+  transition: 0.3s;
+}
+.post .post-title .title {
+  font-size: 5.2vh;
+  font-weight: bold;
+}
+.post .post-title a {
+  text-decoration: none;
+  color: #000;
+}
+.post .post-title a:hover {
+  text-decoration: underline;
+}
+.post .post-content h1 {
+  font-size: 5vh;
+}
+.post .post-content h2 {
+  font-size: 4.5vh;
+}
+.post .post-content h3 {
+  font-size: 4vh;
+}
+.post .post-content h4 {
+  font-size: 3.5vh;
+}
+.post .post-content h5 {
+  font-size: 3.2vh;
+  font-weight: bold;
+}
+.post .post-content h6 {
+  font-size: 3vh;
+  font-weight: bold;
+  color: #808080;
+}
+.post .post-content p,
+.post .post-content strong,
+.post .post-content a {
+  font-size: 3vh;
+}
+.post .post-content a {
+  color: #000;
+  text-decoration: underline;
+  transition: 0.5s;
+}
+.post .post-content a:hover {
+  color: #5bd1d7;
+}
+.post .post-meta {
+  font-size: 2.5vh;
+  color: #bababa;
+}
+.post:hover {
+  background-color: #f8f9fa;
+}
+.blog-footer {
+  font-family: "Times New Roman", Times, serif;
+  padding: 5rem 0;
+  color: #727272;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-top: 0.05rem solid #e5e5e5;
+}
+.blog-footer .row {
+  --bs-gutter-x: 0;
+  --bs-gutter-y: 0;
+}
+.blog-footer p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+.blog-footer a {
+  color: #000;
+}
+.blog-footer .fb-ic,
+.blog-footer .tw-ic,
+.blog-footer .gg-ic,
+.blog-footer .ins-ic,
+.blog-footer .pin-ic {
+  padding: 0 3vh;
+  color: #000;
+  text-decoration: none;
+  transition: 0.5s;
+}
+.blog-footer .fb-ic svg,
+.blog-footer .tw-ic svg,
+.blog-footer .gg-ic svg,
+.blog-footer .ins-ic svg,
+.blog-footer .pin-ic svg {
+  width: 4vh;
+  height: 4vh;
+}
+.blog-footer .fb-ic:hover {
+  color: #1f6ed4;
+}
+.blog-footer .tw-ic:hover {
+  color: #39bae8;
+}
+.blog-footer .gg-ic:hover {
+  color: #5be7c4;
+}
+.blog-footer .ins-ic:hover {
+  color: #a94caf;
+}
+.blog-footer .pin-ic:hover {
+  color: #ff5f5f;
+}
+.blog-footer .footer-icons {
+  padding: 0;
+}
+.blog-footer .footer-copyright {
+  padding: 0;
+}
+.back-top {
+  display: none;
+  position: fixed;
+  height: 60px;
+  width: 60px;
+  bottom: 3vh;
+  right: 3vw;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: rgba(0,0,0,0.6);
+  color: #fff;
+  cursor: pointer;
+  border-radius: 50px;
+  transition: 0.5s;
+}
+.back-top:hover {
+  background-color: #000;
+}
+.cover {
+  width: 100%;
+  height: 90vh;
+  background-size: cover;
+  --bs-gutter-x: 0 !important;
+  --bs-gutter-y: 0 !important;
+}
+.cover-front {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,0.5);
+}
+.cover-text h1 {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
+  font-size: 8vw;
+  color: #fff;
+  transition: 0.5s;
+}
+.cover-text h1:hover {
+  font-size: 8.5vw;
+}
+.cover-text p {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 2.5vh;
+  color: #fff;
+  transition: 0.5s;
+}
+.cover-text p:hover {
+  font-size: 3vh;
+}
+.comment {
+  padding: 0 10vh 0 10vh;
+  background-size: cover;
+  --bs-gutter-x: 0 !important;
+  --bs-gutter-y: 0 !important;
+}
+.comment-front {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,0.6);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+.comment-text .email-form {
+  font-family: "Times New Roman", Times, serif;
+  padding: 10vh;
+}
+.comment-text .email-form h2 {
+  font-size: 8vh;
+  color: #fff;
+}
+.comment-text .email-form label {
+  font-size: 2.5vh;
+  color: #fff;
+}
+.comment-text .email-form input,
+.comment-text .email-form textarea {
+  font-size: 2.5vh;
+  background-color: rgba(255,255,255,0.5);
+  transition: 0.5s;
+}
+.comment-text .email-form input:hover,
+.comment-text .email-form textarea:hover {
+  background-color: #fff;
+}
+.comment-text .email-form button {
+  font-size: 3vh;
+}
+.page-nav {
+  font-family: "Times New Roman", Times, serif;
+  display: flex;
+  font-size: 2.5vh;
+  justify-content: center;
+  transition: 0.8s;
+}
+.page-nav a {
+  color: #000;
+  padding: 0 3vh;
+  text-decoration: none;
+}
+.page-nav a:hover {
+  color: #000;
+  text-decoration: underline;
+}
+.page-nav .prev,
+.page-nav .next {
+  padding: 0 3vh;
+  border-radius: 3vh;
+}
+.page-nav .prev:hover,
+.page-nav .next:hover {
+  color: #fff;
+  background-color: rgba(0,0,0,0.8);
+}
+.page-nav .current,
+.page-nav .invaild {
+  color: #808080;
+  padding: 0 3vh;
+  border-radius: 3vh;
+  margin-bottom: 0;
+}
+.home-search input,
+.home-search button {
+  font-size: 2.5vh;
+  font-family: "Times New Roman", Times, serif;
+}
+.home-about {
+  font-family: "Times New Roman", Times, serif;
+}
+.home-about h4 {
+  font-size: 3.5vh;
+}
+.home-about p {
+  font-size: 2vh;
+}
+.home-archive {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 2vh;
+}
+.home-archive h4 {
+  font-size: 3.5vh;
+}
+.home-archive .archive-list {
+  list-style: none;
+  padding: 0;
+}
+.home-archive .archive-list .archive-list-item {
+  display: flex;
+  justify-content: space-between;
+  transition: 0.5s;
+}
+.home-archive .archive-list .archive-list-item .archive-list-link {
+  padding: 0.5vh 0;
+  margin-right: 2.5vw;
+}
+.home-archive .archive-list .archive-list-item a {
+  color: #000;
+  text-decoration: none;
+}
+.home-archive .archive-list .archive-list-item:hover {
+  font-weight: bold;
+  font-size: 3vh;
+}
+.archives {
+  font-family: "Times New Roman", Times, serif;
+}
+.archives h1 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 8vw;
+}
+.archives .page-type-title {
+  padding: 10vh 0;
+}
+.archives .page-type-subtitle {
+  text-align: right;
+  font-size: 5vh;
+  margin: 0 0 5vh 0;
+}
+.archives .page-type-subtitle .page-type-desc {
+  font-size: 3vh;
+}
+.archives .posts {
+  margin: 0 10vw;
+}
+.archives .posts .post {
+  margin: 0;
+}

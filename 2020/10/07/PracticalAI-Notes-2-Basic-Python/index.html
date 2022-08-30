@@ -1,0 +1,416 @@
+<!-- This is the outermost frame -->
+<!-- Create by MaaZiJyun on 27 Aug 2022 -->
+<!DOCTYPE html>
+<html>
+  <!-- the head of the html -->
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" name="viewport">
+    <!-- more meta data settings -->
+    
+       <meta name="author" content="MaaZiJyun"> 
+     
+    
+        <meta name="subtitle" content="Welcome to My Home"> 
+     
+    
+        <meta name="description" content="Welcome to visit my personal blog. I usually write some notes and articales here to share with others. Hope you could find what you are interested in"> 
+    
+     
+    <!-- generate the title of the web page -->
+     
+
+    <!-- the title of the web page -->
+    <title>
+        PracticalAI Notes 2: Basic Python
+    </title>
+
+    <!-- the icon of the web page -->
+    
+        <link rel="icon" href="/img/domukiico.ico ">
+     
+
+    <!-- CSS list -->
+     
+         
+            
+                <link rel="stylesheet" href="/css/style.css ">
+            
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css ">
+             
+         
+     
+    <!-- JS list -->
+     
+         
+            
+                <script src="/js/helper.css "></script>
+            
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js "></script>
+             
+         
+     
+<meta name="generator" content="Hexo 6.2.0"></head>
+  <!-- the body of the html -->
+  <!-- The interface to connect the body content -->
+<body>
+
+  <!-- the header of the page -->
+   
+    
+  <header class="header" style="background-color: black;">
+    
+  <!-- Navigation-->
+  <nav class="navbar navbar-expand-lg navbar-dark justify-content-center">
+    <div class="container p-2">
+      <a href="/" class="navbar-brand logo">
+        MaaZiJyun' Blog
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span
+          class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ms-auto">
+          
+            <li class="nav-item">
+              <a href="/" class="nav-link active">
+                Home
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/archives" class="nav-link active">
+                Archives
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/categories" class="nav-link active">
+                Categories
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/tags" class="nav-link active">
+                Tags
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/about" class="nav-link active">
+                About
+              </a>
+            </li>
+            
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header> 
+   
+
+  <!-- the main part of the page -->
+  <div class="content">
+
+    <main class="main">
+
+      <div class="main-content">
+
+        <!-- if the current page is home, then the content of hone will be shown up -->
+        
+          <article class="post">
+    <div class="post-title">
+        <h2 class="title">
+            PracticalAI Notes 2: Basic Python
+        </h2>
+    </div>
+    <div class="post-meta">
+        <span class="post-time">
+            2020-10-07
+        </span>
+    </div>
+    <div class="post-content">
+        <p>Huh…, just some basic things. If you already know how to code with Python, just skip this section.</p>
+<span id="more"></span>
+
+<h3 id="Variables"><a href="#Variables" class="headerlink" title="Variables"></a>Variables</h3><p>Variables can be lots of different types. Like <strong>integers</strong> (int), <strong>floats</strong> (float), etc. All text based variables are <strong>string</strong> (str) type. </p>
+<p>We can see what type a variable is by printing its type.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># int variable, like 1, 2, 3</span></span><br><span class="line">x = <span class="number">5</span></span><br><span class="line"><span class="built_in">print</span> (x)</span><br><span class="line"><span class="built_in">print</span> (<span class="built_in">type</span>(x))</span><br><span class="line"></span><br><span class="line"><span class="comment"># float variable, like 1.0, 1.2, 1.3</span></span><br><span class="line">x = <span class="number">5.0</span></span><br><span class="line"><span class="built_in">print</span> (x)</span><br><span class="line"><span class="built_in">print</span> (<span class="built_in">type</span>(x))</span><br><span class="line"></span><br><span class="line"><span class="comment"># text variable, like &quot;lol&quot;, &quot;lmao&quot;, &quot;hello world&quot;</span></span><br><span class="line">x = <span class="string">&quot;5&quot;</span> </span><br><span class="line"><span class="built_in">print</span> (x)</span><br><span class="line"><span class="built_in">print</span> (<span class="built_in">type</span>(x))</span><br><span class="line"></span><br><span class="line"><span class="comment"># boolean variable, like true and false</span></span><br><span class="line">x = <span class="literal">True</span></span><br><span class="line"><span class="built_in">print</span> (x)</span><br><span class="line"><span class="built_in">print</span> (<span class="built_in">type</span>(x))</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># int variables</span></span><br><span class="line">a = <span class="number">5</span></span><br><span class="line">b = <span class="number">3</span></span><br><span class="line"><span class="built_in">print</span> (a + b)</span><br><span class="line"><span class="comment">#result: 8</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># string variables</span></span><br><span class="line">a = <span class="string">&quot;5&quot;</span></span><br><span class="line">b = <span class="string">&quot;3&quot;</span></span><br><span class="line"><span class="built_in">print</span> (a + b)</span><br><span class="line"><span class="comment">#result: 53</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># boolean variables</span></span><br><span class="line"><span class="comment">#a = true</span></span><br><span class="line"><span class="comment">#b = false</span></span><br><span class="line"><span class="comment">#print (a + b)</span></span><br><span class="line"><span class="comment">#result: Error</span></span><br></pre></td></tr></table></figure>
+
+<p>(the Booleans can’t be plus, lol)</p>
+<h3 id="List"><a href="#List" class="headerlink" title="List"></a>List</h3><p>Lists are objects in python that can hold a ordered sequence of numbers <strong>and</strong> text.</p>
+<p>(I think it kinda like the <a href="https://domuki.top/2020/10/06/Linked-List/">Linked List</a>)</p>
+<h4 id="Making-a-list"><a href="#Making-a-list" class="headerlink" title="Making a list"></a>Making a list</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">list_x = [<span class="number">3</span>, <span class="string">&quot;hello&quot;</span>, <span class="number">1</span>]</span><br><span class="line"><span class="built_in">print</span> (list_x)</span><br></pre></td></tr></table></figure>
+
+<p>result: </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[3, &#x27;hello&#x27;, 1]</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="Adding-something"><a href="#Adding-something" class="headerlink" title="Adding something"></a>Adding something</h4><blockquote>
+<p><em><strong>Append</strong></em>: add (something) to the end of a written document</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">list_x.append(<span class="number">7</span>)</span><br><span class="line"><span class="built_in">print</span> (list_x)</span><br></pre></td></tr></table></figure>
+
+<p>result: </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[3, &#x27;hello&#x27;, 1, 7]</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="Accessing-items-at-specific-location-in-a-list"><a href="#Accessing-items-at-specific-location-in-a-list" class="headerlink" title="Accessing items at specific location in a list"></a>Accessing items at specific location in a list</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span> (<span class="string">&quot;list_x[0]: &quot;</span>, list_x[<span class="number">0</span>])</span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;list_x[1]: &quot;</span>, list_x[<span class="number">1</span>])</span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;list_x[2]: &quot;</span>, list_x[<span class="number">2</span>])</span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;list_x[-1]: &quot;</span>, list_x[-<span class="number">1</span>]) <span class="comment"># the last item</span></span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;list_x[-2]: &quot;</span>, list_x[-<span class="number">2</span>]) <span class="comment"># the second to last item</span></span><br></pre></td></tr></table></figure>
+
+<p>result: </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">list_x[0]:  3 </span><br><span class="line">list_x[1]:  hello </span><br><span class="line">list_x[2]:  1 </span><br><span class="line">list_x[-1]:  7 </span><br><span class="line">list_x[-2]:  1</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="Slicing"><a href="#Slicing" class="headerlink" title="Slicing"></a>Slicing</h4><blockquote>
+<p><em><strong>Slice</strong></em>: cut something from (something larger)</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span> (<span class="string">&quot;list_x[:]: &quot;</span>, list_x[:])</span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;list_x[2:]: &quot;</span>, list_x[<span class="number">2</span>:])</span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;list_x[1:3]: &quot;</span>, list_x[<span class="number">1</span>:<span class="number">3</span>]) <span class="comment">#The search will start at index 1 (included) and end at index 3 (not included).</span></span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;list_x[:-1]: &quot;</span>, list_x[:-<span class="number">1</span>])</span><br></pre></td></tr></table></figure>
+
+<p>result: </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">list_x[:]:  [3, &#x27;hello&#x27;, 1, 7] </span><br><span class="line">list_x[2:]:  [1, 7] </span><br><span class="line">list_x[1:3]:  [&#x27;hello&#x27;, 1] </span><br><span class="line">list_x[:-1]:  [3, &#x27;hello&#x27;, 1]</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="Length"><a href="#Length" class="headerlink" title="Length"></a>Length</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">len</span>(list_x)</span><br></pre></td></tr></table></figure>
+
+<p>result: </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">4</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="Replacing"><a href="#Replacing" class="headerlink" title="Replacing"></a>Replacing</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">list_x[<span class="number">1</span>] = <span class="string">&quot;lol&quot;</span></span><br><span class="line"><span class="built_in">print</span> (list_x)</span><br></pre></td></tr></table></figure>
+
+<p>result: </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[3, &#x27;lol&#x27;, 1, 7]</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="Combining"><a href="#Combining" class="headerlink" title="Combining"></a>Combining</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">list_y = [<span class="number">2.4</span>, <span class="string">&quot;world&quot;</span>]</span><br><span class="line">list_z = list_x + list_y</span><br><span class="line"><span class="built_in">print</span> (list_z)</span><br></pre></td></tr></table></figure>
+
+<p>result: </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[3, &#x27;lol&#x27;, 1, 7, 2.4, &#x27;world&#x27;]</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="Tuples"><a href="#Tuples" class="headerlink" title="Tuples"></a>Tuples</h3><blockquote>
+<p>Tuples are also objects in python that can hold immutable data which can not be replaced. </p>
+</blockquote>
+<h4 id="Creating-a-tuple"><a href="#Creating-a-tuple" class="headerlink" title="Creating a tuple"></a>Creating a tuple</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">tuple_x = (<span class="number">3.0</span>, <span class="string">&quot;hello&quot;</span>)</span><br><span class="line"><span class="built_in">print</span> (tuple_x)</span><br></pre></td></tr></table></figure>
+
+<p>result: </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(3.0, &#x27;hello&#x27;)</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="Adding-values-to-a-tuple"><a href="#Adding-values-to-a-tuple" class="headerlink" title="Adding values to a tuple"></a>Adding values to a tuple</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">tuple_x = tuple_x + (<span class="number">5.6</span>, )</span><br><span class="line"><span class="built_in">print</span> (tuple_x)</span><br></pre></td></tr></table></figure>
+
+<p>result: </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(3.0, &#x27;hello&#x27;, 5.6)</span><br></pre></td></tr></table></figure>
+
+
+
+<p>Try to change the value, but I can’t.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tuple_x[<span class="number">1</span>] = <span class="string">&quot;world&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>result: </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">TypeError</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="Dictionaries"><a href="#Dictionaries" class="headerlink" title="Dictionaries"></a>Dictionaries</h3><blockquote>
+<p>Dictionaries are python objects that hold key-value pairs. In the example dictionary below, the keys are the “name” and “eye_colour” variables. They each have a value associated with them. A dictionary cannot have two of the same keys.</p>
+</blockquote>
+<h4 id="Creating-a-dictionary"><a href="#Creating-a-dictionary" class="headerlink" title="Creating a dictionary"></a>Creating a dictionary</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">goku = &#123;<span class="string">&quot;name&quot;</span>: <span class="string">&quot;Goku&quot;</span>,</span><br><span class="line">        <span class="string">&quot;eye_color&quot;</span>: <span class="string">&quot;brown&quot;</span>&#125;</span><br><span class="line"><span class="built_in">print</span> (goku)</span><br><span class="line"><span class="built_in">print</span> (goku[<span class="string">&quot;name&quot;</span>])</span><br><span class="line"><span class="built_in">print</span> (goku[<span class="string">&quot;eye_color&quot;</span>])</span><br></pre></td></tr></table></figure>
+
+<p>result: </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#x27;name&#x27;: &#x27;Goku&#x27;, &#x27;eye_color&#x27;: &#x27;brown&#x27;&#125; </span><br><span class="line">Goku </span><br><span class="line">brown</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="Changing-the-value-for-a-key"><a href="#Changing-the-value-for-a-key" class="headerlink" title="Changing the value for a key"></a>Changing the value for a key</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">goku[<span class="string">&quot;eye_color&quot;</span>] = <span class="string">&quot;green&quot;</span></span><br><span class="line"><span class="built_in">print</span> (goku)</span><br></pre></td></tr></table></figure>
+
+<p>result: </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#x27;name&#x27;: &#x27;Goku&#x27;, &#x27;eye_color&#x27;: &#x27;green&#x27;&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="Adding-new-key-value-pairs"><a href="#Adding-new-key-value-pairs" class="headerlink" title="Adding new key-value pairs"></a>Adding new key-value pairs</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">goku[<span class="string">&quot;age&quot;</span>] = <span class="number">24</span></span><br><span class="line"><span class="built_in">print</span> (goku)</span><br></pre></td></tr></table></figure>
+
+<p>result: </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#x27;name&#x27;: &#x27;Goku&#x27;, &#x27;eye_color&#x27;: &#x27;green&#x27;, &#x27;age&#x27;: 24&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="Length-of-a-dictionary"><a href="#Length-of-a-dictionary" class="headerlink" title="Length of a dictionary"></a>Length of a dictionary</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span> (<span class="built_in">len</span>(goku))</span><br></pre></td></tr></table></figure>
+
+<p>result: </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="If-statements"><a href="#If-statements" class="headerlink" title="If-statements"></a>If-statements</h3><p>you can use <em>if</em> as the code shows below:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># If...else if...else statement</span></span><br><span class="line">x = <span class="number">4</span></span><br><span class="line"><span class="keyword">if</span> x &lt; <span class="number">1</span>:</span><br><span class="line">    score = <span class="string">&quot;low&quot;</span></span><br><span class="line"><span class="keyword">elif</span> x &lt;= <span class="number">4</span>:</span><br><span class="line">    score = <span class="string">&quot;medium&quot;</span></span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    score = <span class="string">&quot;high&quot;</span></span><br><span class="line"><span class="built_in">print</span> (score)</span><br></pre></td></tr></table></figure>
+
+<p>result:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">medium</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="Loops"><a href="#Loops" class="headerlink" title="Loops"></a>Loops</h3><h4 id="For-Loop"><a href="#For-Loop" class="headerlink" title="For Loop"></a>For Loop</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># For loop</span></span><br><span class="line">x = <span class="number">1</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">3</span>): <span class="comment"># goes from i=0 to i=2</span></span><br><span class="line">    x += <span class="number">1</span> <span class="comment"># same as x = x + 1</span></span><br><span class="line">    <span class="built_in">print</span> (<span class="string">&quot;i=&#123;0&#125;, x=&#123;1&#125;&quot;</span>.<span class="built_in">format</span>(i, x)) <span class="comment"># printing with multiple variables</span></span><br></pre></td></tr></table></figure>
+
+<p>result:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">i=0, x=2 </span><br><span class="line">i=1, x=3 </span><br><span class="line">i=2, x=4</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>loop through items in a list</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">x = <span class="number">1</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> [<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>]:</span><br><span class="line">	x += <span class="number">1</span></span><br><span class="line">	<span class="built_in">print</span> (<span class="string">&quot;i=&#123;&#125;, x=&#123;&#125;&quot;</span>.<span class="built_in">format</span>(i, x))</span><br></pre></td></tr></table></figure>
+
+<p>result: </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">i=0, x=2 </span><br><span class="line">i=1, x=3 </span><br><span class="line">i=2, x=4</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="While-Loop"><a href="#While-Loop" class="headerlink" title="While Loop"></a>While Loop</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># While loop</span></span><br><span class="line">x = <span class="number">3</span></span><br><span class="line"><span class="keyword">while</span> x &gt; <span class="number">0</span>:</span><br><span class="line">    x -= <span class="number">1</span> <span class="comment"># same as x = x - 1</span></span><br><span class="line">    <span class="built_in">print</span> (x)</span><br></pre></td></tr></table></figure>
+
+<p>result: </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">2</span><br><span class="line">1</span><br><span class="line">0</span><br></pre></td></tr></table></figure>
+
+<h3 id="Functions"><a href="#Functions" class="headerlink" title="Functions"></a>Functions</h3><blockquote>
+<p>Functions are a way to modularize reusable pieces of code.</p>
+</blockquote>
+<h4 id="Creating-a-function"><a href="#Creating-a-function" class="headerlink" title="Creating a function"></a>Creating a function</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Create a function</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">add_two</span>(<span class="params">x</span>):</span><br><span class="line">    x += <span class="number">2</span></span><br><span class="line">    <span class="keyword">return</span> x</span><br><span class="line"></span><br><span class="line"><span class="comment"># Use the function</span></span><br><span class="line">score = <span class="number">0</span></span><br><span class="line">score = add_two(x=score)</span><br><span class="line"><span class="built_in">print</span> (score)</span><br></pre></td></tr></table></figure>
+
+<p>result:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2</span><br></pre></td></tr></table></figure>
+
+<h4 id="Main-Function"><a href="#Main-Function" class="headerlink" title="Main Function"></a>Main Function</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">main</span>():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Hello World!&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
+
+<p>But how to understand <code>if __name__ == &quot;__main__&quot;:</code> ?</p>
+<p>For example: there’re 2 program</p>
+<p><em><strong>const.py</strong></em> used to define a constant <code>PI=3.14</code></p>
+<p><em><strong>area.py</strong></em> will need the constant to calculate the area of a circle</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># file name: const.py</span></span><br><span class="line">PI = <span class="number">3.14</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">main</span>():</span><br><span class="line">	<span class="built_in">print</span> (<span class="string">&quot;PI:&quot;</span>, PI)</span><br><span class="line"></span><br><span class="line">main()</span><br></pre></td></tr></table></figure>
+
+<p>when you run <em><strong>const.py</strong></em> the output will be</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">PI:3.14</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># file name: area.py</span></span><br><span class="line"><span class="keyword">from</span> const <span class="keyword">import</span> PI</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">calculate_area</span>(<span class="params">r</span>):</span><br><span class="line">	<span class="keyword">return</span> PI * (r ** <span class="number">2</span>)</span><br><span class="line">	</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">main</span>():</span><br><span class="line">	<span class="built_in">print</span> (<span class="string">&quot;area: &quot;</span>, calculate_area(<span class="number">2</span>))</span><br><span class="line">	</span><br><span class="line">main()</span><br></pre></td></tr></table></figure>
+
+<p>When you run <em><strong>area.py</strong></em>,</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">PI: 3.14</span><br><span class="line">round area: 12.56</span><br></pre></td></tr></table></figure>
+
+<p>As it showing, the main() in both .py files were executed, which we would not want to see.</p>
+<p>So, we just need add one statement into the <em><strong>const.py</strong></em> </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># file name: const.py</span></span><br><span class="line">PI = <span class="number">3.14</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">main</span>():</span><br><span class="line">	<span class="built_in">print</span> (<span class="string">&quot;PI:&quot;</span>, PI)</span><br><span class="line">	</span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">	main()</span><br></pre></td></tr></table></figure>
+
+<p><code>__name__</code> represent the name of current block you running. </p>
+<p>When you running <em><strong>area.py</strong></em>, the <code>__name__</code>  of <em><strong>area.py</strong></em> should be  <code>__main__</code> and the <code>__name__</code>  of <em><strong>const.py</strong></em> is still “const”.</p>
+<p>When you running <em><strong>const.py</strong></em>, the <code>__name__</code>  of <em><strong>const.py</strong></em> should be  <code>__main__</code> and the  <code>__name__</code>  of <em><strong>area.py</strong></em> is still “area”.</p>
+<p>After change, the result should be:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">area: 12.56</span><br></pre></td></tr></table></figure>
+
+<h3 id="Classes"><a href="#Classes" class="headerlink" title="Classes"></a>Classes</h3><blockquote>
+<p>Classes are a fundamental piece of object oriented Python programming.</p>
+</blockquote>
+<h4 id="Creating-a-class"><a href="#Creating-a-class" class="headerlink" title="Creating a class"></a>Creating a class</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Student</span>(<span class="title class_ inherited__">object</span>):</span><br><span class="line"></span><br><span class="line">    <span class="comment"># Initialize the class</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, name, matric, age</span>):</span><br><span class="line">        self.name = name</span><br><span class="line">        self.matric = matric</span><br><span class="line">        self.age = age</span><br><span class="line"></span><br><span class="line">    <span class="comment"># For printing</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__str__</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;name: &#123;0&#125; matric: &#123;1&#125; age: &#123;2&#125;&quot;</span>.<span class="built_in">format</span>(self.name, self.matric, self.age)</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># Example function</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">change_name</span>(<span class="params">self, new_name</span>):</span><br><span class="line">        self.name = new_name</span><br></pre></td></tr></table></figure>
+
+<h4 id="Making-an-instance-of-a-class"><a href="#Making-an-instance-of-a-class" class="headerlink" title="Making an instance of a class"></a>Making an instance of a class</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> Student <span class="keyword">import</span> Student</span><br><span class="line">peter = Student(name=<span class="string">&quot;Peter&quot;</span>, matric=<span class="string">&quot;201456&quot;</span>, age=<span class="number">20</span>)</span><br><span class="line"><span class="built_in">print</span> (peter)</span><br><span class="line"><span class="built_in">print</span> (peter.name)</span><br></pre></td></tr></table></figure>
+
+<p>result:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">name: Peter matric: 201456 age: 20</span><br><span class="line">Peter</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="Using-a-class’s-function"><a href="#Using-a-class’s-function" class="headerlink" title="Using a class’s function"></a>Using a class’s function</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">peter.change_name(new_name = <span class="string">&quot;Bob&quot;</span>)</span><br><span class="line"><span class="built_in">print</span> (peter)</span><br><span class="line"><span class="built_in">print</span> (peter.name)</span><br></pre></td></tr></table></figure>
+
+<p>result:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">name: Bob matric: 201456 age: 20</span><br><span class="line">Bob</span><br></pre></td></tr></table></figure>
+
+
+    </div>
+</article>
+
+        <!-- show the content of a category -->
+        
+      </div>
+      
+    </main>
+
+  </div>
+  <!-- the footer of the page -->
+  <!-- Footer -->
+<footer class="blog-footer font-small">
+
+    <!-- Footer Elements -->
+    <div class="footer-icons container">
+  
+      <!-- Grid row-->
+      <div class="row">
+  
+        <!-- Grid column -->
+        
+          <div class="flex-center">
+            <!-- Facebook -->
+             
+            <!-- Twitter -->
+             
+            <!-- Google +-->
+             
+            <!--Instagram-->
+             
+            <!--Pinterest-->
+             
+          </div>
+        
+        <!-- Grid column -->
+  
+      </div>
+      <!-- Grid row-->
+  
+    </div>
+    <!-- Footer Elements -->
+  
+    <!-- Copyright -->
+    <div class="footer-copyright text-center mt-3">© 2020 Copyright:
+      <a href="http://domuki.top ">http://domuki.top</a>
+    </div>
+    <!-- Copyright -->
+  
+  </footer>
+  <!-- Footer --> 
+  <button class="back-top" onclick="topFunction()">
+    Top
+  </button>
+  <script>
+    //Get the button
+    var mybutton = document.getElementsByClassName("back-top");
+    
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton[0].style.display = 'block';
+      } else {
+        mybutton[0].style.display = 'none';
+      }
+    }
+    
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+    </script>
+  
+</body>
+
+ 
+</html>

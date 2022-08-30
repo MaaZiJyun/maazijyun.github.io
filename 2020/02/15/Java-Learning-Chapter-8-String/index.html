@@ -1,0 +1,294 @@
+<!-- This is the outermost frame -->
+<!-- Create by MaaZiJyun on 27 Aug 2022 -->
+<!DOCTYPE html>
+<html>
+  <!-- the head of the html -->
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" name="viewport">
+    <!-- more meta data settings -->
+    
+       <meta name="author" content="MaaZiJyun"> 
+     
+    
+        <meta name="subtitle" content="Welcome to My Home"> 
+     
+    
+        <meta name="description" content="Welcome to visit my personal blog. I usually write some notes and articales here to share with others. Hope you could find what you are interested in"> 
+    
+     
+    <!-- generate the title of the web page -->
+     
+
+    <!-- the title of the web page -->
+    <title>
+        Java Learning Chapter 8 String
+    </title>
+
+    <!-- the icon of the web page -->
+    
+        <link rel="icon" href="/img/domukiico.ico ">
+     
+
+    <!-- CSS list -->
+     
+         
+            
+                <link rel="stylesheet" href="/css/style.css ">
+            
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css ">
+             
+         
+     
+    <!-- JS list -->
+     
+         
+            
+                <script src="/js/helper.css "></script>
+            
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js "></script>
+             
+         
+     
+<meta name="generator" content="Hexo 6.2.0"></head>
+  <!-- the body of the html -->
+  <!-- The interface to connect the body content -->
+<body>
+
+  <!-- the header of the page -->
+   
+    
+  <header class="header" style="background-color: black;">
+    
+  <!-- Navigation-->
+  <nav class="navbar navbar-expand-lg navbar-dark justify-content-center">
+    <div class="container p-2">
+      <a href="/" class="navbar-brand logo">
+        MaaZiJyun' Blog
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span
+          class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ms-auto">
+          
+            <li class="nav-item">
+              <a href="/" class="nav-link active">
+                Home
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/archives" class="nav-link active">
+                Archives
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/categories" class="nav-link active">
+                Categories
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/tags" class="nav-link active">
+                Tags
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/about" class="nav-link active">
+                About
+              </a>
+            </li>
+            
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header> 
+   
+
+  <!-- the main part of the page -->
+  <div class="content">
+
+    <main class="main">
+
+      <div class="main-content">
+
+        <!-- if the current page is home, then the content of hone will be shown up -->
+        
+          <article class="post">
+    <div class="post-title">
+        <h2 class="title">
+            Java Learning Chapter 8 String
+        </h2>
+    </div>
+    <div class="post-meta">
+        <span class="post-time">
+            2020-02-15
+        </span>
+    </div>
+    <div class="post-content">
+        <h4 id="Learning-Outcome"><a href="#Learning-Outcome" class="headerlink" title="Learning Outcome"></a>Learning Outcome</h4><p><em>Construct program by manipulating String</em></p>
+<span id="more"></span>
+
+
+
+<h2 id="1-Constructing-Strings"><a href="#1-Constructing-Strings" class="headerlink" title="1. Constructing Strings"></a>1. Constructing Strings</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">String</span> <span class="variable">newString</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">String</span>(stringLiteral);</span><br><span class="line"> </span><br><span class="line"><span class="type">String</span> <span class="variable">message</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">String</span>(<span class="string">&quot;Welcome to Java&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="type">String</span> <span class="variable">message</span> <span class="operator">=</span> <span class="string">&quot;Welcome to Java&quot;</span>;</span><br></pre></td></tr></table></figure>
+
+<p>A String variable holds a reference to a String object that stores a string value.</p>
+<p>Since strings are used frequently, Java provides a shorthand initializer for creating a string:</p>
+<p><strong>Strings Are Immutable</strong></p>
+<p>A String object is immutable; its contents cannot be changed.</p>
+<p><em>Does the following code change the contents of the string?</em> </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">String</span> <span class="variable">s</span> <span class="operator">=</span> <span class="string">&quot;Java&quot;</span>;</span><br><span class="line">s = <span class="string">&quot;HTML&quot;</span>;</span><br></pre></td></tr></table></figure>
+
+<img src="Java-Learning-Chapter-8-String/001.png" style="zoom:50%;" />
+
+<p> The interesting thing is that String is <strong>Pass By Reference</strong>, like Array.</p>
+<img src="Java-Learning-Chapter-8-String/002.png" style="zoom:48%;" />
+
+<h2 id="2-Finding-String-Length"><a href="#2-Finding-String-Length" class="headerlink" title="2. Finding String Length"></a>2. Finding String Length</h2><p>Finding a string length using the <code>length()</code> method:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">message = <span class="string">&quot;Welcome&quot;</span>;</span><br><span class="line">message.length(); (returns <span class="number">7</span>)</span><br><span class="line"><span class="comment">//notice that the length method here is different from Array</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span>[] array = <span class="keyword">new</span> <span class="title class_">int</span>[<span class="number">12</span>];</span><br><span class="line">array.length;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="3-Retrieving-Individual-Characters-in-a-String"><a href="#3-Retrieving-Individual-Characters-in-a-String" class="headerlink" title="3. Retrieving Individual Characters in a String"></a>3. Retrieving Individual Characters in a String</h2><p>Do not use message[0] – compilation error</p>
+<p>Use <code>message.charAt(index);</code></p>
+<p>Index starts from 0</p>
+<img src="Java-Learning-Chapter-8-String/003.png" style="zoom: 50%;" />
+
+
+
+<h2 id="4-String-Concatenation"><a href="#4-String-Concatenation" class="headerlink" title="4. String Concatenation"></a>4. String Concatenation</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">String</span> <span class="variable">s3</span> <span class="operator">=</span> s1.concat(s2);</span><br><span class="line"></span><br><span class="line"><span class="type">String</span> <span class="variable">s3</span> <span class="operator">=</span> s1 + s2;</span><br><span class="line"></span><br><span class="line">s1 + s2 + s3 + s4 + s5 same <span class="title function_">as</span></span><br><span class="line"><span class="params">(((s1.concat(s2)</span>).concat(s3)).concat(s4)).concat(s5);</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="5-Extracting-Substrings"><a href="#5-Extracting-Substrings" class="headerlink" title="5. Extracting Substrings"></a>5. Extracting Substrings</h2><p>You can extract a single character from a string using the <u>charAt</u> method. </p>
+<p>You can also extract a substring from a string using the <u>substring</u> method in the <u>String</u> class</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">String</span> <span class="variable">message</span> <span class="operator">=</span> <span class="string">&quot;Welcome to Java&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">String</span> <span class="variable">s1</span> <span class="operator">=</span> message.substring(<span class="number">0</span>, <span class="number">11</span>);</span><br><span class="line"><span class="type">String</span> <span class="variable">s2</span> <span class="operator">=</span> message.substring(<span class="number">11</span>);</span><br><span class="line"><span class="type">String</span> <span class="variable">s3</span> <span class="operator">=</span> message.substring(<span class="number">0</span>, <span class="number">11</span>) + <span class="string">&quot;HTML&quot;</span>;</span><br></pre></td></tr></table></figure>
+
+<img src="Java-Learning-Chapter-8-String/004.png" style="zoom:50%;" />
+
+<p>(s3 is “Welcome to HTML”;)</p>
+<h2 id="6-String-Comparisons"><a href="#6-String-Comparisons" class="headerlink" title="6. String Comparisons"></a>6. String Comparisons</h2><p>Equals</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">String</span> <span class="variable">s1</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">String</span>(<span class="string">&quot;Welcome“);</span></span><br><span class="line"><span class="string">	String s2 = &quot;</span>welcome<span class="string">&quot;;</span></span><br><span class="line"><span class="string">	</span></span><br><span class="line"><span class="string">  if (s1.equals(s2))&#123;  </span></span><br><span class="line"><span class="string">    // s1 and s2 have the same contents  </span></span><br><span class="line"><span class="string">  &#125;</span></span><br><span class="line"><span class="string"> </span></span><br><span class="line"><span class="string">  if (s1 == s2) &#123;</span></span><br><span class="line"><span class="string">    // s1 and s2 have the same reference </span></span><br><span class="line"><span class="string">  &#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>Difference</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">String</span> <span class="variable">s1</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">String</span>(<span class="string">&quot;Welcome“);</span></span><br><span class="line"><span class="string">	String s2 = &quot;</span>welcome<span class="string">&quot;;</span></span><br><span class="line"><span class="string">	</span></span><br><span class="line"><span class="string">  if (s1.compareTo(s2) &gt; 0) &#123;  </span></span><br><span class="line"><span class="string">    // s1 is greater than s2 </span></span><br><span class="line"><span class="string">  &#125;</span></span><br><span class="line"><span class="string">  else if (s1.compareTo(s2) == 0) &#123; </span></span><br><span class="line"><span class="string">    // s1 and s2 have the same contents </span></span><br><span class="line"><span class="string">  &#125;</span></span><br><span class="line"><span class="string">  else </span></span><br><span class="line"><span class="string">     // s1 is less than s2</span></span><br></pre></td></tr></table></figure>
+
+<p>by the way, <code>compareTo</code> method uses the length of s1 minus length of s2. It seems like…</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="type">int</span> <span class="title function_">compareTo</span><span class="params">(String pre, String fin)</span>&#123;</span><br><span class="line">	<span class="keyword">return</span> pre.length() - fin.length();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="7-String-Conversions"><a href="#7-String-Conversions" class="headerlink" title="7. String Conversions"></a>7. String Conversions</h2><h3 id="7-1-to-Lower-Case"><a href="#7-1-to-Lower-Case" class="headerlink" title="7.1. to-Lower-Case"></a>7.1. to-Lower-Case</h3><p>​	<code>“WelCOme”.toLowerCase()</code> returns a new string, <em>welcome</em>.</p>
+<h3 id="7-2-to-Upper-Case"><a href="#7-2-to-Upper-Case" class="headerlink" title="7.2. to-Upper-Case"></a>7.2. to-Upper-Case</h3><p>​	<code>“Welcome”.toUpperCase()</code> returns a new string, <em>WELCOME</em></p>
+<h3 id="7-3-trim"><a href="#7-3-trim" class="headerlink" title="7.3. trim"></a>7.3. trim</h3><p>​	Returns a new string by eliminating blank characters from both ends of the string.</p>
+<p>​	<code>“			Welcome”.toUpperCase()</code> returns a new string, “Welcome”</p>
+<h3 id="7-4-replace"><a href="#7-4-replace" class="headerlink" title="7.4. replace"></a>7.4. replace</h3><p>​	<code>“Welcome”.replace(‘e’, ‘A’)</code> returns <em>WAlcomA</em></p>
+<p>​	<code>“Welcome”.replace(”el”, “EL”)</code> returns <em>WELcome</em></p>
+<h2 id="8-Finding-a-Character-or-a-Substring-in-a-String"><a href="#8-Finding-a-Character-or-a-Substring-in-a-String" class="headerlink" title="8. Finding a Character or a Substring in a String"></a>8. Finding a Character or a Substring in a String</h2><h3 id="8-1-Simple-searching"><a href="#8-1-Simple-searching" class="headerlink" title="8.1. Simple searching"></a>8.1. Simple searching</h3><p><code>&quot;Welcome to Java&quot;.indexOf(&#39;W&#39;);</code> returns 0.</p>
+<p>Return the index of the first character in the string that matches the specified character.</p>
+<p><code>&quot;Welcome to Java&quot;.indexOf(&quot;come&quot;);</code> returns 3.</p>
+<p>Returns the index of the first character in the string starting from the specified index that matches the specified character.</p>
+<p><strong>if there’s no searching letter in String</strong></p>
+<p><code>&quot;Welcome to Java&quot;.indexOf(&#39;x&#39;);</code> returns -1.</p>
+<h3 id="8-2-Accurate-searching"><a href="#8-2-Accurate-searching" class="headerlink" title="8.2. Accurate searching"></a>8.2. Accurate searching</h3><p><code>&quot;Welcome to Java&quot;.indexOf(&#39;o&#39;, 5)</code> returns 9.</p>
+<p><code>&quot;Welcome to Java&quot;.indexOf(&quot;Java&quot;, 5)</code> returns 11.</p>
+<p>Returns the index of the first character of the substring in the string that matches the specified string.</p>
+<h2 id="9-Convert"><a href="#9-Convert" class="headerlink" title="9. Convert"></a>9. Convert</h2><h3 id="9-1-Character-and-Numbers-to-Strings"><a href="#9-1-Character-and-Numbers-to-Strings" class="headerlink" title="9.1. Character and Numbers to Strings"></a>9.1. Character and Numbers to Strings</h3><p>The String class provides several static <code>valueOf();</code> methods for converting a character, an array of characters, and numeric values to strings. </p>
+<p>For example, to convert a double value to a string, use <code>String.valueOf (5.44);</code>. The return value is a string that consists of characters ‘5’, ‘.’, ‘4’, and ‘4’. </p>
+<h3 id="9-2-Strings-to-Number"><a href="#9-2-Strings-to-Number" class="headerlink" title="9.2. Strings to Number"></a>9.2. Strings to Number</h3><p>use method <code>Integer.parseInt()</code> and <code>Double.parseDouble()</code> .</p>
+<h3 id="9-3-Convert-String-to-Array"><a href="#9-3-Convert-String-to-Array" class="headerlink" title="9.3. Convert String to Array"></a>9.3. Convert String to Array</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">char</span>[] chars = “Java”.toCharArray();</span><br></pre></td></tr></table></figure>
+
+<p>chars[0] is ‘J’, chars[1] is ‘a’, chars[2] is ‘v’ and chars[3] is ‘a’.</p>
+<p>method <code>getChars(int srcBegin, int srcEnd, char[] dst, int dstBegin)</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">char[] dst = &#123;‘J’,’a’,’v’,’a’,’1’,’3’,’0’,’1’&#125;;</span><br><span class="line"></span><br><span class="line">“CS3720”.getChars(2, 6, dst, 4);</span><br></pre></td></tr></table></figure>
+
+<p>dst becomes {‘J’,’a’,’v’,’a’,’3’,’7’,’2’,’0’}</p>
+<h3 id="10-Traversal-of-a-String"><a href="#10-Traversal-of-a-String" class="headerlink" title="10. Traversal of a String"></a>10. Traversal of a String</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">String</span> <span class="variable">str</span> <span class="operator">=</span> sc.nextLine();</span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; str.length(); i++)&#123;</span><br><span class="line">	<span class="type">char</span> <span class="variable">c</span> <span class="operator">=</span> str.charAt(i);</span><br><span class="line">    System.out.print(c + <span class="string">&quot;\t&quot;</span>);</span><br><span class="line">	...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+    </div>
+</article>
+
+        <!-- show the content of a category -->
+        
+      </div>
+      
+    </main>
+
+  </div>
+  <!-- the footer of the page -->
+  <!-- Footer -->
+<footer class="blog-footer font-small">
+
+    <!-- Footer Elements -->
+    <div class="footer-icons container">
+  
+      <!-- Grid row-->
+      <div class="row">
+  
+        <!-- Grid column -->
+        
+          <div class="flex-center">
+            <!-- Facebook -->
+             
+            <!-- Twitter -->
+             
+            <!-- Google +-->
+             
+            <!--Instagram-->
+             
+            <!--Pinterest-->
+             
+          </div>
+        
+        <!-- Grid column -->
+  
+      </div>
+      <!-- Grid row-->
+  
+    </div>
+    <!-- Footer Elements -->
+  
+    <!-- Copyright -->
+    <div class="footer-copyright text-center mt-3">© 2020 Copyright:
+      <a href="http://domuki.top ">http://domuki.top</a>
+    </div>
+    <!-- Copyright -->
+  
+  </footer>
+  <!-- Footer --> 
+  <button class="back-top" onclick="topFunction()">
+    Top
+  </button>
+  <script>
+    //Get the button
+    var mybutton = document.getElementsByClassName("back-top");
+    
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton[0].style.display = 'block';
+      } else {
+        mybutton[0].style.display = 'none';
+      }
+    }
+    
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+    </script>
+  
+</body>
+
+ 
+</html>

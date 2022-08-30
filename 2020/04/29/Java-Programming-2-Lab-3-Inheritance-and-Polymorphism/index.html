@@ -1,0 +1,247 @@
+<!-- This is the outermost frame -->
+<!-- Create by MaaZiJyun on 27 Aug 2022 -->
+<!DOCTYPE html>
+<html>
+  <!-- the head of the html -->
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" name="viewport">
+    <!-- more meta data settings -->
+    
+       <meta name="author" content="MaaZiJyun"> 
+     
+    
+        <meta name="subtitle" content="Welcome to My Home"> 
+     
+    
+        <meta name="description" content="Welcome to visit my personal blog. I usually write some notes and articales here to share with others. Hope you could find what you are interested in"> 
+    
+     
+    <!-- generate the title of the web page -->
+     
+
+    <!-- the title of the web page -->
+    <title>
+        Java Programming 2 Lab 3 Inheritance and Polymorphism
+    </title>
+
+    <!-- the icon of the web page -->
+    
+        <link rel="icon" href="/img/domukiico.ico ">
+     
+
+    <!-- CSS list -->
+     
+         
+            
+                <link rel="stylesheet" href="/css/style.css ">
+            
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css ">
+             
+         
+     
+    <!-- JS list -->
+     
+         
+            
+                <script src="/js/helper.css "></script>
+            
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js "></script>
+             
+         
+     
+<meta name="generator" content="Hexo 6.2.0"></head>
+  <!-- the body of the html -->
+  <!-- The interface to connect the body content -->
+<body>
+
+  <!-- the header of the page -->
+   
+    
+  <header class="header" style="background-color: black;">
+    
+  <!-- Navigation-->
+  <nav class="navbar navbar-expand-lg navbar-dark justify-content-center">
+    <div class="container p-2">
+      <a href="/" class="navbar-brand logo">
+        MaaZiJyun' Blog
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span
+          class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ms-auto">
+          
+            <li class="nav-item">
+              <a href="/" class="nav-link active">
+                Home
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/archives" class="nav-link active">
+                Archives
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/categories" class="nav-link active">
+                Categories
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/tags" class="nav-link active">
+                Tags
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/about" class="nav-link active">
+                About
+              </a>
+            </li>
+            
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header> 
+   
+
+  <!-- the main part of the page -->
+  <div class="content">
+
+    <main class="main">
+
+      <div class="main-content">
+
+        <!-- if the current page is home, then the content of hone will be shown up -->
+        
+          <article class="post">
+    <div class="post-title">
+        <h2 class="title">
+            Java Programming 2 Lab 3 Inheritance and Polymorphism
+        </h2>
+    </div>
+    <div class="post-meta">
+        <span class="post-time">
+            2020-04-29
+        </span>
+    </div>
+    <div class="post-content">
+        <span id="more"></span>
+
+<h2 id="Question"><a href="#Question" class="headerlink" title="Question:"></a>Question:</h2><p>Create a hierarchy of classes for a set of vehicles using the following class names: Vehicle, Bicycle, Car, Motorbike, airplane. </p>
+<p>The common methods for these vehicles are move(), printName(), printType() and printSeat(). The move() method prints out the distinct way on how a specific vehicle moves. For instance, the bicycle will be ‘paddling…’, the airplane will be ‘flying…’. The printName() method prints out registration number of vehicle (e.g. MH371). The printType() method prints the class name. The printSeat() method prints out how many seats available for passengers and drivers for a specific vehicle. The seatSize is a common attribute for all vehicles. </p>
+<p>Create a test class to apply the Polymorphism concept using the following scenario.</p>
+<p>Create an array of vehicles to store different types of vehicle instances. This array must be accessible by 2 methods: test1() and test2(). </p>
+<p>The test1() method shall create different vehicle instances including the generic vehicle and store them in the array. Then, use a For loop to loop through the array to call all the callable instance methods. Take the screenshot of your execution result (whole ide screen) for submission later.</p>
+<p>Modify your airplane class by adding a method call autopilot() to toggle autopilot mode. Calling the autopilot() method will print out “airplane autopilot [ON&#x2F;OFF]. </p>
+<p>In the test2 method, use a For loop to loop through the array to toggle the autopilot mode for airplanes only.</p>
+<p>Take the screenshot of your execution result (whole ide screen) for submission later.</p>
+<p>For submission, you need to submit the .java files together with 2 screenshots. DO NOT compress&#x2F;zip the files.</p>
+<h2 id="Source-code-be-for-the-class"><a href="#Source-code-be-for-the-class" class="headerlink" title="Source code (be for the class):"></a>Source code (be for the class):</h2><h3 id="Class-Vehicle"><a href="#Class-Vehicle" class="headerlink" title="Class Vehicle"></a>Class Vehicle</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> Java20200401.Homework;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Vehicle</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> String wayToMove;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> String registration;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="type">int</span> seatSize;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> String type;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">Vehicle</span><span class="params">(String wayToMove, String registration, <span class="type">int</span> seatSize, String type)</span> &#123;</span><br><span class="line"></span><br><span class="line">        <span class="built_in">this</span>.wayToMove = wayToMove;</span><br><span class="line"></span><br><span class="line">        <span class="built_in">this</span>.registration = registration;</span><br><span class="line"></span><br><span class="line">        <span class="built_in">this</span>.seatSize = seatSize;</span><br><span class="line"></span><br><span class="line">        <span class="built_in">this</span>.type = type;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">move</span><span class="params">()</span>&#123;</span><br><span class="line"></span><br><span class="line">        System.out.println(wayToMove);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">printName</span><span class="params">()</span>&#123;</span><br><span class="line"></span><br><span class="line">        System.out.println(registration);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">printType</span><span class="params">()</span>&#123;</span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="built_in">this</span>.type);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">printSeat</span><span class="params">()</span>&#123;</span><br><span class="line"></span><br><span class="line">        System.out.println(seatSize);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">getType</span><span class="params">()</span> &#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> type;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setType</span><span class="params">(String type)</span> &#123;</span><br><span class="line"></span><br><span class="line">        <span class="built_in">this</span>.type = type;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="Class-Car"><a href="#Class-Car" class="headerlink" title="Class Car"></a>Class Car</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> Java20200401.Homework;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Car</span> <span class="keyword">extends</span> <span class="title class_">Vehicle</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">Car</span><span class="params">(String wayToMove, String registration, <span class="type">int</span> seatSize, String type)</span> &#123;</span><br><span class="line">        <span class="built_in">super</span>(wayToMove, registration, seatSize, type);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="Class-Bicycle"><a href="#Class-Bicycle" class="headerlink" title="Class Bicycle"></a>Class Bicycle</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> Java20200401.Homework;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Bicycle</span> <span class="keyword">extends</span> <span class="title class_">Vehicle</span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">Bicycle</span><span class="params">(String wayToMove, String registration, <span class="type">int</span> seatSize, String type)</span> &#123;</span><br><span class="line">        <span class="built_in">super</span>(wayToMove, registration, seatSize, type);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="Class-Motorbike"><a href="#Class-Motorbike" class="headerlink" title="Class Motorbike"></a>Class Motorbike</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> Java20200401.Homework;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Motorbike</span> <span class="keyword">extends</span> <span class="title class_">Vehicle</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">Motorbike</span><span class="params">(String wayToMove, String registration, <span class="type">int</span> seatSize, String type)</span> &#123;</span><br><span class="line">        <span class="built_in">super</span>(wayToMove, registration, seatSize, type);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="Class-Airplane"><a href="#Class-Airplane" class="headerlink" title="Class Airplane"></a>Class Airplane</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> Java20200401.Homework;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Airplane</span> <span class="keyword">extends</span> <span class="title class_">Vehicle</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="type">String</span> <span class="variable">mode</span> <span class="operator">=</span> <span class="string">&quot;ON&quot;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">Airplane</span><span class="params">(String wayToMove, String registration, <span class="type">int</span> seatSize, String type)</span> &#123;</span><br><span class="line">        <span class="built_in">super</span>(wayToMove, registration, seatSize, type);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">autopilot</span><span class="params">()</span>&#123;</span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="string">&quot;previous state &quot;</span> + <span class="string">&quot;[&quot;</span> + mode + <span class="string">&quot;]&quot;</span>);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(mode.equals(<span class="string">&quot;ON&quot;</span>))mode = <span class="string">&quot;OFF&quot;</span>;</span><br><span class="line">        <span class="keyword">else</span> mode = <span class="string">&quot;ON&quot;</span>;</span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="string">&quot;airplane autopilot &quot;</span> + <span class="string">&quot;[&quot;</span> + mode + <span class="string">&quot;]&quot;</span>);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="Class-Test"><a href="#Class-Test" class="headerlink" title="Class Test"></a>Class Test</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> Java20200401.Homework;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Test</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> Vehicle[] vehicleList;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">test1</span><span class="params">()</span>&#123;</span><br><span class="line"></span><br><span class="line">        ArrayList&lt;Vehicle&gt; vehicles = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line"></span><br><span class="line">        <span class="type">Scanner</span> <span class="variable">sc</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);</span><br><span class="line"></span><br><span class="line">        <span class="type">boolean</span> <span class="variable">gate</span> <span class="operator">=</span> <span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span>(gate)&#123;</span><br><span class="line"></span><br><span class="line">            sc = <span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);</span><br><span class="line"></span><br><span class="line">            System.out.println(<span class="string">&quot;registration?&quot;</span>);</span><br><span class="line"></span><br><span class="line">            <span class="type">String</span> <span class="variable">registration</span> <span class="operator">=</span> sc.nextLine();</span><br><span class="line"></span><br><span class="line">            System.out.println(<span class="string">&quot;seatSize?&quot;</span>);</span><br><span class="line"></span><br><span class="line">            <span class="type">int</span> <span class="variable">seatSize</span> <span class="operator">=</span> sc.nextInt();</span><br><span class="line"></span><br><span class="line">            System.out.println(<span class="string">&quot;which type of vehicle you wanna add?\n&quot;</span> +</span><br><span class="line">                    <span class="string">&quot;\t1. Car\n\t2. Bicycle\n\t3. Motorbike\n\t4. Airplane&quot;</span>);</span><br><span class="line"></span><br><span class="line">            <span class="keyword">switch</span> (sc.nextInt())&#123;</span><br><span class="line">                <span class="keyword">case</span> <span class="number">1</span>: vehicles.add((Vehicle)(<span class="keyword">new</span> <span class="title class_">Car</span>(<span class="string">&quot;driving &quot;</span>, registration, seatSize, <span class="string">&quot;Car&quot;</span>)));</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">case</span> <span class="number">2</span>: vehicles.add((Vehicle)(<span class="keyword">new</span> <span class="title class_">Bicycle</span>(<span class="string">&quot;paddling &quot;</span>, registration, seatSize, <span class="string">&quot;Bicycle&quot;</span>)));</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">case</span> <span class="number">3</span>: vehicles.add((Vehicle)(<span class="keyword">new</span> <span class="title class_">Motorbike</span>(<span class="string">&quot;riding &quot;</span>, registration, seatSize, <span class="string">&quot;Motorbike&quot;</span>)));</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">case</span> <span class="number">4</span>: vehicles.add((Vehicle)(<span class="keyword">new</span> <span class="title class_">Airplane</span>(<span class="string">&quot;flying &quot;</span>, registration, seatSize, <span class="string">&quot;Airplane&quot;</span>)));</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">default</span>:</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            System.out.println(<span class="string">&quot;continue?&quot;</span>);</span><br><span class="line"></span><br><span class="line">            gate = sc.nextBoolean();</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        vehicleList = (Vehicle[]) vehicles.toArray(<span class="keyword">new</span> <span class="title class_">Vehicle</span>[vehicles.size()]);</span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="string">&quot;Vehicle List printing: &quot;</span>);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; vehicleList.length; i++)&#123;</span><br><span class="line"></span><br><span class="line">            vehicleList[i].printName();</span><br><span class="line">            vehicleList[i].printType();</span><br><span class="line">            vehicleList[i].move();</span><br><span class="line">            vehicleList[i].printSeat();</span><br><span class="line"></span><br><span class="line">            System.out.println(<span class="string">&quot;+++++++++++++++++++++++++++++++++++&quot;</span>);</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">test2</span><span class="params">()</span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; vehicleList.length; i++)&#123;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span>(vehicleList[i].getType().equals(<span class="string">&quot;Airplane&quot;</span>))&#123;</span><br><span class="line"></span><br><span class="line">                vehicleList[i].printName();</span><br><span class="line">                vehicleList[i].printType();</span><br><span class="line"></span><br><span class="line">                <span class="type">Airplane</span> <span class="variable">airplane</span> <span class="operator">=</span> (Airplane) vehicleList[i];</span><br><span class="line"></span><br><span class="line">                airplane.autopilot();</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">Test</span> <span class="variable">t1</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Test</span>();</span><br><span class="line">        t1.test1();</span><br><span class="line">        t1.test2();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+    </div>
+</article>
+
+        <!-- show the content of a category -->
+        
+      </div>
+      
+    </main>
+
+  </div>
+  <!-- the footer of the page -->
+  <!-- Footer -->
+<footer class="blog-footer font-small">
+
+    <!-- Footer Elements -->
+    <div class="footer-icons container">
+  
+      <!-- Grid row-->
+      <div class="row">
+  
+        <!-- Grid column -->
+        
+          <div class="flex-center">
+            <!-- Facebook -->
+             
+            <!-- Twitter -->
+             
+            <!-- Google +-->
+             
+            <!--Instagram-->
+             
+            <!--Pinterest-->
+             
+          </div>
+        
+        <!-- Grid column -->
+  
+      </div>
+      <!-- Grid row-->
+  
+    </div>
+    <!-- Footer Elements -->
+  
+    <!-- Copyright -->
+    <div class="footer-copyright text-center mt-3">© 2020 Copyright:
+      <a href="http://domuki.top ">http://domuki.top</a>
+    </div>
+    <!-- Copyright -->
+  
+  </footer>
+  <!-- Footer --> 
+  <button class="back-top" onclick="topFunction()">
+    Top
+  </button>
+  <script>
+    //Get the button
+    var mybutton = document.getElementsByClassName("back-top");
+    
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton[0].style.display = 'block';
+      } else {
+        mybutton[0].style.display = 'none';
+      }
+    }
+    
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+    </script>
+  
+</body>
+
+ 
+</html>

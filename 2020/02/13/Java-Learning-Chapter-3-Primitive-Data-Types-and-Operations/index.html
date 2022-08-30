@@ -1,0 +1,450 @@
+<!-- This is the outermost frame -->
+<!-- Create by MaaZiJyun on 27 Aug 2022 -->
+<!DOCTYPE html>
+<html>
+  <!-- the head of the html -->
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" name="viewport">
+    <!-- more meta data settings -->
+    
+       <meta name="author" content="MaaZiJyun"> 
+     
+    
+        <meta name="subtitle" content="Welcome to My Home"> 
+     
+    
+        <meta name="description" content="Welcome to visit my personal blog. I usually write some notes and articales here to share with others. Hope you could find what you are interested in"> 
+    
+     
+    <!-- generate the title of the web page -->
+     
+
+    <!-- the title of the web page -->
+    <title>
+        Java Learning Chapter 3 Primitive Data Types and Operations
+    </title>
+
+    <!-- the icon of the web page -->
+    
+        <link rel="icon" href="/img/domukiico.ico ">
+     
+
+    <!-- CSS list -->
+     
+         
+            
+                <link rel="stylesheet" href="/css/style.css ">
+            
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css ">
+             
+         
+     
+    <!-- JS list -->
+     
+         
+            
+                <script src="/js/helper.css "></script>
+            
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js "></script>
+             
+         
+     
+<meta name="generator" content="Hexo 6.2.0"></head>
+  <!-- the body of the html -->
+  <!-- The interface to connect the body content -->
+<body>
+
+  <!-- the header of the page -->
+   
+    
+  <header class="header" style="background-color: black;">
+    
+  <!-- Navigation-->
+  <nav class="navbar navbar-expand-lg navbar-dark justify-content-center">
+    <div class="container p-2">
+      <a href="/" class="navbar-brand logo">
+        MaaZiJyun' Blog
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span
+          class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ms-auto">
+          
+            <li class="nav-item">
+              <a href="/" class="nav-link active">
+                Home
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/archives" class="nav-link active">
+                Archives
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/categories" class="nav-link active">
+                Categories
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/tags" class="nav-link active">
+                Tags
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/about" class="nav-link active">
+                About
+              </a>
+            </li>
+            
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header> 
+   
+
+  <!-- the main part of the page -->
+  <div class="content">
+
+    <main class="main">
+
+      <div class="main-content">
+
+        <!-- if the current page is home, then the content of hone will be shown up -->
+        
+          <article class="post">
+    <div class="post-title">
+        <h2 class="title">
+            Java Learning Chapter 3 Primitive Data Types and Operations
+        </h2>
+    </div>
+    <div class="post-meta">
+        <span class="post-time">
+            2020-02-13
+        </span>
+    </div>
+    <div class="post-content">
+        <h2 id="Learning-Outcomes"><a href="#Learning-Outcomes" class="headerlink" title="Learning Outcomes"></a>Learning Outcomes</h2><blockquote>
+<p>At the end of this chapter, student should be able to:</p>
+<p>​			<em>Construct program  from flowchart (C3, P4)</em></p>
+<p>​			<em>Construct simple program (C3, P4)</em> </p>
+<p>​			<em>Explain the basic programming concepts in developing simple program (C2, A3)</em></p>
+</blockquote>
+<span id="more"></span>
+
+<h2 id="Structuring-a-Program"><a href="#Structuring-a-Program" class="headerlink" title="Structuring a Program"></a>Structuring a Program</h2><h4 id="Develop-efficient-computer-solutions-to-solve-problems"><a href="#Develop-efficient-computer-solutions-to-solve-problems" class="headerlink" title="Develop efficient computer solutions to solve problems:"></a>Develop efficient computer solutions to solve problems:</h4><ol>
+<li><p>Use Modules</p>
+</li>
+<li><p>Use four logic structures</p>
+<p>a. Sequential structure</p>
+<p>​	Executes instructions one after another in a sequence.</p>
+<p>b. Decision structure</p>
+<p>​	Branches to execute one of two possible sets of instructions.</p>
+<p>c. Loop structure</p>
+<p>​	Executes a set of instructions many times.</p>
+<p>d. Case structure</p>
+<p>​	Executes one set of instructions out of several sets.</p>
+</li>
+<li><p>Eliminate rewriting of identical process by using modules.</p>
+</li>
+<li><p>Use techniques to improve readability including four logic structures, proper naming of variables, internal documentation and proper indentation.</p>
+</li>
+</ol>
+<h2 id="Simple-Program-Structure"><a href="#Simple-Program-Structure" class="headerlink" title="Simple Program Structure"></a>Simple Program Structure</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">____________</span> &#123;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">		<span class="comment">//Steps to be performed</span></span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="Writing-Simple-Programs"><a href="#Writing-Simple-Programs" class="headerlink" title="Writing Simple Programs"></a>Writing Simple Programs</h2><h4 id="1-Algorithm"><a href="#1-Algorithm" class="headerlink" title="1. Algorithm:"></a>1. Algorithm:</h4><ol>
+<li><p>Read the radius</p>
+</li>
+<li><p>Compute the area using the following formula:</p>
+<p>​			area &#x3D; radius x radius x pi</p>
+</li>
+<li><p>Display the area</p>
+</li>
+</ol>
+<h4 id="2-Coding"><a href="#2-Coding" class="headerlink" title="2. Coding"></a>2. Coding</h4><ol>
+<li>Framework</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Circle</span> &#123;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line"></span><br><span class="line">		<span class="comment">//Step 1: Read the radius</span></span><br><span class="line"></span><br><span class="line">		<span class="comment">//Step 2: Compute area</span></span><br><span class="line"></span><br><span class="line">		<span class="comment">//Step 3: Display the area</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>Define Variables</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">double</span> radius;</span><br><span class="line"><span class="type">double</span> area;	<span class="comment">//Variables</span></span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>Assign Variables:</li>
+</ol>
+<p><code>radius = 20;</code> in Step 1 </p>
+<ol start="4">
+<li>Define the Formula:</li>
+</ol>
+<p>Adding <code>area = radius * radius * 3.14159;</code>in Step 2.</p>
+<ol start="5">
+<li>Calling Method</li>
+</ol>
+<p><code>System.out.println(area);</code></p>
+<ol start="6">
+<li>Completed</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Example Computing the Area of a Circle</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Circle</span> &#123;</span><br><span class="line">  <span class="comment">/** Main method */</span></span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">     <span class="type">double</span> radius;</span><br><span class="line">     <span class="type">double</span> area;</span><br><span class="line">     <span class="comment">// Assign a radius</span></span><br><span class="line">     radius = <span class="number">20</span>;</span><br><span class="line">     <span class="comment">// Compute area</span></span><br><span class="line">     area = radius * radius * <span class="number">3.14159</span>;</span><br><span class="line">     <span class="comment">// Display results</span></span><br><span class="line">     System.out.println(<span class="string">&quot;The area for the circle of radius &quot;</span> + radius + <span class="string">&quot; is &quot;</span> + area);</span><br><span class="line">  &#125;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="Getting-Input-Using-Scanner"><a href="#Getting-Input-Using-Scanner" class="headerlink" title="Getting Input Using Scanner"></a>Getting Input Using Scanner</h2><h4 id="1-Create-a-Scanner-object"><a href="#1-Create-a-Scanner-object" class="headerlink" title="1. Create a Scanner object"></a>1. Create a Scanner object</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">Scanner</span> <span class="variable">scanner</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);</span><br></pre></td></tr></table></figure>
+
+<p>Only need to create once, and can be used many times in the same program.</p>
+<h4 id="2-Use-the-methods"><a href="#2-Use-the-methods" class="headerlink" title="2. Use the methods"></a>2. Use the methods</h4><p><code>next()</code>, <code>nextByte()</code>, <code>nextShort()</code>, <code>nextInt()</code>, <code>nextLong()</code>, <code>nextFloat()</code>, <code>nextDouble()</code>, or <code>nextBoolean()</code> to obtain to a <strong>string, byte, short, int, long, float, double,</strong> or <strong>boolean</strong> value. For example,</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">Scanner</span> <span class="variable">scanner</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);</span><br><span class="line"></span><br><span class="line">System.out.print(<span class="string">&quot;Enter a double value: &quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="type">double</span> <span class="variable">d</span> <span class="operator">=</span> scanner.nextDouble();</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-Modify-Example-Code"><a href="#3-Modify-Example-Code" class="headerlink" title="3. Modify Example Code"></a>3. Modify Example Code</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Example Computing the Area of a Circle</span></span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Circle</span> &#123;</span><br><span class="line">    </span><br><span class="line">	<span class="comment">/** Main method */</span></span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">      </span><br><span class="line">		<span class="type">double</span> radius;</span><br><span class="line">		<span class="type">double</span> area;</span><br><span class="line">      </span><br><span class="line">		<span class="comment">// Assign a radius</span></span><br><span class="line">		<span class="comment">/*radius = 20;*/</span></span><br><span class="line">		<span class="type">Scanner</span> <span class="variable">scanner</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);</span><br><span class="line">		System.out.print(<span class="string">&quot;Enter radius: &quot;</span>);</span><br><span class="line">		radius = scanner.nextDouble();</span><br><span class="line"></span><br><span class="line">     </span><br><span class="line">		<span class="comment">// Compute area</span></span><br><span class="line">		area = radius * radius * <span class="number">3.14159</span>;</span><br><span class="line">      </span><br><span class="line">		<span class="comment">// Display results</span></span><br><span class="line">		System.out.println(<span class="string">&quot;The area for the circle of radius &quot;</span> + radius </span><br><span class="line">                           + <span class="string">&quot; is &quot;</span> + area);</span><br><span class="line">      </span><br><span class="line">  &#125;</span><br><span class="line">    </span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="Programming-Style-and-Documentation"><a href="#Programming-Style-and-Documentation" class="headerlink" title="Programming Style and Documentation"></a>Programming Style and Documentation</h2><h4 id="1-Appropriate-Comments"><a href="#1-Appropriate-Comments" class="headerlink" title="1. Appropriate Comments"></a>1. Appropriate Comments</h4><p>a. Include a summary at the beginning of the program to explain what the program does, its key features, its supporting data structures, and any unique techniques it uses. </p>
+<p>b. Include your name, class section, instructor, date, and a brief description at the beginning of the program. </p>
+<h4 id="2-Naming-Conventions"><a href="#2-Naming-Conventions" class="headerlink" title="2. Naming Conventions"></a>2. Naming Conventions</h4><h5 id="a-Choose-meaningful-and-descriptive-names"><a href="#a-Choose-meaningful-and-descriptive-names" class="headerlink" title="a. Choose meaningful and descriptive names."></a>a. Choose meaningful and descriptive names.</h5><h5 id="b-Variables-and-method-names"><a href="#b-Variables-and-method-names" class="headerlink" title="b. Variables and method names:"></a>b. Variables and method names:</h5><p>–Use lowercase. If the name consists of several words, concatenate all in one, use lowercase for the first word, and capitalize the first letter of each subsequent word in the name. For example, the variables <em><strong>radius</strong></em> and <em><strong>area</strong></em>, and the method <em><strong>computeArea</strong></em>. </p>
+<h4 id="3-Proper-Indentation-and-Spacing-Lines"><a href="#3-Proper-Indentation-and-Spacing-Lines" class="headerlink" title="3. Proper Indentation and Spacing Lines"></a>3. Proper Indentation and Spacing Lines</h4><h5 id="a-Class-names"><a href="#a-Class-names" class="headerlink" title="a. Class names:"></a>a. Class names:</h5><p>​	–Capitalize the first letter of each word in the name. For example, the class name <em><strong>ComputeArea</strong></em>.</p>
+<h5 id="b-Constants"><a href="#b-Constants" class="headerlink" title="b. Constants:"></a>b. Constants:</h5><p>​	–Capitalize all letters in constants, and use underscores to connect words. For example, the constant <em><strong>PI</strong></em> and <em><strong>MAX_VALUE</strong></em></p>
+<h5 id="c-Indentation"><a href="#c-Indentation" class="headerlink" title="c. Indentation"></a>c. Indentation</h5><p>​	-Indent two spaces.</p>
+<h5 id="d-Spacing"><a href="#d-Spacing" class="headerlink" title="d. Spacing"></a>d. Spacing</h5><p>​	-Use blank line to separate segments of the code.</p>
+<h4 id="4-Block-Styles"><a href="#4-Block-Styles" class="headerlink" title="4. Block Styles"></a>4. Block Styles</h4><p>Use end-of-line style for braces.</p>
+<p><img src="/Java-Learning-Chapter-3-Primitive-Data-Types-and-Operations/001.png" alt="BlockStyles"></p>
+<h2 id="Programming-Errors"><a href="#Programming-Errors" class="headerlink" title="Programming Errors"></a>Programming Errors</h2><h4 id="1-Syntax-Errors"><a href="#1-Syntax-Errors" class="headerlink" title="1. Syntax Errors"></a>1. Syntax Errors</h4><p>​	Detected by the compiler</p>
+<p>​	Result from errors in code construction, such as mistyping a keyword.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ShowSyntaxErrors</span> &#123;</span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">    i = <span class="number">30</span>;</span><br><span class="line">    System.out.println(i + <span class="number">4</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="2-Runtime-Errors"><a href="#2-Runtime-Errors" class="headerlink" title="2. Runtime Errors"></a>2. Runtime Errors</h4><p>​	Causes the program to abort</p>
+<p>​	Occur while an application is running  such as input error (unexpected value that the program cannot handle) or division by zero.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ShowRuntimeErrors</span> &#123;</span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">    <span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">1</span> / <span class="number">0</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="3-Logic-Errors"><a href="#3-Logic-Errors" class="headerlink" title="3. Logic Errors"></a>3. Logic Errors</h4><p>​	Produces incorrect result</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Program to compute the sum of two integer numbers</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Sum</span> &#123;</span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line"><span class="type">int</span> <span class="variable">num1</span> <span class="operator">=</span> <span class="number">3</span>;</span><br><span class="line"><span class="type">int</span> <span class="variable">num2</span> <span class="operator">=</span> <span class="number">2</span>;</span><br><span class="line"><span class="type">int</span> <span class="variable">sum</span> <span class="operator">=</span> num1 + num2;</span><br><span class="line">sum = <span class="number">0</span>;</span><br><span class="line">	  System.out.println(“Total is <span class="string">&quot; + sum);</span></span><br><span class="line"><span class="string">  &#125;</span></span><br><span class="line"><span class="string">&#125;</span></span><br><span class="line"><span class="string"></span></span><br></pre></td></tr></table></figure>
+
+<p>Which displays:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Total is 0</span><br></pre></td></tr></table></figure>
+
+<p>But the result that we want is 5.</p>
+<h2 id="Debugging"><a href="#Debugging" class="headerlink" title="Debugging"></a>Debugging</h2><blockquote>
+<p>Logic errors are called <em>bugs</em>. The process of finding and correcting errors is called debugging. </p>
+</blockquote>
+<p>BreakPoint;</p>
+<h2 id="Identifiers"><a href="#Identifiers" class="headerlink" title="Identifiers"></a>Identifiers</h2><p>Special symbols to name such programming entities as variables, constants, methods, classes and packages.</p>
+<p>Examples in the previous simple program: </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">	Circle			- class name</span><br><span class="line"></span><br><span class="line">​	radius			- data name</span><br><span class="line"></span><br><span class="line">​	area			- data name</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li><p>An identifier is a sequence of characters that consist of letters, digits, underscores (_), and dollar signs ($). _</p>
+</li>
+<li><p>An identifier must begin with a letter, an underscore (_), or a dollar sign ($). </p>
+</li>
+<li><p>An identifier <strong>cannot</strong>:</p>
+<blockquote>
+<p>​		be a reserved word, e.g. true, false, or null</p>
+<p>​		start with a digit</p>
+<p>​		contain a (blank) space</p>
+<p>​		contain special characters, except _ and $</p>
+</blockquote>
+</li>
+<li><p>An identifier can be of any length.</p>
+</li>
+<li><p>Conventions for choosing identifier names: </p>
+<p>​	a. Name according to what it represents</p>
+<p>​	b. Consistent in the use of variable names</p>
+<p>​	c. Consistent when using upper and lowercase characters</p>
+<p>​			–<strong>Variable</strong> name – <em>lowercase</em>, or <em>mix-case</em></p>
+<p>​			–<strong>Constant</strong> name – <em>uppercase</em> (all caps)</p>
+</li>
+</ol>
+<h2 id="Data"><a href="#Data" class="headerlink" title="Data"></a>Data</h2><blockquote>
+<p>Data used in processing</p>
+</blockquote>
+<h4 id="1-Constant-and-Variable"><a href="#1-Constant-and-Variable" class="headerlink" title="1. Constant and Variable"></a>1. Constant and Variable</h4><p>​		<strong>Constant</strong> is a value that never changes during the processing of all instructions in a solution</p>
+<p>​				–Constant is given a location in memory and a name.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">final</span> <span class="type">double</span> <span class="variable">PI</span> <span class="operator">=</span> <span class="number">3.14159</span>; </span><br></pre></td></tr></table></figure>
+
+<p>​		<strong>Variable</strong> – value may change during processing</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">double</span> <span class="variable">Pi</span> <span class="operator">=</span> <span class="number">3.14159</span>; </span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="2-Data-Types"><a href="#2-Data-Types" class="headerlink" title="2. Data Types"></a>2. Data Types</h4><blockquote>
+<p>Data are unorganized facts</p>
+<p>Goes as input and is processed to produce output, information</p>
+<p>Computers must be told the data type of each variable and constant</p>
+<p>Three common types: <strong>numeric, character</strong>, and <strong>logical</strong></p>
+<p>Other data types: date data type and user-defined data types</p>
+</blockquote>
+<pre><code>    1. Numeric Data Types
+</code></pre>
+<table>
+<thead>
+<tr>
+<th><strong>Integers (in Java):</strong></th>
+<th><strong>Floating-point numbers:</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>byte</td>
+<td>float</td>
+</tr>
+<tr>
+<td>short</td>
+<td><strong>double</strong></td>
+</tr>
+<tr>
+<td><strong>int</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>long</td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="Operators"><a href="#Operators" class="headerlink" title="Operators"></a>Operators</h2><table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Meaning</th>
+<th>Example</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>+</td>
+<td>Addition</td>
+<td>34  + 1</td>
+<td>35</td>
+</tr>
+<tr>
+<td>-</td>
+<td>Substraction</td>
+<td>34.0  – 0.1</td>
+<td>33.9</td>
+</tr>
+<tr>
+<td>*</td>
+<td>Multiplication</td>
+<td>300  * 30</td>
+<td>9000</td>
+</tr>
+<tr>
+<td>&#x2F;</td>
+<td>Division</td>
+<td>1.0&#x2F;2.0</td>
+<td>0.5</td>
+</tr>
+<tr>
+<td>%</td>
+<td>Remainder</td>
+<td>20  % 3</td>
+<td>2</td>
+</tr>
+</tbody></table>
+<p>Shortcut Assignment Operators:</p>
+<h4 id="Note"><a href="#Note" class="headerlink" title="Note"></a>Note</h4><blockquote>
+<p>Calculations involving floating-point numbers are approximated because these numbers are not stored with complete accuracy. </p>
+</blockquote>
+<p>For example, </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">System.out.println(<span class="number">1</span> - <span class="number">0.1</span> - <span class="number">0.1</span> - <span class="number">0.1</span> - <span class="number">0.1</span> - <span class="number">0.1</span>);</span><br></pre></td></tr></table></figure>
+
+<p>​	<strong>displays 0.5000000000000001, not 0.5</strong>, and </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">System.out.println(<span class="number">1.0</span> - <span class="number">0.9</span>);</span><br></pre></td></tr></table></figure>
+
+<p>​	<strong>displays 0.09999999999999998, not 0.1</strong>. </p>
+<p><strong>Integers are stored precisely</strong>. Therefore, <u>calculations with integers yield a precise integer result</u>. </p>
+<h2 id="Escape-Sequences-for-Special-Characters"><a href="#Escape-Sequences-for-Special-Characters" class="headerlink" title="Escape Sequences for Special Characters"></a>Escape Sequences for Special Characters</h2><img src="Java-Learning-Chapter-3-Primitive-Data-Types-and-Operations/002.png" alt="specialC" style="zoom: 50%;" />
+
+
+    </div>
+</article>
+
+        <!-- show the content of a category -->
+        
+      </div>
+      
+    </main>
+
+  </div>
+  <!-- the footer of the page -->
+  <!-- Footer -->
+<footer class="blog-footer font-small">
+
+    <!-- Footer Elements -->
+    <div class="footer-icons container">
+  
+      <!-- Grid row-->
+      <div class="row">
+  
+        <!-- Grid column -->
+        
+          <div class="flex-center">
+            <!-- Facebook -->
+             
+            <!-- Twitter -->
+             
+            <!-- Google +-->
+             
+            <!--Instagram-->
+             
+            <!--Pinterest-->
+             
+          </div>
+        
+        <!-- Grid column -->
+  
+      </div>
+      <!-- Grid row-->
+  
+    </div>
+    <!-- Footer Elements -->
+  
+    <!-- Copyright -->
+    <div class="footer-copyright text-center mt-3">© 2020 Copyright:
+      <a href="http://domuki.top ">http://domuki.top</a>
+    </div>
+    <!-- Copyright -->
+  
+  </footer>
+  <!-- Footer --> 
+  <button class="back-top" onclick="topFunction()">
+    Top
+  </button>
+  <script>
+    //Get the button
+    var mybutton = document.getElementsByClassName("back-top");
+    
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton[0].style.display = 'block';
+      } else {
+        mybutton[0].style.display = 'none';
+      }
+    }
+    
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+    </script>
+  
+</body>
+
+ 
+</html>

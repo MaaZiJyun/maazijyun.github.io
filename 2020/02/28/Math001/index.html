@@ -1,0 +1,252 @@
+<!-- This is the outermost frame -->
+<!-- Create by MaaZiJyun on 27 Aug 2022 -->
+<!DOCTYPE html>
+<html>
+  <!-- the head of the html -->
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" name="viewport">
+    <!-- more meta data settings -->
+    
+       <meta name="author" content="MaaZiJyun"> 
+     
+    
+        <meta name="subtitle" content="Welcome to My Home"> 
+     
+    
+        <meta name="description" content="Welcome to visit my personal blog. I usually write some notes and articales here to share with others. Hope you could find what you are interested in"> 
+    
+     
+    <!-- generate the title of the web page -->
+     
+
+    <!-- the title of the web page -->
+    <title>
+        How to draw a Box Plot
+    </title>
+
+    <!-- the icon of the web page -->
+    
+        <link rel="icon" href="/img/domukiico.ico ">
+     
+
+    <!-- CSS list -->
+     
+         
+            
+                <link rel="stylesheet" href="/css/style.css ">
+            
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css ">
+             
+         
+     
+    <!-- JS list -->
+     
+         
+            
+                <script src="/js/helper.css "></script>
+            
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js "></script>
+             
+         
+     
+<meta name="generator" content="Hexo 6.2.0"></head>
+  <!-- the body of the html -->
+  <!-- The interface to connect the body content -->
+<body>
+
+  <!-- the header of the page -->
+   
+    
+  <header class="header" style="background-color: black;">
+    
+  <!-- Navigation-->
+  <nav class="navbar navbar-expand-lg navbar-dark justify-content-center">
+    <div class="container p-2">
+      <a href="/" class="navbar-brand logo">
+        MaaZiJyun' Blog
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span
+          class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ms-auto">
+          
+            <li class="nav-item">
+              <a href="/" class="nav-link active">
+                Home
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/archives" class="nav-link active">
+                Archives
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/categories" class="nav-link active">
+                Categories
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/tags" class="nav-link active">
+                Tags
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/about" class="nav-link active">
+                About
+              </a>
+            </li>
+            
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header> 
+   
+
+  <!-- the main part of the page -->
+  <div class="content">
+
+    <main class="main">
+
+      <div class="main-content">
+
+        <!-- if the current page is home, then the content of hone will be shown up -->
+        
+          <article class="post">
+    <div class="post-title">
+        <h2 class="title">
+            How to draw a Box Plot
+        </h2>
+    </div>
+    <div class="post-meta">
+        <span class="post-time">
+            2020-02-28
+        </span>
+    </div>
+    <div class="post-content">
+        <h2 id="1-Read-the-data-and-sort-numbers"><a href="#1-Read-the-data-and-sort-numbers" class="headerlink" title="1. Read the data and sort numbers"></a>1. Read the data and sort numbers</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">16	25	4	18	11	13	20	8	11	9 </span><br><span class="line">// after sorting</span><br><span class="line">4	8	9	11	11	13	16	18	20	25</span><br></pre></td></tr></table></figure>
+
+<p>So from the information that we can get the maximum and minimum of this data(question).</p>
+<p><code>Max = 25</code> and <code>Min = 4</code></p>
+<span id="more"></span>
+
+<h2 id="2-Compute-the-Q1-Medium-Q3-IQR-LF-and-UF"><a href="#2-Compute-the-Q1-Medium-Q3-IQR-LF-and-UF" class="headerlink" title="2. Compute the Q1, Medium, Q3, IQR, LF and UF"></a>2. Compute the Q1, Medium, Q3, IQR, LF and UF</h2><h3 id="1-Q1"><a href="#1-Q1" class="headerlink" title="1. Q1"></a>1. Q1</h3><p><strong>Q1: 0.25(n + 1)</strong> <em>n means the number of data</em> </p>
+<p>Imagine set of information is  an array named <em><strong>“data”</strong></em> (this array’s index begin from 1 not 0)</p>
+<p>From the information we know <code>n = data.length = 10</code></p>
+<p><strong>Location</strong> of Q1 &#x3D; 0.25 * (10 + 1) &#x3D; 2.75</p>
+<p>Last-Location &lt; 2.75 &lt; Next-Location</p>
+<p>Thus, <code>Last-Location = 2</code>, <code>Next-Location = 3</code>;</p>
+<p><code>Q1 = data[Last-Location] + 0.25 * (data[Next-Location] - data[Last-Location])</code></p>
+<p>so, Q1 &#x3D; 8 + 0.25(9 - 8) &#x3D; 8.25</p>
+<h3 id="2-Medium"><a href="#2-Medium" class="headerlink" title="2. Medium"></a>2. Medium</h3><p><strong>Medium: 0.5(n + 1)</strong> <em>n means the number of data</em></p>
+<p><strong>Location</strong> of Medium &#x3D; 0.5 * (10 + 1) &#x3D; 5.5</p>
+<p>Medium &#x3D; 11 + 0.5(13 - 11) &#x3D; 12</p>
+<h3 id="3-Q3"><a href="#3-Q3" class="headerlink" title="3. Q3"></a>3. Q3</h3><p>Same way to Q3:</p>
+<p><strong>Q3: 0.75(n + 1)</strong> <em>n means the number of data</em> </p>
+<p><strong>Location</strong> of Q3 &#x3D; 0.75 * (10 + 1) &#x3D; 8.25</p>
+<p>so, Q1 &#x3D; 8 + 0.25(9 - 8) &#x3D; 19.5</p>
+<h3 id="4-IQR"><a href="#4-IQR" class="headerlink" title="4. IQR"></a>4. IQR</h3><p><strong>IQR &#x3D; Q3 - Q1</strong></p>
+<p>&#x3D; 19.5 - 8.25 &#x3D; 11.25</p>
+<h3 id="5-LF-and-UF"><a href="#5-LF-and-UF" class="headerlink" title="5. LF and UF"></a>5. LF and UF</h3><p><strong>LF &#x3D; Q1 - 1.5(IQR)</strong></p>
+<p><strong>UF &#x3D; Q3 + 1.5(IQR)</strong></p>
+<p>So, LF &#x3D; 8.25 - 1.5(11.25) &#x3D; -5.875</p>
+<p>UF &#x3D; 19.5 + 1.5(11.25) &#x3D; 33.125</p>
+<h3 id="6-Draw-Box-Plot"><a href="#6-Draw-Box-Plot" class="headerlink" title="6. Draw Box Plot"></a>6. Draw Box Plot</h3><img src="Math001/001.png" style="zoom:60%;" />
+
+<p>THIS IS THE EXAMPLE OF HOW TO DRAW A BOX PLOT</p>
+<p>THE DATA WE MIGHT USE:</p>
+<p>MAX &#x3D; 25</p>
+<p>MIN &#x3D; 4</p>
+<p>Q1 &#x3D; 8.25</p>
+<p>Q3 &#x3D; 19.5</p>
+<p>MEDIUM &#x3D; 12</p>
+<p>LF &#x3D; -5.875</p>
+<p>UF &#x3D; 33.125</p>
+<img src="Math001/002.png" style="zoom:60%;" />
+    </div>
+</article>
+
+        <!-- show the content of a category -->
+        
+      </div>
+      
+    </main>
+
+  </div>
+  <!-- the footer of the page -->
+  <!-- Footer -->
+<footer class="blog-footer font-small">
+
+    <!-- Footer Elements -->
+    <div class="footer-icons container">
+  
+      <!-- Grid row-->
+      <div class="row">
+  
+        <!-- Grid column -->
+        
+          <div class="flex-center">
+            <!-- Facebook -->
+             
+            <!-- Twitter -->
+             
+            <!-- Google +-->
+             
+            <!--Instagram-->
+             
+            <!--Pinterest-->
+             
+          </div>
+        
+        <!-- Grid column -->
+  
+      </div>
+      <!-- Grid row-->
+  
+    </div>
+    <!-- Footer Elements -->
+  
+    <!-- Copyright -->
+    <div class="footer-copyright text-center mt-3">© 2020 Copyright:
+      <a href="http://domuki.top ">http://domuki.top</a>
+    </div>
+    <!-- Copyright -->
+  
+  </footer>
+  <!-- Footer --> 
+  <button class="back-top" onclick="topFunction()">
+    Top
+  </button>
+  <script>
+    //Get the button
+    var mybutton = document.getElementsByClassName("back-top");
+    
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton[0].style.display = 'block';
+      } else {
+        mybutton[0].style.display = 'none';
+      }
+    }
+    
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+    </script>
+  
+</body>
+
+ 
+</html>

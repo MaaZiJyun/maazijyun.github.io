@@ -1,0 +1,269 @@
+<!-- This is the outermost frame -->
+<!-- Create by MaaZiJyun on 27 Aug 2022 -->
+<!DOCTYPE html>
+<html>
+  <!-- the head of the html -->
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" name="viewport">
+    <!-- more meta data settings -->
+    
+       <meta name="author" content="MaaZiJyun"> 
+     
+    
+        <meta name="subtitle" content="Welcome to My Home"> 
+     
+    
+        <meta name="description" content="Welcome to visit my personal blog. I usually write some notes and articales here to share with others. Hope you could find what you are interested in"> 
+    
+     
+    <!-- generate the title of the web page -->
+     
+
+    <!-- the title of the web page -->
+    <title>
+        Java Programming 2 Lab 1
+    </title>
+
+    <!-- the icon of the web page -->
+    
+        <link rel="icon" href="/img/domukiico.ico ">
+     
+
+    <!-- CSS list -->
+     
+         
+            
+                <link rel="stylesheet" href="/css/style.css ">
+            
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css ">
+             
+         
+     
+    <!-- JS list -->
+     
+         
+            
+                <script src="/js/helper.css "></script>
+            
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js "></script>
+             
+         
+     
+<meta name="generator" content="Hexo 6.2.0"></head>
+  <!-- the body of the html -->
+  <!-- The interface to connect the body content -->
+<body>
+
+  <!-- the header of the page -->
+   
+    
+  <header class="header" style="background-color: black;">
+    
+  <!-- Navigation-->
+  <nav class="navbar navbar-expand-lg navbar-dark justify-content-center">
+    <div class="container p-2">
+      <a href="/" class="navbar-brand logo">
+        MaaZiJyun' Blog
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span
+          class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ms-auto">
+          
+            <li class="nav-item">
+              <a href="/" class="nav-link active">
+                Home
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/archives" class="nav-link active">
+                Archives
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/categories" class="nav-link active">
+                Categories
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/tags" class="nav-link active">
+                Tags
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/about" class="nav-link active">
+                About
+              </a>
+            </li>
+            
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header> 
+   
+
+  <!-- the main part of the page -->
+  <div class="content">
+
+    <main class="main">
+
+      <div class="main-content">
+
+        <!-- if the current page is home, then the content of hone will be shown up -->
+        
+          <article class="post">
+    <div class="post-title">
+        <h2 class="title">
+            Java Programming 2 Lab 1
+        </h2>
+    </div>
+    <div class="post-meta">
+        <span class="post-time">
+            2020-02-17
+        </span>
+    </div>
+    <div class="post-content">
+        <h2 id="Question-1"><a href="#Question-1" class="headerlink" title="Question 1"></a>Question 1</h2><p>Create a class named <em><strong>Rectangle</strong></em> to represent a rectangle. The class contains:</p>
+<span id="more"></span>
+
+<p>​	• <strong>Two double data fields</strong> named <em><strong>width</strong></em> and <em><strong>height</strong></em> with the default values of 1 for both. </p>
+<p>​	• A method named <code>getArea()</code> that returns the area of this rectangle. </p>
+<p>​	• A method named <code>getPerimeter()</code> that returns the perimeter. </p>
+<p>​	• A <strong>no-arg</strong> constructor <code>Rectangle()</code>.</p>
+<p>​	• A constructor with parameters that accepts width and height values: Rectangle(width: double, height: double).</p>
+<p>Write a test program that creates three Rectangle objects: </p>
+<p>​	i. using <strong>no-arg</strong> constructor with default values of 1 (for both)</p>
+<p>​	ii. using <strong>no-arg</strong> constructor with assigned values: <code>width = 4</code> and <code>height = 40</code></p>
+<p>​	iii. using argument constructor that accepts <em><strong>width</strong></em> and <em><strong>height</strong></em> values from the user.</p>
+<p>Display the <strong>width, height, area</strong> and <strong>perimeter</strong> of each rectangle in this order.</p>
+<blockquote>
+<p>Class <em><strong>Rectangle</strong></em> </p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Rectangle</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="type">double</span> <span class="variable">width</span> <span class="operator">=</span> <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">private</span> <span class="type">double</span> <span class="variable">height</span> <span class="operator">=</span> <span class="number">1</span>;</span><br><span class="line">    <span class="comment">//Two double data fields named width and height with the default values of 1 for both.</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">Rectangle</span><span class="params">(<span class="type">double</span> width, <span class="type">double</span> height)</span>&#123;</span><br><span class="line">        <span class="comment">//A constructor with parameters that accepts width and height values: Rectangle(width: double, height: double)..</span></span><br><span class="line"></span><br><span class="line">        <span class="built_in">this</span>.height = height;</span><br><span class="line">        <span class="built_in">this</span>.width = width;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">Rectangle</span><span class="params">()</span>&#123;</span><br><span class="line">        <span class="comment">//A no-arg constructor Rectangle().</span></span><br><span class="line"></span><br><span class="line">        <span class="built_in">this</span>.height = height;</span><br><span class="line">        <span class="built_in">this</span>.width = width;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="type">double</span> <span class="title function_">getHeight</span><span class="params">()</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> height;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="type">double</span> <span class="title function_">getWidth</span><span class="params">()</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> width;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setHeight</span><span class="params">(<span class="type">double</span> height)</span>&#123;</span><br><span class="line">        <span class="built_in">this</span>.height = height;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setWidth</span><span class="params">(<span class="type">double</span> width)</span>&#123;</span><br><span class="line">        <span class="built_in">this</span>.width = width;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//A method named getArea() that returns the area of this rectangle. </span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">double</span> <span class="title function_">getArea</span><span class="params">()</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> height * width / <span class="number">2</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="type">double</span> <span class="title function_">getEdge</span><span class="params">()</span>&#123;</span><br><span class="line">        <span class="type">double</span> <span class="variable">a</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="type">double</span> <span class="variable">b</span> <span class="operator">=</span> height;</span><br><span class="line">        <span class="type">double</span> <span class="variable">c</span> <span class="operator">=</span> width;</span><br><span class="line">        a = Math.sqrt(Math.pow(b, <span class="number">2</span>) + Math.pow(c/<span class="number">2</span>, <span class="number">2</span>));</span><br><span class="line">        <span class="keyword">return</span> a;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//A method named getPerimeter() that returns the perimeter. </span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">double</span> <span class="title function_">getPerimeter</span><span class="params">()</span>&#123;</span><br><span class="line">        <span class="type">double</span> <span class="variable">edge</span> <span class="operator">=</span> getEdge();</span><br><span class="line">        <span class="keyword">return</span> edge * <span class="number">2</span> + width;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>Class Main</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Main</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="type">Scanner</span> <span class="variable">sc</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//using no-arg constructor with default values of 1 (for both)</span></span><br><span class="line">        <span class="type">Rectangle</span> <span class="variable">r1</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Rectangle</span>();</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//using no-arg constructor with assigned values: width = 4 and height = 40</span></span><br><span class="line">        r1.setWidth(<span class="number">4</span>);</span><br><span class="line">        r1.setHeight(<span class="number">40</span>);</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//using argument constructor that accepts width and height values from the user.</span></span><br><span class="line">        <span class="type">Rectangle</span> <span class="variable">r2</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Rectangle</span>(sc.nextDouble(),sc.nextDouble());</span><br><span class="line"></span><br><span class="line">        <span class="comment">//Display the width, height, area and perimeter of each rectangle in this order.</span></span><br><span class="line">        System.out.println(r1.getHeight() + r1.getWidth() </span><br><span class="line">                           + r1.getPerimeter() + r1.getArea());</span><br><span class="line"></span><br><span class="line">        System.out.println(r2.getHeight() + r2.getWidth() </span><br><span class="line">                           + r2.getPerimeter() + r2.getArea());</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="Question-2"><a href="#Question-2" class="headerlink" title="Question 2"></a>Question 2</h2><table>
+<thead>
+<tr>
+<th>Bank-Account (UML diagram)</th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>balance</strong>: double</td>
+<td><em>A double that holds the account current balance.</em></td>
+</tr>
+<tr>
+<td>+<strong>BankAccount</strong>(startBalance:double) <br/><br/>+<strong>deposit</strong>(amount:double):void <br/>+<strong>withdraw</strong>(amount:double):void <br/>+<strong>getBalance</strong>():double<br/></td>
+<td><em>When the constructor executes, the amount of balance is passed into startBalance parameter. <br/><br/>The amount deposit is added to the balance field. <br/><br/>The amount withdraw is subtracted from the balance field. <br/>The method will return the value in the balance field, which is the current account balance.</em></td>
+</tr>
+</tbody></table>
+<p>Create a BankAccount class based on the UML diagram. Write a test class to create an object from the BankAccount class that: </p>
+<p>i.	accept input of initial balance from the user. </p>
+<p>ii.	ask the user to deposit amount into the account and show the balance.</p>
+<p>iii.	ask the user to withdraw amount from the account and show the balance.</p>
+<blockquote>
+<p>Class BankAccount</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">BankAccount</span> &#123;</span><br><span class="line">    <span class="type">double</span> balance;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//1. Bank Account</span></span><br><span class="line">    BankAccount(<span class="type">double</span> startBalance)&#123;</span><br><span class="line">        balance = startBalance;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//2. deposit</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">deposit</span><span class="params">(<span class="type">double</span> amount)</span>&#123;</span><br><span class="line">        balance += amount;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//3. withdraw</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">withdraw</span><span class="params">(<span class="type">double</span> amount)</span>&#123;</span><br><span class="line">        balance -= amount;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//4. getBalance</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">double</span> <span class="title function_">getBalance</span><span class="params">()</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> balance;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>Class Main</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Main</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line"></span><br><span class="line">        <span class="type">Scanner</span> <span class="variable">sc</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//i.accept input of initial balance from the user.</span></span><br><span class="line">        <span class="type">BankAccount</span> <span class="variable">ba</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">BankAccount</span>(sc.nextDouble());</span><br><span class="line"></span><br><span class="line">        <span class="comment">//ii.ask the user to deposit amount into the account and show the balance.</span></span><br><span class="line">        System.out.println(<span class="string">&quot;Deposit amount: &quot;</span>);</span><br><span class="line">        ba.deposit(sc.nextDouble());</span><br><span class="line">        System.out.println(ba.getBalance());</span><br><span class="line"></span><br><span class="line">        <span class="comment">//iii.ask the user to withdraw amount from the account and show the balance.</span></span><br><span class="line">        System.out.println(<span class="string">&quot;Withdraw amount: &quot;</span>);</span><br><span class="line">        ba.withdraw(sc.nextDouble());</span><br><span class="line">        System.out.println(ba.getBalance());</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+    </div>
+</article>
+
+        <!-- show the content of a category -->
+        
+      </div>
+      
+    </main>
+
+  </div>
+  <!-- the footer of the page -->
+  <!-- Footer -->
+<footer class="blog-footer font-small">
+
+    <!-- Footer Elements -->
+    <div class="footer-icons container">
+  
+      <!-- Grid row-->
+      <div class="row">
+  
+        <!-- Grid column -->
+        
+          <div class="flex-center">
+            <!-- Facebook -->
+             
+            <!-- Twitter -->
+             
+            <!-- Google +-->
+             
+            <!--Instagram-->
+             
+            <!--Pinterest-->
+             
+          </div>
+        
+        <!-- Grid column -->
+  
+      </div>
+      <!-- Grid row-->
+  
+    </div>
+    <!-- Footer Elements -->
+  
+    <!-- Copyright -->
+    <div class="footer-copyright text-center mt-3">© 2020 Copyright:
+      <a href="http://domuki.top ">http://domuki.top</a>
+    </div>
+    <!-- Copyright -->
+  
+  </footer>
+  <!-- Footer --> 
+  <button class="back-top" onclick="topFunction()">
+    Top
+  </button>
+  <script>
+    //Get the button
+    var mybutton = document.getElementsByClassName("back-top");
+    
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton[0].style.display = 'block';
+      } else {
+        mybutton[0].style.display = 'none';
+      }
+    }
+    
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+    </script>
+  
+</body>
+
+ 
+</html>

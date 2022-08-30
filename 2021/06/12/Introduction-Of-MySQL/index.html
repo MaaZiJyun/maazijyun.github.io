@@ -1,0 +1,321 @@
+<!-- This is the outermost frame -->
+<!-- Create by MaaZiJyun on 27 Aug 2022 -->
+<!DOCTYPE html>
+<html>
+  <!-- the head of the html -->
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" name="viewport">
+    <!-- more meta data settings -->
+    
+       <meta name="author" content="MaaZiJyun"> 
+     
+    
+        <meta name="subtitle" content="Welcome to My Home"> 
+     
+    
+        <meta name="description" content="Welcome to visit my personal blog. I usually write some notes and articales here to share with others. Hope you could find what you are interested in"> 
+    
+     
+    <!-- generate the title of the web page -->
+     
+
+    <!-- the title of the web page -->
+    <title>
+        Introduction Of MySQL
+    </title>
+
+    <!-- the icon of the web page -->
+    
+        <link rel="icon" href="/img/domukiico.ico ">
+     
+
+    <!-- CSS list -->
+     
+         
+            
+                <link rel="stylesheet" href="/css/style.css ">
+            
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css ">
+             
+         
+     
+    <!-- JS list -->
+     
+         
+            
+                <script src="/js/helper.css "></script>
+            
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js "></script>
+             
+         
+     
+<meta name="generator" content="Hexo 6.2.0"></head>
+  <!-- the body of the html -->
+  <!-- The interface to connect the body content -->
+<body>
+
+  <!-- the header of the page -->
+   
+    
+  <header class="header" style="background-color: black;">
+    
+  <!-- Navigation-->
+  <nav class="navbar navbar-expand-lg navbar-dark justify-content-center">
+    <div class="container p-2">
+      <a href="/" class="navbar-brand logo">
+        MaaZiJyun' Blog
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span
+          class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ms-auto">
+          
+            <li class="nav-item">
+              <a href="/" class="nav-link active">
+                Home
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/archives" class="nav-link active">
+                Archives
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/categories" class="nav-link active">
+                Categories
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/tags" class="nav-link active">
+                Tags
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/about" class="nav-link active">
+                About
+              </a>
+            </li>
+            
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header> 
+   
+
+  <!-- the main part of the page -->
+  <div class="content">
+
+    <main class="main">
+
+      <div class="main-content">
+
+        <!-- if the current page is home, then the content of hone will be shown up -->
+        
+          <article class="post">
+    <div class="post-title">
+        <h2 class="title">
+            Introduction Of MySQL
+        </h2>
+    </div>
+    <div class="post-meta">
+        <span class="post-time">
+            2021-06-12
+        </span>
+    </div>
+    <div class="post-content">
+        <p>In this Blog, I simply introduced some basic knowledge about MySQL</p>
+<span id="more"></span>
+
+<h1 id="Databases-and-MySQL"><a href="#Databases-and-MySQL" class="headerlink" title="Databases and MySQL"></a>Databases and MySQL</h1><h2 id="Structured-Query-Language"><a href="#Structured-Query-Language" class="headerlink" title="Structured Query Language"></a>Structured Query Language</h2><p>the language that we use to issue commands to the database</p>
+<ul>
+<li>Create&#x2F;Insert</li>
+<li>Read&#x2F;Select</li>
+<li>Update</li>
+<li>Delete</li>
+</ul>
+<h2 id="Terminology"><a href="#Terminology" class="headerlink" title="Terminology"></a>Terminology</h2><h3 id="Database"><a href="#Database" class="headerlink" title="Database"></a>Database</h3><p>Contains one or more tables</p>
+<h3 id="Table-or-relation"><a href="#Table-or-relation" class="headerlink" title="Table (or relation)"></a>Table (or relation)</h3><p>contains tuples (row) and attributes (column&#x2F;field)</p>
+<h3 id="Tuple"><a href="#Tuple" class="headerlink" title="Tuple"></a>Tuple</h3><p>a set of fields which generally represent an “object” like a person or a music track</p>
+<h3 id="Attribute"><a href="#Attribute" class="headerlink" title="Attribute"></a>Attribute</h3><p>one of possibly many elements of data corresponding to the object represented by the row</p>
+<h2 id="Common-DBSM"><a href="#Common-DBSM" class="headerlink" title="Common DBSM"></a>Common DBSM</h2><ul>
+<li><p>Oracle</p>
+<p>Large, commercial, enterprise-scale, very tweakable</p>
+<ul>
+<li><p>MySQL</p>
+<p>Simpler but very fast and scalable - commercial open source</p>
+</li>
+<li><p>SqlServer</p>
+<p>Very nice - from Microsoft (also Access)</p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="Basic-SQL-Operations"><a href="#Basic-SQL-Operations" class="headerlink" title="Basic SQL Operations"></a>Basic SQL Operations</h1><h2 id="Command-Line"><a href="#Command-Line" class="headerlink" title="Command Line"></a>Command Line</h2><ul>
+<li><p>Macintosh</p>
+<p><code>/Applications/MAMP/Library/bin/mysql --host=localhost -uroot –p</code></p>
+<p>Enter “root” when prompted for the password</p>
+</li>
+<li><p>Windows</p>
+<p><code>c:\xampp\mysql\bin\mysql.exe -u root –p</code></p>
+<p>Press enter when prompted for password</p>
+</li>
+</ul>
+<h3 id="Show-Database"><a href="#Show-Database" class="headerlink" title="Show Database"></a>Show Database</h3><p>the function to print out the content of the database.</p>
+<h3 id="Create-Database"><a href="#Create-Database" class="headerlink" title="Create Database"></a>Create Database</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> DATABASE student;</span><br><span class="line">USE student;</span><br></pre></td></tr></table></figure>
+
+<p>to create new database</p>
+<h3 id="Create-Table"><a href="#Create-Table" class="headerlink" title="Create Table"></a>Create Table</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> Users( </span><br><span class="line">  name <span class="type">VARCHAR</span>(<span class="number">128</span>), </span><br><span class="line">  email <span class="type">VARCHAR</span>(<span class="number">128</span>)</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="keyword">DESCRIBE</span> Users;</span><br></pre></td></tr></table></figure>
+
+<p>to create a new table</p>
+<h3 id="Drop-Table"><a href="#Drop-Table" class="headerlink" title="Drop Table"></a>Drop Table</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DROP</span> <span class="keyword">TABLE</span> Users;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Insert-Row"><a href="#Insert-Row" class="headerlink" title="Insert Row"></a>Insert Row</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> Users (name, email) <span class="keyword">VALUES</span> (<span class="string">&#x27;Chuck&#x27;</span>, <span class="string">&#x27;csev@umich.edu&#x27;</span>) ;</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> Users (name, email) <span class="keyword">VALUES</span> (<span class="string">&#x27;Somesh&#x27;</span>, <span class="string">&#x27;somesh@umich.edu&#x27;</span>) ;</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> Users (name, email) <span class="keyword">VALUES</span> (<span class="string">&#x27;Caitlin&#x27;</span>, <span class="string">&#x27;cait@umich.edu&#x27;</span>) ;</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> Users (name, email) <span class="keyword">VALUES</span> (<span class="string">&#x27;Ted&#x27;</span>, <span class="string">&#x27;ted@umich.edu&#x27;</span>) ;</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> Users (name, email) <span class="keyword">VALUES</span> (<span class="string">&#x27;Sally&#x27;</span>, <span class="string">&#x27;sally@umich.edu&#x27;</span>) ;</span><br></pre></td></tr></table></figure>
+
+<p>The INSERT statement inserts a row into a table</p>
+<h3 id="Delete-Row"><a href="#Delete-Row" class="headerlink" title="Delete Row"></a>Delete Row</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DELETE</span> <span class="keyword">FROM</span> Users <span class="keyword">WHERE</span> email<span class="operator">=</span><span class="string">&#x27;ted@umich.edu&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>Deletes a row in a table based on selection criteria</p>
+<h3 id="Update-Row"><a href="#Update-Row" class="headerlink" title="Update Row"></a>Update Row</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">UPDATE</span> Users <span class="keyword">SET</span> name<span class="operator">=</span><span class="string">&#x27;Charles&#x27;</span> <span class="keyword">WHERE</span> email<span class="operator">=</span><span class="string">&#x27;csev@umich.edu&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>Allows the updating of a field with a WHERE clause</p>
+<h3 id="Select-Row"><a href="#Select-Row" class="headerlink" title="Select Row"></a>Select Row</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> Users</span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> Users <span class="keyword">WHERE</span> email<span class="operator">=</span><span class="string">&#x27;csev@umich.edu&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>Retrieves a group of records - you can either retrieve all the records or a subset of the records with a WHERE clause</p>
+<h3 id="Order-By"><a href="#Order-By" class="headerlink" title="Order By"></a>Order By</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> Users <span class="keyword">ORDER</span> <span class="keyword">BY</span> email <span class="keyword">ASC</span>;</span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> Users <span class="keyword">ORDER</span> <span class="keyword">BY</span> email <span class="keyword">DESC</span>;</span><br></pre></td></tr></table></figure>
+
+<p>You can add an ORDER BY clause to SELECT statements to get the results sorted in ascending or descending order</p>
+<h3 id="like"><a href="#like" class="headerlink" title="like"></a>like</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> Users <span class="keyword">WHERE</span> name <span class="keyword">LIKE</span> <span class="string">&#x27;%e%&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>We can do wildcard matching in a WHERE clause using the LIKE operator</p>
+<h3 id="Limit"><a href="#Limit" class="headerlink" title="Limit"></a>Limit</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> Users <span class="keyword">ORDER</span> <span class="keyword">BY</span> email <span class="keyword">DESC</span> LIMIT <span class="number">2</span>;</span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> Users <span class="keyword">ORDER</span> <span class="keyword">BY</span> email LIMIT <span class="number">1</span>,<span class="number">2</span>;</span><br></pre></td></tr></table></figure>
+
+<p><code>LIMIT 2</code> is same as <code>LIMIT 0,2</code></p>
+<p><code>LIMIT n,m</code> ‘n’ means the select begin from n index in table; ‘m’ means how many number of rows will be selected after n index.</p>
+<h3 id="Count"><a href="#Count" class="headerlink" title="Count()"></a>Count()</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="built_in">COUNT</span>(<span class="operator">*</span>) <span class="keyword">FROM</span> Users;</span><br><span class="line"><span class="keyword">SELECT</span> <span class="built_in">COUNT</span>(<span class="operator">*</span>) <span class="keyword">FROM</span> Users <span class="keyword">WHERE</span> email<span class="operator">=</span><span class="string">&#x27;csev@umich.edu&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>return the number of selected items</p>
+<h2 id="Data-Types"><a href="#Data-Types" class="headerlink" title="Data Types"></a>Data Types</h2><h3 id="String-Fields"><a href="#String-Fields" class="headerlink" title="String Fields"></a>String Fields</h3><ul>
+<li>CHAR allocates the entire space (faster for small strings where length is known)</li>
+<li>VARCHAR allocates a variable amount of space depending on the data length (less space)</li>
+</ul>
+<h3 id="Text-Fields"><a href="#Text-Fields" class="headerlink" title="Text Fields"></a>Text Fields</h3><ul>
+<li>TINYTEXT up to 255 characters</li>
+<li>TEXT up to 65K</li>
+<li>MEDIUMTEXT up to 16M</li>
+<li>LONGTEXT up to 4G</li>
+</ul>
+<h3 id="Binary-Types"><a href="#Binary-Types" class="headerlink" title="Binary Types"></a>Binary Types</h3><ul>
+<li>BYTE(n) up to 255 bytes</li>
+<li>VARBINARY(n) up to 65K bytes</li>
+</ul>
+<h3 id="Binary-Large-Object"><a href="#Binary-Large-Object" class="headerlink" title="Binary Large Object"></a>Binary Large Object</h3><ul>
+<li>TINYBLOB(n) - up to 255</li>
+<li>BLOB(n) - up to 65K</li>
+<li>MEDIUMBLOB(n) - up to 16M</li>
+<li>LONGBLOB(n) - up to 4G</li>
+</ul>
+<h3 id="Integer-Numbers"><a href="#Integer-Numbers" class="headerlink" title="Integer Numbers"></a>Integer Numbers</h3><ul>
+<li>TINYINT (-128, 128)</li>
+<li>SMALLINT (-32768, +32768)</li>
+<li>INT or INTEGER (2 Billion)</li>
+<li>BIGINT - (10**18 ish)</li>
+</ul>
+<h3 id="Floating-Point-Numbers"><a href="#Floating-Point-Numbers" class="headerlink" title="Floating Point Numbers"></a>Floating Point Numbers</h3><ul>
+<li>FLOAT (32-bit) 10**38 with seven digits of accuracy</li>
+<li>DOUBLE (64-bit) 10**308 with 14 digits of accuracy</li>
+</ul>
+<h3 id="Dates"><a href="#Dates" class="headerlink" title="Dates"></a>Dates</h3><ul>
+<li>TIMESTAMP - ‘YYYY-MM-DD HH:MM:SS’ (1970, 2037)</li>
+<li>DATETIME - ‘YYYY-MM-DD HH:MM:SS’</li>
+<li>DATE - ‘YYYY-MM-DD’</li>
+<li>TIME - ‘HH:MM:SS’</li>
+</ul>
+
+    </div>
+</article>
+
+        <!-- show the content of a category -->
+        
+      </div>
+      
+    </main>
+
+  </div>
+  <!-- the footer of the page -->
+  <!-- Footer -->
+<footer class="blog-footer font-small">
+
+    <!-- Footer Elements -->
+    <div class="footer-icons container">
+  
+      <!-- Grid row-->
+      <div class="row">
+  
+        <!-- Grid column -->
+        
+          <div class="flex-center">
+            <!-- Facebook -->
+             
+            <!-- Twitter -->
+             
+            <!-- Google +-->
+             
+            <!--Instagram-->
+             
+            <!--Pinterest-->
+             
+          </div>
+        
+        <!-- Grid column -->
+  
+      </div>
+      <!-- Grid row-->
+  
+    </div>
+    <!-- Footer Elements -->
+  
+    <!-- Copyright -->
+    <div class="footer-copyright text-center mt-3">© 2020 Copyright:
+      <a href="http://domuki.top ">http://domuki.top</a>
+    </div>
+    <!-- Copyright -->
+  
+  </footer>
+  <!-- Footer --> 
+  <button class="back-top" onclick="topFunction()">
+    Top
+  </button>
+  <script>
+    //Get the button
+    var mybutton = document.getElementsByClassName("back-top");
+    
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton[0].style.display = 'block';
+      } else {
+        mybutton[0].style.display = 'none';
+      }
+    }
+    
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+    </script>
+  
+</body>
+
+ 
+</html>

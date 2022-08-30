@@ -1,0 +1,242 @@
+<!-- This is the outermost frame -->
+<!-- Create by MaaZiJyun on 27 Aug 2022 -->
+<!DOCTYPE html>
+<html>
+  <!-- the head of the html -->
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" name="viewport">
+    <!-- more meta data settings -->
+    
+       <meta name="author" content="MaaZiJyun"> 
+     
+    
+        <meta name="subtitle" content="Welcome to My Home"> 
+     
+    
+        <meta name="description" content="Welcome to visit my personal blog. I usually write some notes and articales here to share with others. Hope you could find what you are interested in"> 
+    
+     
+    <!-- generate the title of the web page -->
+     
+
+    <!-- the title of the web page -->
+    <title>
+        Frequently Used Methods of ArrayList
+    </title>
+
+    <!-- the icon of the web page -->
+    
+        <link rel="icon" href="/img/domukiico.ico ">
+     
+
+    <!-- CSS list -->
+     
+         
+            
+                <link rel="stylesheet" href="/css/style.css ">
+            
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css ">
+             
+         
+     
+    <!-- JS list -->
+     
+         
+            
+                <script src="/js/helper.css "></script>
+            
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js "></script>
+             
+         
+     
+<meta name="generator" content="Hexo 6.2.0"></head>
+  <!-- the body of the html -->
+  <!-- The interface to connect the body content -->
+<body>
+
+  <!-- the header of the page -->
+   
+    
+  <header class="header" style="background-color: black;">
+    
+  <!-- Navigation-->
+  <nav class="navbar navbar-expand-lg navbar-dark justify-content-center">
+    <div class="container p-2">
+      <a href="/" class="navbar-brand logo">
+        MaaZiJyun' Blog
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span
+          class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ms-auto">
+          
+            <li class="nav-item">
+              <a href="/" class="nav-link active">
+                Home
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/archives" class="nav-link active">
+                Archives
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/categories" class="nav-link active">
+                Categories
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/tags" class="nav-link active">
+                Tags
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/about" class="nav-link active">
+                About
+              </a>
+            </li>
+            
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header> 
+   
+
+  <!-- the main part of the page -->
+  <div class="content">
+
+    <main class="main">
+
+      <div class="main-content">
+
+        <!-- if the current page is home, then the content of hone will be shown up -->
+        
+          <article class="post">
+    <div class="post-title">
+        <h2 class="title">
+            Frequently Used Methods of ArrayList
+        </h2>
+    </div>
+    <div class="post-meta">
+        <span class="post-time">
+            2020-04-23
+        </span>
+    </div>
+    <div class="post-content">
+        <p>array’s length cannot be changed<br>but length of array list can be changed<br>we know ArrayList<E>, but what’s the meaning of <E>？<br>you can think it as the type of all data in array list.<br>creating:<br><code>ArrayList();</code><br>notice: for array list, you cannot get reference when you try to print it</p>
+<span id="more"></span>
+
+<h2 id="1-Creating"><a href="#1-Creating" class="headerlink" title="1. Creating"></a>1. Creating</h2><p>creating is one of the most simple part which seems like calling class.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">I created an arrayList named al which inside is full of String type data</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line">ArrayList&lt;String&gt; al = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line"></span><br><span class="line">System.out.println(al); <span class="comment">// [] is the result</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="2-Adding"><a href="#2-Adding" class="headerlink" title="2. Adding"></a>2. Adding</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">the way to add new data to list</span></span><br><span class="line"><span class="comment">the type of the data you wanna add must same as the type of list</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="comment">//1. add(o)</span></span><br><span class="line"></span><br><span class="line">al.add(<span class="string">&quot;1&quot;</span>);</span><br><span class="line">al.add(<span class="string">&quot;2&quot;</span>);</span><br><span class="line">al.add(<span class="string">&quot;3&quot;</span>);</span><br><span class="line"></span><br><span class="line">System.out.println(al); <span class="comment">//the result will become to [1, 2, 3]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//2. add(index, o)</span></span><br><span class="line"></span><br><span class="line">al.add(<span class="number">0</span>, <span class="string">&quot;1&quot;</span>);</span><br><span class="line">al.add(<span class="number">1</span>, <span class="string">&quot;2&quot;</span>);</span><br><span class="line">al.add(<span class="number">2</span>, <span class="string">&quot;3&quot;</span>);</span><br><span class="line"></span><br><span class="line">System.out.println(al); <span class="comment">//the result will become to [1, 2, 3]</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="3-Deleting"><a href="#3-Deleting" class="headerlink" title="3. Deleting"></a>3. Deleting</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">al.remove(<span class="number">1</span>);</span><br><span class="line">al.remove(<span class="string">&quot;1&quot;</span>);</span><br><span class="line"></span><br><span class="line">System.out.println(al); <span class="comment">//the result will become to [ 3 ]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//void clear(): This method is used to remove all the elements from any list.</span></span><br><span class="line">al.clear();</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="4-Getting"><a href="#4-Getting" class="headerlink" title="4. Getting"></a>4. Getting</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//get(index)</span></span><br><span class="line"></span><br><span class="line">System.out.println(al.get(<span class="number">0</span>)); <span class="comment">////the result will be 3</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="5-Size"><a href="#5-Size" class="headerlink" title="5. Size"></a>5. Size</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">System.out.println(al.size());</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="6-To-String"><a href="#6-To-String" class="headerlink" title="6. To String"></a>6. To String</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//it&#x27;s don&#x27;t has the method like that. so if you wanna print the list justwrite the name of object in the &quot;sout&quot;</span></span><br><span class="line"></span><br><span class="line">System.out.println(al);</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="Remarks"><a href="#Remarks" class="headerlink" title="Remarks"></a>Remarks</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">if you wanna store the data in basic type(like int, double) you need use wrapper class corresponding to the type</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">basic type  	wrapper class</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">byte        	Byte</span></span><br><span class="line"><span class="comment">short       	Short</span></span><br><span class="line"><span class="comment">int         	Integer</span></span><br><span class="line"><span class="comment">long        	Long</span></span><br><span class="line"><span class="comment">flout       	Flout</span></span><br><span class="line"><span class="comment">double      	Double</span></span><br><span class="line"><span class="comment">char        	Character</span></span><br><span class="line"><span class="comment">boolean    		Boolean</span></span><br><span class="line"><span class="comment"> */</span></span><br></pre></td></tr></table></figure>
+
+
+    </div>
+</article>
+
+        <!-- show the content of a category -->
+        
+      </div>
+      
+    </main>
+
+  </div>
+  <!-- the footer of the page -->
+  <!-- Footer -->
+<footer class="blog-footer font-small">
+
+    <!-- Footer Elements -->
+    <div class="footer-icons container">
+  
+      <!-- Grid row-->
+      <div class="row">
+  
+        <!-- Grid column -->
+        
+          <div class="flex-center">
+            <!-- Facebook -->
+             
+            <!-- Twitter -->
+             
+            <!-- Google +-->
+             
+            <!--Instagram-->
+             
+            <!--Pinterest-->
+             
+          </div>
+        
+        <!-- Grid column -->
+  
+      </div>
+      <!-- Grid row-->
+  
+    </div>
+    <!-- Footer Elements -->
+  
+    <!-- Copyright -->
+    <div class="footer-copyright text-center mt-3">© 2020 Copyright:
+      <a href="http://domuki.top ">http://domuki.top</a>
+    </div>
+    <!-- Copyright -->
+  
+  </footer>
+  <!-- Footer --> 
+  <button class="back-top" onclick="topFunction()">
+    Top
+  </button>
+  <script>
+    //Get the button
+    var mybutton = document.getElementsByClassName("back-top");
+    
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton[0].style.display = 'block';
+      } else {
+        mybutton[0].style.display = 'none';
+      }
+    }
+    
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+    </script>
+  
+</body>
+
+ 
+</html>
