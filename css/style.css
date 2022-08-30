@@ -49,6 +49,9 @@ nav .logo {
 .post .post-title a:hover {
   text-decoration: underline;
 }
+.post .post-content {
+  word-wrap: break-word;
+}
 .post .post-content h1 {
   font-size: 5vh;
 }
