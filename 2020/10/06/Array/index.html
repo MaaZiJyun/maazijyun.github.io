@@ -119,19 +119,26 @@
 
         <!-- if the current page is home, then the content of hone will be shown up -->
         
-          <article class="post">
-    <div class="post-title">
-        <h2 class="title">
-            Array
-        </h2>
-    </div>
-    <div class="post-meta">
-        <span class="post-time">
-            2020-10-06
-        </span>
-    </div>
-    <div class="post-content">
-        <h3 id="Understanding-Arrays"><a href="#Understanding-Arrays" class="headerlink" title="Understanding Arrays"></a>Understanding Arrays</h3><blockquote>
+          <section>
+    <div class="container mb-5">
+        <article class="article">
+            <div class="article-header">
+                <div class="article-title">
+                    <span class="article-title-text">
+                        Array
+                    </span>
+                </div>
+                <div class="post-meta">
+                    <span class="post-time">
+                        2020-10-06
+                    </span>
+                </div>
+            </div>
+
+            <div class="article-body row">
+                <div class="col-md-8">
+                    <div class="post-content">
+                        <h3 id="Understanding-Arrays"><a href="#Understanding-Arrays" class="headerlink" title="Understanding Arrays"></a>Understanding Arrays</h3><blockquote>
 <p>In <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Computer_science">computer science</a>, an <strong>array data structure</strong>, or simply an <strong>array</strong>, is a <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Data_structure">data structure</a> consisting of a collection of <em>elements</em> (<a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Value_(computer_science)">values</a> or <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Variable_(programming)">variables</a>), each identified by at least one <em>array index</em> or <em>key</em>.</p>
 </blockquote>
 <p>Simply, </p>
@@ -142,7 +149,7 @@
 
 <h3 id="Exercise-Building-an-Array"><a href="#Exercise-Building-an-Array" class="headerlink" title="Exercise: Building an Array"></a>Exercise: Building an Array</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="type">int</span>[] intArray_1 = <span class="keyword">new</span> <span class="title class_">int</span>[<span class="number">3</span>];</span><br><span class="line"><span class="keyword">public</span> <span class="type">int</span>[] intArray_2 = &#123; <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span> &#125;;</span><br></pre></td></tr></table></figure>
 
-<p><a href="https://domuki.top/2020/02/14/Java-Learning-Chapter-7-Arrays/">More information about array</a></p>
+<p><a target="_blank" rel="noopener" href="https://domuki.top/2020/02/14/Java-Learning-Chapter-7-Arrays/">More information about array</a></p>
 <h3 id="Solution-Creating-the-Array-Class"><a href="#Solution-Creating-the-Array-Class" class="headerlink" title="Solution: Creating the Array Class"></a>Solution: Creating the Array Class</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Array</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="type">int</span>[] items;</span><br><span class="line">    <span class="keyword">private</span> <span class="type">int</span> count;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">Array</span><span class="params">()</span>&#123;</span><br><span class="line">        items = <span class="keyword">new</span> <span class="title class_">int</span>[<span class="number">0</span>];</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">Array</span><span class="params">(<span class="type">int</span> length)</span>&#123;</span><br><span class="line">        items = <span class="keyword">new</span> <span class="title class_">int</span>[length];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">insert</span><span class="params">(<span class="type">int</span> item)</span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(items.length == count)&#123;</span><br><span class="line">            <span class="type">int</span>[] newItems = <span class="keyword">new</span> <span class="title class_">int</span>[count + <span class="number">1</span>];</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; count; i++)</span><br><span class="line">                newItems[i] = items[i];</span><br><span class="line">            items = newItems;</span><br><span class="line">        &#125;</span><br><span class="line">        items[count++] = item;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">removeAt</span><span class="params">(<span class="type">int</span> index)</span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (index &lt; <span class="number">0</span> || index &gt;= count)</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">IllegalArgumentException</span>();</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> index; i &lt; count - <span class="number">1</span>; i++)</span><br><span class="line">            items[i] = items[i + <span class="number">1</span>];</span><br><span class="line">        count--;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">/*int[] newItems = new int[count];</span></span><br><span class="line"><span class="comment">        for (int i = 0; i &lt; count; i++)</span></span><br><span class="line"><span class="comment">            newItems[i] = items[i];</span></span><br><span class="line"><span class="comment">        items = newItems;*/</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">indexOf</span><span class="params">(<span class="type">int</span> item)</span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; count; i++)</span><br><span class="line">            <span class="keyword">if</span> (items[i] == item)</span><br><span class="line">                <span class="keyword">return</span> i;</span><br><span class="line">        <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">length</span><span class="params">()</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> items.length;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">print</span><span class="params">()</span>&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; count; i++)</span><br><span class="line">            System.out.println(items[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <h3 id="Dynamic-Array"><a href="#Dynamic-Array" class="headerlink" title="Dynamic Array"></a>Dynamic Array</h3><blockquote>
@@ -152,10 +159,27 @@
 <blockquote>
 <p>The array can adjust its length automatically as long as it is changed.</p>
 </blockquote>
-<h4 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h4><p>Java has built-in dynamic arrays. These are <a href="https://domuki.top/2020/04/23/Frequently-Used-Methods-of-Vector/">Vector</a>, <a href="https://domuki.top/2020/04/23/Frequently-Used-Methods-of-ArrayList/">ArrayList</a>, LinkedList and CopyOnWriteArrayList.</p>
+<h4 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h4><p>Java has built-in dynamic arrays. These are <a target="_blank" rel="noopener" href="https://domuki.top/2020/04/23/Frequently-Used-Methods-of-Vector/">Vector</a>, <a target="_blank" rel="noopener" href="https://domuki.top/2020/04/23/Frequently-Used-Methods-of-ArrayList/">ArrayList</a>, LinkedList and CopyOnWriteArrayList.</p>
 
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="position-sticky" style="top: 2rem;">
+                        <!-- archives list by date -->
+                        <div class="home-archive">
+                            <div class="p-4">
+                                <h4>Other Archives</h4>
+                                <ol class="list-unstyled mb-0">
+                                    <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">October 2021</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/07/">July 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/06/">June 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/05/">May 2021</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">April 2021</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a><span class="archive-list-count">18</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a><span class="archive-list-count">24</span></li></ul>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
     </div>
-</article>
+</section>
 
         <!-- show the content of a category -->
         
@@ -199,7 +223,7 @@
   
     <!-- Copyright -->
     <div class="footer-copyright text-center mt-3">© 2020 Copyright:
-      <a href="http://domuki.top ">http://domuki.top</a>
+      <a href="https://maazijyun.github.io ">https://maazijyun.github.io</a>
     </div>
     <!-- Copyright -->
   

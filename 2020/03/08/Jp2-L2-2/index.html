@@ -119,19 +119,26 @@
 
         <!-- if the current page is home, then the content of hone will be shown up -->
         
-          <article class="post">
-    <div class="post-title">
-        <h2 class="title">
-            Java Programming 2 Lab 2 Additional File
-        </h2>
-    </div>
-    <div class="post-meta">
-        <span class="post-time">
-            2020-03-08
-        </span>
-    </div>
-    <div class="post-content">
-        <h2 id="Question"><a href="#Question" class="headerlink" title="Question"></a>Question</h2><p>Use the frame and knowledge professor taught to create 3 class which includes “Student”, “Course” and “Address” used to store Student’s information.</p>
+          <section>
+    <div class="container mb-5">
+        <article class="article">
+            <div class="article-header">
+                <div class="article-title">
+                    <span class="article-title-text">
+                        Java Programming 2 Lab 2 Additional File
+                    </span>
+                </div>
+                <div class="post-meta">
+                    <span class="post-time">
+                        2020-03-08
+                    </span>
+                </div>
+            </div>
+
+            <div class="article-body row">
+                <div class="col-md-8">
+                    <div class="post-content">
+                        <h2 id="Question"><a href="#Question" class="headerlink" title="Question"></a>Question</h2><p>Use the frame and knowledge professor taught to create 3 class which includes “Student”, “Course” and “Address” used to store Student’s information.</p>
 <span id="more"></span>
 
 <h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Address</span> &#123;</span><br><span class="line">	<span class="comment">//list of variables</span></span><br><span class="line">	<span class="keyword">private</span> String line1, line2, postcode, city, country;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * constructor</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> line1 first line of the address</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> line2 second line of the address</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> postcode postal code</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> city state name</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> country country name</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="keyword">public</span> <span class="title function_">Address</span><span class="params">(String line1, String line2, String postcode, String city, String country)</span> &#123;</span><br><span class="line">		<span class="built_in">this</span>.line1 = line1;</span><br><span class="line">		<span class="built_in">this</span>.line2 = line2;</span><br><span class="line">		<span class="built_in">this</span>.postcode = postcode;</span><br><span class="line">		<span class="built_in">this</span>.city = city;</span><br><span class="line">		<span class="built_in">this</span>.country = country;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">public</span> String <span class="title function_">toString</span><span class="params">()</span> &#123;</span><br><span class="line">		<span class="keyword">return</span> line1 + <span class="string">&quot;\n&quot;</span> + line2 + <span class="string">&quot;\n&quot;</span> + postcode + <span class="string">&quot; \n&quot;</span>  + city + <span class="string">&quot;\n&quot;</span>  + country;   </span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -143,8 +150,25 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">TestLab2</span> &#123;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">	</span><br><span class="line">		<span class="type">Address</span> <span class="variable">address1</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Address</span>(<span class="string">&quot;FSKTM&quot;</span>, <span class="string">&quot;UPM&quot;</span>, <span class="string">&quot;43400&quot;</span>, <span class="string">&quot;SEL&quot;</span>, <span class="string">&quot;Malaysia&quot;</span>);</span><br><span class="line">		student1 = <span class="keyword">new</span> <span class="title class_">Student</span>(<span class="string">&quot;Ng&quot;</span>, <span class="string">&quot;123123&quot;</span>, address1);</span><br><span class="line">		System.out.println(student1);</span><br><span class="line">		System.out.println(address1);</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="position-sticky" style="top: 2rem;">
+                        <!-- archives list by date -->
+                        <div class="home-archive">
+                            <div class="p-4">
+                                <h4>Other Archives</h4>
+                                <ol class="list-unstyled mb-0">
+                                    <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">October 2021</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/07/">July 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/06/">June 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/05/">May 2021</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">April 2021</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a><span class="archive-list-count">18</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a><span class="archive-list-count">24</span></li></ul>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
     </div>
-</article>
+</section>
 
         <!-- show the content of a category -->
         
@@ -188,7 +212,7 @@
   
     <!-- Copyright -->
     <div class="footer-copyright text-center mt-3">© 2020 Copyright:
-      <a href="http://domuki.top ">http://domuki.top</a>
+      <a href="https://maazijyun.github.io ">https://maazijyun.github.io</a>
     </div>
     <!-- Copyright -->
   

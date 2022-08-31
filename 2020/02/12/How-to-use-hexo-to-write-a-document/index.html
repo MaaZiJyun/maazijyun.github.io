@@ -119,19 +119,26 @@
 
         <!-- if the current page is home, then the content of hone will be shown up -->
         
-          <article class="post">
-    <div class="post-title">
-        <h2 class="title">
-            How to use Hexo to write a document
-        </h2>
-    </div>
-    <div class="post-meta">
-        <span class="post-time">
-            2020-02-12
-        </span>
-    </div>
-    <div class="post-content">
-        <h1 id="1-Creating-original-file"><a href="#1-Creating-original-file" class="headerlink" title="1. Creating original file"></a>1. Creating original file</h1><p>Open git bash.exe in site file folder, then input the commit below to create a new file named “doc”</p>
+          <section>
+    <div class="container mb-5">
+        <article class="article">
+            <div class="article-header">
+                <div class="article-title">
+                    <span class="article-title-text">
+                        How to use Hexo to write a document
+                    </span>
+                </div>
+                <div class="post-meta">
+                    <span class="post-time">
+                        2020-02-12
+                    </span>
+                </div>
+            </div>
+
+            <div class="article-body row">
+                <div class="col-md-8">
+                    <div class="post-content">
+                        <h1 id="1-Creating-original-file"><a href="#1-Creating-original-file" class="headerlink" title="1. Creating original file"></a>1. Creating original file</h1><p>Open git bash.exe in site file folder, then input the commit below to create a new file named “doc”</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;doc&quot;</span></span><br></pre></td></tr></table></figure>
 <p>the file will be create under the folder <em>source&#x2F;_post</em> named “doc”.<br>this is the original file using to record the content of document which will be shared to the website.</p>
 <span id="more"></span>
@@ -198,8 +205,25 @@
 
 <h3 id="3-3-3-Homepage-Display"><a href="#3-3-3-Homepage-Display" class="headerlink" title="3.3.3. Homepage Display"></a>3.3.3. Homepage Display</h3><p>The document we wrote is quite long, sometimes.<br>However, when using Hexo framework to construct a blog, the homepage will display the content of whole document by default and the page will looks weird.<br>In this situation, we just put <code>&lt;!--more--&gt;</code> in the position where you wanna stop showing on the homepage</p>
 <h1 id="3-Publish"><a href="#3-Publish" class="headerlink" title="3. Publish"></a>3. Publish</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g -d</span><br></pre></td></tr></table></figure>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="position-sticky" style="top: 2rem;">
+                        <!-- archives list by date -->
+                        <div class="home-archive">
+                            <div class="p-4">
+                                <h4>Other Archives</h4>
+                                <ol class="list-unstyled mb-0">
+                                    <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">October 2021</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/07/">July 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/06/">June 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/05/">May 2021</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">April 2021</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a><span class="archive-list-count">18</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a><span class="archive-list-count">24</span></li></ul>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
     </div>
-</article>
+</section>
 
         <!-- show the content of a category -->
         
@@ -243,7 +267,7 @@
   
     <!-- Copyright -->
     <div class="footer-copyright text-center mt-3">© 2020 Copyright:
-      <a href="http://domuki.top ">http://domuki.top</a>
+      <a href="https://maazijyun.github.io ">https://maazijyun.github.io</a>
     </div>
     <!-- Copyright -->
   
